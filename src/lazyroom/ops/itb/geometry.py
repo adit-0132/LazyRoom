@@ -9,7 +9,7 @@ import numpy as np
 from ...core.errors import invalid
 from ...core.params import Bool, Choice, Color, File, Float, FloatList, Int, Point
 from .._util import F32
-from ._common import gmic_cmd, itb_op
+from ._common import gmic_cmd, gmic_single_thread, itb_op
 from . import _geometry_impl as G
 
 GROUP = "geometry"
@@ -565,7 +565,8 @@ def poincare_disk(img, ctx, p_value, q_value, size, iterations, angle, tiling, a
                    ["triangular", "polygonal"].index(tiling), bool(antialias), ["binary", "image"].index(fill),
                    x_shift, y_shift, zoom, image_angle, outline, *G.gmic_color(outline_color),
                    *G.gmic_color(first_color), *G.gmic_color(second_color))
-    return G.gmic_apply(img, cmd, ctx, process_alpha=True)
+    with gmic_single_thread():  # its threaded min/max reduction was not reproducible (seen on Windows CI)
+        return G.gmic_apply(img, cmd, ctx, process_alpha=True)
 
 
 _POLAR_PRESETS = ["custom_transform", "inverse_radius", "swap_radius_angle"]
