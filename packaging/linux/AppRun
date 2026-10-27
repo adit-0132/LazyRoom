@@ -10,5 +10,5 @@ case "$1" in
   --cli) shift; exec "$APP/lazyroom" "$@" ;;
   info|formats|backends|ops|inspect|apply|project|preset|style|batch|tools|intent|call|mcp|models|config|agent-setup|--version|--help|-h|--json)
     exec "$APP/lazyroom" "$@" ;;
-  *) exec "$APP/LazyRoom" "$@" ;;
+  *) exec "$APP/lazyroom-gui" "$@" ;;
 esac

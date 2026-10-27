@@ -1,6 +1,7 @@
 # PyInstaller spec: one folder, two executables sharing the same runtime.
 #   lazyroom      console CLI (also `lazyroom mcp` for the MCP server)
-#   LazyRoom      windowed desktop GUI (no console window on Windows)
+#   lazyroom-gui  windowed desktop GUI (no console window on Windows; not "LazyRoom": Windows file names
+#                 are case-insensitive, so LazyRoom.exe would overwrite lazyroom.exe)
 # Build:  pyinstaller packaging/lazyroom.spec --noconfirm --distpath dist --workpath build
 import os
 import sys
@@ -36,5 +37,5 @@ a_cli = Analysis([os.path.join(ROOT, "packaging", "entry_cli.py")], **common)
 a_gui = Analysis([os.path.join(ROOT, "packaging", "entry_gui.py")], **common)
 icon = os.path.join(ROOT, "packaging", "lazyroom.ico") if sys.platform == "win32" else None
 exe_cli = EXE(PYZ(a_cli.pure), a_cli.scripts, [], exclude_binaries=True, name="lazyroom", console=True, icon=icon)
-exe_gui = EXE(PYZ(a_gui.pure), a_gui.scripts, [], exclude_binaries=True, name="LazyRoom", console=False, icon=icon)
+exe_gui = EXE(PYZ(a_gui.pure), a_gui.scripts, [], exclude_binaries=True, name="lazyroom-gui", console=False, icon=icon)
 coll = COLLECT(exe_cli, exe_gui, a_cli.binaries, a_cli.datas, a_gui.binaries, a_gui.datas, name="LazyRoom")

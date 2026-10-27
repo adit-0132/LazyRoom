@@ -18,7 +18,7 @@ SolidCompression=yes
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 SetupIconFile=..\lazyroom.ico
-UninstallDisplayIcon={app}\LazyRoom.exe
+UninstallDisplayIcon={app}\lazyroom-gui.exe
 LicenseFile=..\..\LICENSE
 ChangesEnvironment=yes
 
@@ -30,14 +30,14 @@ Name: "addtopath"; Description: "Add the lazyroom command (CLI / MCP server) to 
 Source: "..\..\dist\LazyRoom\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
 
 [Icons]
-Name: "{group}\LazyRoom"; Filename: "{app}\LazyRoom.exe"
-Name: "{autodesktop}\LazyRoom"; Filename: "{app}\LazyRoom.exe"; Tasks: desktopicon
+Name: "{group}\LazyRoom"; Filename: "{app}\lazyroom-gui.exe"
+Name: "{autodesktop}\LazyRoom"; Filename: "{app}\lazyroom-gui.exe"; Tasks: desktopicon
 
 [Registry]
 Root: HKCU; Subkey: "Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Tasks: addtopath; Check: NeedsAddPath(ExpandConstant('{app}'))
 
 [Run]
-Filename: "{app}\LazyRoom.exe"; Description: "Launch LazyRoom"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\lazyroom-gui.exe"; Description: "Launch LazyRoom"; Flags: nowait postinstall skipifsilent
 
 [Code]
 function NeedsAddPath(Param: string): boolean;
