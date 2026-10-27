@@ -10,7 +10,9 @@ ROOT = os.path.abspath(os.path.join(SPECPATH, ".."))
 SRC = os.path.join(ROOT, "src")
 sys.path.insert(0, SRC)
 
-hidden = collect_submodules("lazyroom") + collect_submodules("mcp") + collect_submodules("mcp_types")
+# mcp.cli is the optional `mcp` developer CLI (needs typer, from mcp[cli]); LazyRoom never imports it
+hidden = (collect_submodules("lazyroom") + collect_submodules("mcp", filter=lambda m: not m.startswith("mcp.cli"))
+          + collect_submodules("mcp_types"))
 hidden += ["PySide6.QtQuickControls2", "PySide6.QtSvg", "zxingcpp", "segno", "pypdf", "piexif"]
 datas = collect_data_files("lazyroom", include_py_files=False)
 datas += collect_data_files("mcp") + collect_data_files("mcp_types")
