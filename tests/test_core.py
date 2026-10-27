@@ -144,6 +144,27 @@ def test_project_roundtrip_undo_redo_revert_and_atomicity(tmp_path):
     assert old.save().endswith("old.lazyroom") and legacy.exists()
 
 
+# --------------------------------------------------------------------------- backends
+
+@pytest.mark.parametrize("version, usable", [("2.9.4", False), ("3.7.6", True), ("4.0.6", True)])
+def test_gmic_older_than_3_is_reported_unavailable(monkeypatch, version, usable):
+    import subprocess
+
+    from lazyroom.core import backends
+
+    banner = f"G'MIC: GREYC's Magic for Image Computing: Command-Line Interface\n  Version {version}\n".encode()
+    monkeypatch.setattr(backends, "_which", lambda *a: "/opt/gmic")
+    monkeypatch.setattr(subprocess, "run", lambda *a, **k: subprocess.CompletedProcess(a, 0, banner, b""))
+    backends._gmic_probe.cache_clear()
+    try:
+        assert backends.is_available("gmic") is usable
+        assert backends.gmic_version() == (tuple(map(int, version.split("."))) if usable else None)
+        if not usable:  # the hint names the version that was found
+            assert f"Found G'MIC {version}" in backends.hint_for("gmic")
+    finally:
+        backends._gmic_probe.cache_clear()
+
+
 # --------------------------------------------------------------------------- IO
 def test_16bit_png_precision_preserved(tmp_path):
     ramp = np.linspace(0, 1, 4096, dtype=np.float32).reshape(64, 64)

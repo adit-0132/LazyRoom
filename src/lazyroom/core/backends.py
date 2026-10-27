@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import functools
 import os
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -15,8 +16,9 @@ from typing import Callable
 from .errors import ErrorCode, LazyRoomError
 
 INSTALL_HINTS = {
-    "gmic": "Install the G'MIC command-line tool (Fedora: 'sudo dnf install gmic'; Debian/Ubuntu: "
-            "'sudo apt install gmic'; Windows: download gmic_*_cli_win64.zip from https://gmic.eu/download.html) "
+    "gmic": "Install the G'MIC 3.x/4.x command-line tool (Fedora: 'sudo dnf install gmic'; Debian/Ubuntu: the "
+            "distribution package can be the old 2.x series, so install the current .deb from "
+            "https://gmic.eu/download.html; Windows: download gmic_*_cli_win64.zip from the same page) "
             "or set LAZYROOM_GMIC to the gmic executable.",
     "tesseract": "Install Tesseract OCR (Fedora: 'sudo dnf install tesseract'; Debian/Ubuntu: "
                  "'sudo apt install tesseract-ocr'; Windows: UB-Mannheim installer) or set LAZYROOM_TESSERACT.",
@@ -46,16 +48,35 @@ def _which(env: str, *names: str) -> str | None:
     return None
 
 
+# 2.x lacks most of the fx_* filters the ImageToolbox ports call. Tested with 3.7.6 and 4.0.6.
+GMIC_MIN_VERSION = (3, 0, 0)
+
+
 @functools.lru_cache(maxsize=None)
-def gmic_path() -> str | None:
+def _gmic_probe() -> tuple[str | None, tuple[int, int, int] | None]:
+    """(path, version) of the G'MIC CLI that would be used; version is None if it could not be read."""
     p = _which("LAZYROOM_GMIC", "gmic")
     if not p:
-        return None
+        return None, None
     try:
         r = subprocess.run([p, "-version"], capture_output=True, timeout=20)
-        return p if r.returncode == 0 or b"G'MIC" in (r.stdout + r.stderr) else None
     except Exception:
-        return None
+        return None, None
+    out = (r.stdout + r.stderr).decode("utf-8", "replace")
+    m = re.search(r"[Vv]ersion\s+(\d+)\.(\d+)\.(\d+)", out)
+    if m:
+        return p, (int(m[1]), int(m[2]), int(m[3]))
+    return (p if r.returncode == 0 or "G'MIC" in out else None), None
+
+
+def gmic_path() -> str | None:
+    """Path of a usable G'MIC CLI (None if missing or older than GMIC_MIN_VERSION)."""
+    p, v = _gmic_probe()
+    return None if v is not None and v < GMIC_MIN_VERSION else p
+
+
+def gmic_version() -> tuple[int, int, int] | None:
+    return _gmic_probe()[1] if gmic_path() else None
 
 
 @functools.lru_cache(maxsize=None)
@@ -97,6 +118,11 @@ def hint_for(name: str) -> str:
     if name.startswith("model:"):
         return (f"Download the model with: lazyroom models download {name.split(':', 1)[1]} "
                 "(or the 'models_download' MCP action).")
+    if name == "gmic":
+        p, v = _gmic_probe()
+        if p and v is not None and v < GMIC_MIN_VERSION:
+            return (f"Found G'MIC {'.'.join(map(str, v))} at {p}, but LazyRoom needs "
+                    f"{'.'.join(map(str, GMIC_MIN_VERSION))} or newer. " + INSTALL_HINTS["gmic"])
     return INSTALL_HINTS.get(name, f"Install backend '{name}'.")
 
 
@@ -115,4 +141,7 @@ def report() -> dict[str, dict[str, object]]:
             out[name]["hint"] = hint_for(name)
     if out["gmic"]["available"]:
         out["gmic"]["path"] = gmic_path()
+        v = gmic_version()
+        if v:
+            out["gmic"]["version"] = ".".join(map(str, v))
     return out

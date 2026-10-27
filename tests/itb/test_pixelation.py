@@ -233,6 +233,16 @@ def test_ascii_draws_characters():
     assert drawn.any() and np.allclose(grey[drawn][:, :3], 0x88 / 255, atol=1e-4)
 
 
+def test_glyph_check_tells_real_glyphs_from_notdef():
+    from lazyroom.ops.draw import find_font
+    from lazyroom.ops.itb._pixelation_impl import _has_glyph
+
+    path = find_font("sans-serif")
+    if not path:
+        pytest.skip("no system font found")
+    assert _has_glyph(path, ord("A")) and not _has_glyph(path, 0x10FFFD)
+
+
 # ---------------------------------------------------------------------------
 # G'MIC filters: exact ImageToolboxLibs command strings and alpha semantics
 # ---------------------------------------------------------------------------
@@ -268,8 +278,10 @@ PADDED = {"filter.make_seamless": "power2", "filter.tileable_rotation": "square"
 
 @pytest.mark.parametrize("op_id", sorted(EXPECTED_GMIC))
 def test_gmic_default_command_strings(op_id, monkeypatch):
+    from lazyroom.core import backends
     from lazyroom.ops.itb import _pixelation_impl as impl
 
+    monkeypatch.setitem(backends.CHECKS, "gmic", lambda: True)  # G'MIC itself is faked below
     seen = []
 
     def fake_run_gmic(img, command, **kw):
@@ -293,8 +305,10 @@ def test_gmic_default_command_strings(op_id, monkeypatch):
 
 
 def test_shuffle_patches_gradient_reconstruction_is_padded(monkeypatch):
+    from lazyroom.core import backends
     from lazyroom.ops.itb import _pixelation_impl as impl
 
+    monkeypatch.setitem(backends.CHECKS, "gmic", lambda: True)  # G'MIC itself is faked below
     seen = []
     monkeypatch.setattr(impl, "run_gmic", lambda img, command, **kw: seen.append(command) or img)
     _run("filter.shuffle_patches", synthetic_image(32, 24), reconstruct="gradients")

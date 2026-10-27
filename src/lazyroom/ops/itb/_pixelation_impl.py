@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import functools
 import math
+import os
 import shutil
 import subprocess
 import sys
@@ -1015,6 +1016,38 @@ def _fc_font_for_char(family: str, codepoint: int) -> str | None:
     return None
 
 
+def _has_glyph(path: str, codepoint: int) -> bool:
+    """True if the font file has its own glyph for ``codepoint`` (not the .notdef box)."""
+    from PIL import Image, ImageDraw, ImageFont
+
+    try:
+        f = ImageFont.truetype(path, 24)
+    except OSError:
+        return False
+
+    def render(ch: str) -> bytes:
+        im = Image.new("L", (64, 64))
+        ImageDraw.Draw(im).text((8, 8), ch, font=f, fill=255)
+        return im.tobytes()
+
+    return render(chr(codepoint)) != render("\U0010FFFD")  # private-use: draws the font's .notdef glyph
+
+
+@functools.lru_cache(maxsize=256)
+def _win_font_for_char(family: str, codepoint: int) -> str | None:
+    """Windows has no fontconfig fallback: the requested font if it has the glyph, else a common system font."""
+    if sys.platform != "win32":
+        return None
+    from ..draw import find_font
+
+    fonts = os.path.join(os.environ.get("WINDIR", "C:/Windows"), "Fonts")
+    for path in [find_font(family or "sans-serif")] + [os.path.join(fonts, f) for f in (
+            "segoeui.ttf", "seguisym.ttf", "consola.ttf", "arial.ttf", "msgothic.ttc", "simsun.ttc")]:
+        if path and os.path.exists(path) and _has_glyph(path, codepoint):
+            return path
+    return None
+
+
 def _glyph_font(font: str, ch: str, size: float):
     from PIL import ImageFont
 
@@ -1024,7 +1057,8 @@ def _glyph_font(font: str, ch: str, size: float):
     if font and (font.lower().endswith((".ttf", ".otf", ".ttc")) or "/" in font or "\\" in font):
         path = find_font(font)
     if path is None:
-        path = _fc_font_for_char(font or "sans-serif", ord(ch)) or find_font(font or "sans-serif")
+        path = (_fc_font_for_char(font or "sans-serif", ord(ch)) or _win_font_for_char(font, ord(ch))
+                or find_font(font or "sans-serif"))
     if path:
         try:
             return ImageFont.truetype(path, size)

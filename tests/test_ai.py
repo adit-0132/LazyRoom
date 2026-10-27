@@ -133,7 +133,7 @@ def empty_home(tmp_path, monkeypatch):
 # Catalogue
 # ---------------------------------------------------------------------------
 def test_catalog_integrity():
-    cat = json.loads(models.CATALOG_PATH.read_text())
+    cat = json.loads(models.CATALOG_PATH.read_text(encoding="utf-8"))
     ms = cat["models"]
     names = [m["name"] for m in ms]
     assert len(names) == len(set(names)), "duplicate model names"

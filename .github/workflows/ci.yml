@@ -22,15 +22,27 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: System packages (Linux)
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y gmic tesseract-ocr libegl1 libgl1 libxkbcommon0 libfontconfig1 libdbus-1-3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr libegl1 libgl1 libxkbcommon0 libfontconfig1 libdbus-1-3
+          # Ubuntu's own gmic package is the old 2.9 series; install the current release from gmic.eu
+          deb=$(curl -fsSL https://gmic.eu/files/linux/ | grep -oE 'gmic_[0-9.]+_ubuntu24-04_noble_amd64\.deb' | sort -uV | tail -1)
+          curl -fsSLO "https://gmic.eu/files/linux/$deb"
+          sudo apt-get install -y "./$deb"
+          gmic -version
       - name: G'MIC CLI (Windows, best effort — G'MIC tests skip if unavailable)
         if: runner.os == 'Windows'
         continue-on-error: true
         shell: pwsh
         run: |
-          Invoke-WebRequest https://gmic.eu/files/windows/gmic_3.7.6_cli_win64.zip -OutFile gmic.zip
+          # gmic.eu only keeps the current release, so pick the newest CLI zip from the listing
+          $index = (Invoke-WebRequest https://gmic.eu/files/windows/).Content
+          $zip = [regex]::Matches($index, 'gmic_[0-9.]+_cli_win64\.zip') | ForEach-Object Value | Sort-Object -Unique |
+            Sort-Object { [version]($_ -replace '^gmic_([0-9.]+)_cli_win64\.zip$', '$1') } | Select-Object -Last 1
+          Invoke-WebRequest "https://gmic.eu/files/windows/$zip" -OutFile gmic.zip
           Expand-Archive gmic.zip -DestinationPath gmic
           $exe = Get-ChildItem gmic -Recurse -Filter gmic.exe | Select-Object -First 1
+          & $exe.FullName -version
           "LAZYROOM_GMIC=$($exe.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Append
       - name: Install
         run: python -m pip install -e ".[all,dev]"

@@ -362,7 +362,8 @@ def test_zip_slip_is_rejected_and_rolled_back(api, tmp_path, evil):
     assert list(dest.iterdir()) == []  # the subfolder and good.txt were removed again
     assert not (tmp_path / "evil.txt").exists()
     lst = run(api, "archive_list", input=str(z))
-    assert [e["path"] for e in lst["entries"]] == ["good.txt"] and lst["skipped_entries"][0]["path"] == evil
+    assert [e["path"] for e in lst["entries"]] == ["good.txt"]
+    assert lst["skipped_entries"][0]["path"].replace("\\", "/") == evil.replace("\\", "/")  # Windows zipfile uses /
 
 
 def test_safe_segments_port():

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import math
 
+from ...core import backends
 from ...core.errors import invalid
 from ...core.params import Bool, Choice, Color, Float, Int
 from . import _glitch_impl as G
@@ -205,8 +206,13 @@ def mess_with_bits(img, ctx, pre_normalize, smoothness, multiplier, reversing, m
 def offset_stripes(img, ctx, iterations, seed, channel_shift, horizontal_height, horizontal_amplitude,
                    vertical_width, vertical_amplitude, boundary, channel):
     """G'MIC fx_offset_stripes (seeded; alpha processed by G'MIC)."""
-    cmd = gmic_cmd("fx_offset_stripes", int(iterations), int(seed), channel_shift, float(horizontal_height),
-                   float(horizontal_amplitude), float(vertical_width), float(vertical_amplitude),
+    h = (float(horizontal_height), float(horizontal_amplitude))
+    v = (float(vertical_width), float(vertical_amplitude))
+    if (backends.gmic_version() or (0,)) >= (4,):
+        # G'MIC 4 added a shift PDF per direction (0 = Gaussian) and halved the Gaussian shift: 2x amplitude
+        # gives the same shift distribution as 3.x / ImageToolbox (G'MIC 4's random sequence itself differs).
+        h, v = (h[0], 2 * h[1], 0), (v[0], 2 * v[1], 0)
+    cmd = gmic_cmd("fx_offset_stripes", int(iterations), int(seed), channel_shift, *h, *v,
                    BOUNDARY.index(boundary), CHANNELS.index(channel))
     return G.run_gmic_glitch(img, cmd, ctx, process_alpha=True)
 

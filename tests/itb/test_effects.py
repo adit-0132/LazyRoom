@@ -336,10 +336,14 @@ def test_raw_gmic_blur_changes_image():
     "",
 ])
 def test_raw_gmic_rejects_dangerous_commands(command):
+    with pytest.raises(LazyRoomError) as ei:  # the policy itself needs no G'MIC
+        fx.check_raw_gmic(command)
+    assert ei.value.code == ErrorCode.INVALID_PARAMS
     spec = get_op("filter.raw_gmic")
-    img = synthetic_image(32, 24)
-    with pytest.raises(LazyRoomError) as ei:
-        spec.run(img, RenderContext(), spec.validate({"command": command}))
+    if not spec.availability()[0]:
+        return
+    with pytest.raises(LazyRoomError) as ei:  # and the operation refuses before G'MIC runs
+        spec.run(synthetic_image(32, 24), RenderContext(), spec.validate({"command": command}))
     assert ei.value.code == ErrorCode.INVALID_PARAMS
 
 

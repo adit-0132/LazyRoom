@@ -30,6 +30,9 @@ _Last updated: 2026-10-27. This file is the durable record of progress; update i
 * Working space float32 sRGB-encoded, straight alpha; ICC → sRGB on import.
 * ImageToolbox ports are faithful by default; **upstream bugs that make a filter unusable are fixed** and the
   filter is marked *approximate* (Moiré, Gamma, CLAHE/Equalize LAB/LUV, FishEye). Harmless quirks are kept.
+* G'MIC 3.x and 4.x are supported (tested with 3.7.6 and 4.0.6); 2.x is treated as unavailable. G'MIC 4
+  changed its random generator, so seeded G'MIC filters give different (equally valid) results than on 3.x,
+  and two filters needed small argument adaptations (offset stripes, marker drawing).
 * G'MIC runs as an isolated subprocess (own config home, `-network -1`, optional single-thread for RNG
   determinism); G'MIC is optional at runtime.
 * Remote resources without a licence (ImageToolboxRemoteResources: Cube-LUT pack, mesh gradients, lens profiles)

@@ -229,7 +229,7 @@ def test_color_library_lookups(api):
 def test_color_library_data_is_verified_subset():
     from lazyroom.core.paths import package_data_dir
 
-    data = json.loads((package_data_dir() / "color_library.json").read_text())
+    data = json.loads((package_data_dir() / "color_library.json").read_text(encoding="utf-8"))
     c = data["counts"]
     assert c["total"] == len(data["colors"]) == c["from_meodai_color_names"] + c["from_ntc_js"] + c["css_named_colors"]
     assert all(k.startswith("#") and len(k) == 7 for k in data["colors"])

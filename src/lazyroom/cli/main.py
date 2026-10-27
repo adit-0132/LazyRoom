@@ -498,7 +498,7 @@ def _project(api, args, out: Out) -> int:
     elif sub == "edit":
         actions: list[dict[str, Any]] = []
         if args.actions:
-            raw = Path(args.actions[1:]).read_text() if args.actions.startswith("@") else args.actions
+            raw = Path(args.actions[1:]).read_text(encoding="utf-8") if args.actions.startswith("@") else args.actions
             actions = json.loads(raw)
         actions += [{"type": "add", **s} for s in ops_to_steps(args.op)]
         r = api.project_edit(pid, actions, actor="user", description=args.description)
@@ -536,7 +536,7 @@ def _call(api, args, out: Out) -> int:
         raise LazyRoomError(ErrorCode.UNKNOWN_COMMAND, f"Unknown command '{args.command}'",
                               details={"suggestions": difflib.get_close_matches(args.command, list(COMMANDS), 5)},
                               hint="See 'lazyroom info --json' -> commands")
-    raw = Path(args.args[1:]).read_text() if args.args.startswith("@") else args.args
+    raw = Path(args.args[1:]).read_text(encoding="utf-8") if args.args.startswith("@") else args.args
     kwargs = json.loads(raw or "{}")
     if not isinstance(kwargs, dict):
         raise LazyRoomError(ErrorCode.INVALID_PARAMS, "Arguments must be a JSON object")

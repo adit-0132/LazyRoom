@@ -6,7 +6,7 @@
 uv venv --python 3.13 .venv              # or: python3.13 -m venv .venv
 uv pip install --python .venv -e ".[all,dev]" pyinstaller
 ```
-Optional tools: G'MIC CLI (`gmic`), Tesseract. For development without root, a portable G'MIC can live in
+Optional tools: G'MIC CLI (`gmic`, 3.x or 4.x — older 2.x builds are reported as unavailable), Tesseract. For development without root, a portable G'MIC can live in
 `.tools/gmic/gmic`; the test suite picks it up automatically (tests/conftest.py sets `LAZYROOM_GMIC`).
 
 Environment variables: `LAZYROOM_HOME` (put config/data/cache under one folder — use it for tests),

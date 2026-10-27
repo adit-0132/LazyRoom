@@ -35,7 +35,9 @@ git clone https://github.com/adit-0132/LazyRoom.git && cd LazyRoom
 python -m venv .venv && . .venv/bin/activate           # Windows: .venv\Scripts\activate
 pip install -e ".[all]"                                # GUI, RAW, AI, HEIF, HTTP extras
 # optional system tools
-sudo dnf install gmic tesseract   # Fedora  (Ubuntu/Debian: sudo apt install gmic tesseract-ocr)
+sudo dnf install gmic tesseract   # Fedora  (Ubuntu/Debian: sudo apt install tesseract-ocr)
+# G'MIC 3.x or 4.x is needed for the G'MIC-based filters. Ubuntu/Debian's own gmic package can be the old
+# 2.x series: install the current .deb from https://gmic.eu/download.html instead (Windows: the CLI zip).
 ```
 
 Pre-built bundles: `LazyRoom-<version>-x86_64.AppImage` (Linux) and the Windows installer / portable ZIP built by

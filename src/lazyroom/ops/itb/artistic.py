@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import math
 
+from ...core import backends
 from ...core.params import Bool, Choice, Color, Float, Int
 from . import _artistic_impl as impl
 from ._common import gmic_cmd, gmic_pipeline, itb_op
@@ -353,8 +354,9 @@ def lylejk_painting(img, ctx, iterations, abstraction, radius, canvas):
 def marker_drawing(img, ctx, length, radius, opacity, inertia, curviness, anisotropy, smoothness, coherence,
                    iterations, background, background_blur, background_color):
     """G'MIC fx_marker_drawing (alpha processed by G'MIC; multi-threaded random strokes are not reproducible)."""
+    min_length = 2 if (backends.gmic_version() or (0,)) >= (4,) else 1  # G'MIC 4.0.6 fails at length 1
     return impl.gmic_itb(img, ctx, gmic_cmd(
-        "fx_marker_drawing", min(256, ctx.ipx(length)), min(32.0, max(1.0, ctx.px(radius))), opacity, inertia,
+        "fx_marker_drawing", max(min_length, min(256, ctx.ipx(length))), min(32.0, max(1.0, ctx.px(radius))), opacity, inertia,
         curviness, anisotropy, smoothness, coherence, iterations, ("blur", "color").index(background),
         background_blur, *impl.color255(background_color)), mode="process")
 

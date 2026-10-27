@@ -126,8 +126,9 @@ def test_colorspaces(colorspace):
     img = synthetic_image(64, 48, alpha=True)
     rgb = img[..., :3]
     # pure-gamma decoding (x^(1/2.2), x^(1/2.8)) has infinite slope at 0: float32 noise of the
-    # Oklab/Jzazbz matrices on exactly-zero channels becomes up to ~2/255 (same as upstream f32)
-    tol = 1e-2 if colorspace.startswith(("oklab_gamma", "jzazbz_gamma")) else 1e-4
+    # Oklab/Jzazbz matrices on exactly-zero channels becomes ~2-3/255 depending on the BLAS/CPU
+    # (2.7/255 measured on GitHub's Ubuntu runners; same as upstream f32)
+    tol = 2e-2 if colorspace.startswith(("oklab_gamma", "jzazbz_gamma")) else 1e-4
     assert np.abs(R.decode_space(R.encode_space(rgb, colorspace), colorspace) - rgb).max() < tol
     for name in ["lanczos3", "ewa_robidoux", "area", "nearest"]:
         for w, h in [(29, 21), (100, 75)]:
