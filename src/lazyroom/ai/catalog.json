@@ -1,0 +1,3712 @@
+{
+ "schema": 1,
+ "source": {
+  "project": "ImageToolbox (Apache-2.0)",
+  "file": "feature/ai-tools/src/main/java/com/t8rin/imagetoolbox/feature/ai_tools/domain/model/NeuralModel.kt",
+  "downloads": "https://huggingface.co/T8RIN/imagetoolbox-models",
+  "extras": "LaMa_512*.onnx (lib/neural-tools inpaint), paddleocr_*.zip (lib/neural-tools ocr)"
+ },
+ "restricted_policy": "restricted = the weights' licence is non-commercial/research-only, strong copyleft (GPL/AGPL) or could not be verified. Weights are never bundled; users download them explicitly and are responsible for complying with the licence.",
+ "task_defaults": {
+  "upscale": "RealESRGAN-x4v3.ort",
+  "remove_background": "u2netp.onnx",
+  "colorize": "ddcolor_paper_tiny.ort",
+  "dejpeg": "fbcnn_color_fp16.onnx",
+  "denoise": "scunet_color_25_fp16.onnx",
+  "remove_artifacts": "1x_Bendel_Halftone-fp32.onnx",
+  "remove_watermark": "watermark_mit_b5_sigmoid.onnx",
+  "enhance": "1xOverExposureCorrection_compact-fp16.onnx",
+  "restore_anime": "1x-span-anime-pretrain-fp16.onnx",
+  "restore_scans": "1xBook-Compact-fp16.onnx",
+  "style_transfer": "microast_style_transfer_onnx.zip",
+  "depth": "depth_anything_v2_vits_q4.onnx",
+  "detect_ai_generated": "ai_detector_distilled_vit_small_fp32.onnx",
+  "inpaint": "LaMa_512.onnx",
+  "ocr": "paddleocr_v5.zip"
+ },
+ "models": [
+  {
+   "name": "RealESRGAN-x4v3.ort",
+   "title": "RealESRGAN x4v3",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 upscaler for general images; tiny model that uses less GPU and time, with moderate deblur and denoise.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRGAN-x4v3.ort",
+   "size": 2621440,
+   "sha256": "8dbd9c316f436c6e1d35a11ed29dbea0ce8f5b5b3ef082c9358ec93603a0398b",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 1.215
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "presumed = realesr-general-x4v3 (description matches upstream model_zoo 'tiny small model...not too strong deblur and denoise'); not hash-verified; repo LICENSE BSD-3-Clause covers released weights",
+   "restricted": false
+  },
+  {
+   "name": "RealESRGAN_x2plus.ort",
+   "title": "RealESRGAN x2 Plus",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X2 upscaler for general images, preserving textures and natural details.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRGAN_x2plus.ort",
+   "size": 35456784,
+   "sha256": "cd6986ac4bd2d10d460c281dcd4f1df638fddb241f4810b53cb0eb98cfb420cd",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 4.437
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "RealESRGAN_x2plus.pth (release v0.2.1); code+weights BSD-3-Clause",
+   "restricted": false
+  },
+  {
+   "name": "RealESRGAN_x4plus.ort",
+   "title": "RealESRGAN x4 Plus",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 upscaler for general images with enhanced textures and realistic results.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRGAN_x4plus.ort",
+   "size": 35437480,
+   "sha256": "110818e1a29309d1da6087e8bbe201f50e43ea7679483ebca1df95ab333d2a66",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 18.018
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "RealESRGAN_x4plus.pth (release v0.1.0); code+weights BSD-3-Clause",
+   "restricted": false
+  },
+  {
+   "name": "RealESRGAN_x4plus_anime_6B.ort",
+   "title": "RealESRGAN x4 Plus Anime 6B",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 upscaler optimized for anime images; 6 RRDB blocks for sharper lines and details.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRGAN_x4plus_anime_6B.ort",
+   "size": 9488256,
+   "sha256": "e73004a743169923b28434b1487ed2f8c329fa99c057ffa15018502612b8bd36",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 5.793
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "RealESRGAN_x4plus_anime_6B.pth (release v0.2.2.4); BSD-3-Clause",
+   "restricted": false
+  },
+  {
+   "name": "RealESRNet_x4plus.ort",
+   "title": "RealESRNet x4 Plus",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 upscaler with MSE loss, produces smoother results and reduced artifacts for general images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRNet_x4plus.ort",
+   "size": 35437480,
+   "sha256": "ed82b5cd61a6281db0eafa722c92803cecbf9eda8c88194c058e93e21407d38f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 17.11
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "RealESRNet_x4plus.pth (release v0.1.1); BSD-3-Clause",
+   "restricted": false
+  },
+  {
+   "name": "RealESRGAN_x4plus_anime_4B32F.ort",
+   "title": "RealESRGAN x4 Plus Anime 4B",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 Upscaler optimized for anime images; 4B32F variant with sharper details and smooth lines.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/RealESRGAN_x4plus_anime_4B32F.ort",
+   "size": 5241720,
+   "sha256": "ca05a00f6cb42fb1fdf03e3b132ae792a83d748fc8df0c0fa62f67e798385fd7",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 1.534
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "lightweight-real-ESRGAN-anime (xiongjie / xiong-jie-y), third-party Real-ESRGAN anime variant (4 blocks, 32 feats)",
+   "upstream_url": "https://huggingface.co/xiongjie/lightweight-real-ESRGAN-anime",
+   "license": "MIT",
+   "license_source": "https://huggingface.co/xiongjie/lightweight-real-ESRGAN-anime/blob/main/README.md",
+   "license_notes": "NOT an official xinntao release; HF README states 'License: MIT License' (no license metadata tag); architecture/training from Real-ESRGAN (BSD-3-Clause); .ort conversion not hash-verified against the HF .onnx",
+   "restricted": false
+  },
+  {
+   "name": "x4-UltraSharpV2_fp32_op17.ort",
+   "title": "UltraSharp x4 V2",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 UltraSharp V2 model for general images; emphasizes sharpness and clarity.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/x4-UltraSharpV2_fp32_op17.ort",
+   "size": 80518784,
+   "sha256": "6bbf8c91bced8c7c6fdacf841f34713b66b223fe5ccd5f579af04e077fa68302",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 36.695
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "UltraSharpV2 by kim2091 (OpenModelDB 4x-UltraSharpV2)",
+   "upstream_url": "https://openmodeldb.info/models/4x-UltraSharpV2",
+   "architecture": "DAT (DAT2)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/4x-UltraSharpV2.json",
+   "license_notes": "Author's own ONNX is 4x-UltraSharpV2_fp32_op17.onnx; HF model card: 'License: CC BY-NC-SA 4.0'",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "x4-UltraSharpV2_Lite_fp16_op17.ort",
+   "title": "UltraSharp x4 V2 Lite",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "X4 UltraSharp V2 Lite; faster and smaller, preserves detail while using less GPU memory.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/upscale/x4-UltraSharpV2_Lite_fp16_op17.ort",
+   "size": 16055408,
+   "sha256": "f65092e0ee88c41bdbb1eb633aa4014479599228c150f796e85d429aea4d43a0",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 7.718
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "4x-UltraSharpV2_Lite by Kim2091",
+   "upstream_url": "https://huggingface.co/Kim2091/UltraSharpV2",
+   "architecture": "RealPLKSR",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://huggingface.co/Kim2091/UltraSharpV2 (README: 'License: CC BY-NC-SA 4.0'; repo license cc-by-nc-sa-4.0)",
+   "license_notes": "Not a separate OpenModelDB entry; author ships 4x-UltraSharpV2_Lite_fp16_op17.onnx in the same HF repo; README: 'The Lite model is based on the RealPLKSR architecture'",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "2xLiveActionV1_SPAN_490000.onnx",
+   "title": "LiveAction V1 SPAN x2",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Optimized for live-action content, reduces compression artifacts and enhances fine details in movie/TV show frames.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/2xLiveActionV1_SPAN_490000.onnx",
+   "size": 1654748,
+   "sha256": "bfa72f3c6347076aed140d0836cee30c27ea434c047beeaf9466469483836ecc",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.311
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "2xLiveActionV1_SPAN by jcj83429 (OpenModelDB 2x-LiveActionV1-SPAN)",
+   "upstream_url": "https://openmodeldb.info/models/2x-LiveActionV1-SPAN",
+   "architecture": "SPAN",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/2x-LiveActionV1-SPAN.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "2xVHS2HD-RealPLKSR.onnx",
+   "title": "VHS to HD x2",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Converts VHS-quality footage to HD, removing tape noise and enhancing resolution while preserving vintage feel.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/2xVHS2HD-RealPLKSR.onnx",
+   "size": 29718646,
+   "sha256": "441c8c8acedee4cf79c5629779e7720aef25952cfc68ca137034d835bbfa66f4",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 5.591
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "VHS2HD by asterixcool (OpenModelDB 2x-VHS2HD)",
+   "upstream_url": "https://openmodeldb.info/models/2x-VHS2HD",
+   "architecture": "RealPLKSR",
+   "license": "CC-BY-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/2x-VHS2HD.json",
+   "restricted": false
+  },
+  {
+   "name": "2x_Text2HD_v.1-RealPLKSR.onnx",
+   "title": "Text2HD x2",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Specialized for text-heavy images and screenshots, sharpens characters and improves readability.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/2x_Text2HD_v.1-RealPLKSR.onnx",
+   "size": 29718646,
+   "sha256": "0c3ef0e30de53ff0156da5fb4593dd4cbc89eee4707ca8e84d640302e4b9c3df",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 5.55
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Text2HD v.1 by asterixcool (OpenModelDB 2x-Text2HD-v-1)",
+   "upstream_url": "https://openmodeldb.info/models/2x-Text2HD-v-1",
+   "architecture": "RealPLKSR",
+   "license": "CC-BY-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/2x-Text2HD-v-1.json",
+   "restricted": false
+  },
+  {
+   "name": "4x-FrankendataPretrainer_SRFormer400K.onnx",
+   "title": "SRFormer x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Advanced upscaling trained on diverse datasets, excellent for general-purpose photo enhancement.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/4x-FrankendataPretrainer_SRFormer400K.onnx",
+   "size": 120837871,
+   "sha256": "6f505d321e07dadaa3f2f2cb91e4cb37cc47ba630a601fa4207abae6f8877bbc",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.13
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "FrankendataPretainer_SRFormer by crustaceous-d (OpenModelDB 4x-FrankendataPretainer-SRFormer)",
+   "upstream_url": "https://openmodeldb.info/models/4x-FrankendataPretainer-SRFormer",
+   "architecture": "SRFormer",
+   "license": "CC-BY-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/4x-FrankendataPretainer-SRFormer.json",
+   "license_notes": "OpenModelDB id has typo 'Pretainer'",
+   "restricted": false
+  },
+  {
+   "name": "4xRealWebPhoto_v2_rgt_s.onnx",
+   "title": "RealWebPhoto v2 RGT-S x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Optimized for web-compressed photos, removes JPEG artifacts and restores natural appearance.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/4xRealWebPhoto_v2_rgt_s.onnx",
+   "size": 48824340,
+   "sha256": "1c014ca191c9e3c41c47e26a6fe859a6847dd00d9d49073386e7104ac438450e",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 39.655
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "4xRealWebPhoto_v2_rgt_s by helaman (Philip Hofmann / Phhofm) (OpenModelDB 4x-RealWebPhoto-v2-rgt-s)",
+   "upstream_url": "https://openmodeldb.info/models/4x-RealWebPhoto-v2-rgt-s",
+   "architecture": "RGT (RGT-S)",
+   "license": "CC-BY-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/4x-RealWebPhoto-v2-rgt-s.json ; https://github.com/Phhofm/models/releases/tag/4xRealWebPhoto_v2_rgt_s",
+   "license_notes": "Author release (Phhofm/models) also states 'License: CC BY 4.0'",
+   "restricted": false
+  },
+  {
+   "name": "4xRealWebPhoto_v4_dat2.onnx",
+   "title": "RealWebPhoto v4 DAT2 x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Improved version for web photos with better texture preservation and artifact reduction.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/4xRealWebPhoto_v4_dat2.onnx",
+   "size": 48760847,
+   "sha256": "a9a3a9099e0108b793556ed9cf2123a61a727bbc611dd8d93475f7144596589e",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 25.959
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "4xRealWebPhoto_v4_dat2 by helaman (Philip Hofmann / Phhofm) (OpenModelDB 4x-RealWebPhoto-v4-dat2)",
+   "upstream_url": "https://openmodeldb.info/models/4x-RealWebPhoto-v4-dat2",
+   "architecture": "DAT (DAT2)",
+   "license": "CC-BY-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/4x-RealWebPhoto-v4-dat2.json ; https://github.com/Phhofm/models/releases/tag/4xRealWebPhoto_v4_dat2",
+   "license_notes": "Author release (Phhofm/models) also states 'License: CC-BY-4.0'",
+   "restricted": false
+  },
+  {
+   "name": "DAT_2_x2.onnx",
+   "title": "DAT2 x2",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "2x upscaling with Dual Aggregation Transformer technology, maintains sharpness and natural details.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/DAT_2_x2.onnx",
+   "size": 49503576,
+   "sha256": "fee6f4901207b1b5f68900ebbc7e0a2dbcb881b8ddfac97219f118af2cc53066",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 25.567
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DAT - Dual Aggregation Transformer (Zheng Chen et al.)",
+   "upstream_url": "https://github.com/zhengchen1999/DAT",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/zhengchen1999/DAT/blob/main/LICENSE",
+   "license_notes": "DAT-2 x2 weights (Google Drive linked from README); no separate weights licence; ONNX exporter not identified",
+   "restricted": false
+  },
+  {
+   "name": "DAT_2_x3.onnx",
+   "title": "DAT2 x3",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "3x upscaling using advanced transformer architecture, ideal for moderate enlargement needs.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/DAT_2_x3.onnx",
+   "size": 50242136,
+   "sha256": "59aeb6835c29f57dc9cab3b1367ec670eddc5b51d5a8177f3f921ad7ffb63ad9",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 25.736
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DAT - Dual Aggregation Transformer (Zheng Chen et al.)",
+   "upstream_url": "https://github.com/zhengchen1999/DAT",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/zhengchen1999/DAT/blob/main/LICENSE",
+   "license_notes": "DAT-2 x3 weights (Google Drive linked from README); no separate weights licence; ONNX exporter not identified",
+   "restricted": false
+  },
+  {
+   "name": "DAT_2_x4.onnx",
+   "title": "DAT2 x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "4x high-quality upscaling with state-of-the-art transformer network, preserves fine details at larger scales.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/DAT_2_x4.onnx",
+   "size": 50094919,
+   "sha256": "e6354e8fdd1b31b6e1114300843bf7bc31f91e4294fbb8e41282fc43f0a46cbc",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 26.169
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DAT - Dual Aggregation Transformer (Zheng Chen et al.)",
+   "upstream_url": "https://github.com/zhengchen1999/DAT",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/zhengchen1999/DAT/blob/main/LICENSE",
+   "license_notes": "DAT-2 x4 weights (Google Drive linked from README); no separate weights licence; ONNX exporter not identified (PyTorch 2.7.0)",
+   "restricted": false
+  },
+  {
+   "name": "swin2SR-x4-bsrgan-psnr.onnx",
+   "title": "Swin2SR BSRGAN PSNR x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Restores low-quality images using Swin2SR transformer, optimized for BSRGAN degradation. Great for fixing heavy compression artifacts and enhancing details at 4x scale.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/swin2SR-x4-bsrgan-psnr.onnx",
+   "size": 53827735,
+   "sha256": "987d88b356554161cbb8f67b7a8f4162cad6dc147839c344e3d5142140f25d6f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.478
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Swin2SR (mv-lab)",
+   "upstream_url": "https://github.com/mv-lab/swin2sr",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/mv-lab/swin2sr/blob/main/LICENSE",
+   "license_notes": "weights Swin2SR_RealworldSR_X4_64_BSRGAN_PSNR.pth; ONNX input 'pixel_values' implies HF port caidas/swin2SR-realworld-sr-x4-64-bsrgan-psnr (card apache-2.0)",
+   "restricted": false
+  },
+  {
+   "name": "BSRGAN_SwinIR-M_x4_GAN.onnx",
+   "title": "SwinIR-M BSRGAN GAN x4",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "4x upscaling with SwinIR transformer trained on BSRGAN degradation. Uses GAN for sharper textures and more natural details in photos and complex scenes.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/BSRGAN_SwinIR-M_x4_GAN.onnx",
+   "size": 61316800,
+   "sha256": "50a7b6fcaad6c4f342c5e1d059916a3e5d48e89d1d311270a476a7ce6a2ea09f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 13.116
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SwinIR (Jingyun Liang et al.)",
+   "upstream_url": "https://github.com/JingyunLiang/SwinIR",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/JingyunLiang/SwinIR/blob/main/LICENSE",
+   "license_notes": "= 003_realSR_BSRGAN_DFO_s64w8_SwinIR-M_x4_GAN.pth (release v0.0); README: released under Apache 2.0; exporter not identified",
+   "restricted": false
+  },
+  {
+   "name": "RealESR-AnimeVideo-x4v3.onnx",
+   "title": "RealESR AnimeVideo x4v3",
+   "type": "UPSCALE",
+   "task": "upscale",
+   "description": "Optimized for anime and cartoons. Fast upscaling with improved natural colors and fewer artifacts",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/RealESR-AnimeVideo-x4v3.onnx",
+   "size": 2495473,
+   "sha256": "3d2dc0af5e2cdf3a31655c4c673df9ad74f14775d74237bd0dc68fc885bd6841",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.437
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Real-ESRGAN (xinntao)",
+   "upstream_url": "https://github.com/xinntao/Real-ESRGAN",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/xinntao/Real-ESRGAN/blob/master/LICENSE",
+   "license_notes": "= realesr-animevideov3 (release v0.2.5.0); BSD-3-Clause",
+   "restricted": false
+  },
+  {
+   "name": "RMBG_1.4.ort",
+   "title": "RMBG 1.4",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Lightweight model for quick background removal. Balanced performance and accuracy. Works with portraits, objects, and scenes. Recommended for most use cases.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/bgremove/RMBG_1.4.ort",
+   "size": 88704616,
+   "sha256": "ecefc6e25e88a403762e74e2d112cd8f9dea4f4628c73f3da914ef169c91d86f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 0.603
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "RMBG-1.4 (BRIA AI)",
+   "upstream_url": "https://huggingface.co/briaai/RMBG-1.4",
+   "license": "LicenseRef-bria-rmbg-1.4",
+   "license_source": "https://huggingface.co/briaai/RMBG-1.4",
+   "license_notes": "NON-COMMERCIAL: card says 'source-available model for non-commercial use'; commercial licence must be purchased from BRIA; terms at https://bria.ai/bria-huggingface-model-license-agreement/; model is gated",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "inspyrenet.onnx",
+   "title": "InSPyReNet",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "High-quality background removal with sharp edges and excellent detail preservation, especially on complex objects and tricky backgrounds.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/bgremove/inspyrenet.onnx",
+   "size": 395316574,
+   "sha256": "c108dd92b3ddfe3a2d9e9ac2b74730cc5acbb2ddc7ea863330c43f56ae832aa3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 3.029
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "InSPyReNet (plemeri)",
+   "upstream_url": "https://github.com/plemeri/InSPyReNet",
+   "license": "MIT",
+   "license_source": "https://github.com/plemeri/InSPyReNet/blob/main/LICENSE",
+   "license_notes": "no separate weights licence stated; checkpoints also distributed via transparent-background (MIT); ONNX exporter not identified (PyTorch 2.8.0 export)",
+   "restricted": false
+  },
+  {
+   "name": "u2net.onnx",
+   "title": "U2Net",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "High-accuracy image segmentation model for background removing",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/bgremove/u2net.onnx",
+   "size": 175997641,
+   "sha256": "8d10d2f3bb75ae3b6d527c77944fc5e7dcd94b29809d47a739a7a728a912b491",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 0.19
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "U^2-Net (Xuebin Qin et al.)",
+   "upstream_url": "https://github.com/xuebinqin/U-2-Net",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/xuebinqin/U-2-Net/blob/master/LICENSE",
+   "license_notes": "no separate weights licence stated; file size equals rembg v0.0.0 release asset u2net.onnx (rembg is MIT)",
+   "restricted": false
+  },
+  {
+   "name": "u2netp.onnx",
+   "title": "U2NetP",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Lightweight version of U2Net for faster background removing with smaller memory usage.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/bgremove/u2netp.onnx",
+   "size": 4574861,
+   "sha256": "309c8469258dda742793dce0ebea8e6dd393174f89934733ecc8b14c76f4ddd8",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.074
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "U^2-Net (Xuebin Qin et al.) - U2NetP small",
+   "upstream_url": "https://github.com/xuebinqin/U-2-Net",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/xuebinqin/U-2-Net/blob/master/LICENSE",
+   "license_notes": "no separate weights licence stated; file size equals rembg v0.0.0 release asset u2netp.onnx (rembg MIT)",
+   "restricted": false
+  },
+  {
+   "name": "birefnet_swin_tiny.ort",
+   "title": "BiRefNet",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Lightweight BiRefNet model based on Swin Transformer for accurate background removing.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/birefnet_swin_tiny.ort",
+   "size": 247356800,
+   "sha256": "46512ae91e17171c09476e3154fa2f2f8b0a557b3c8e9c91c10d11f35bc3f70c",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 4.117
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "BiRefNet (ZhengPeng7) - general, swin_v1_tiny backbone",
+   "upstream_url": "https://github.com/ZhengPeng7/BiRefNet",
+   "license": "MIT",
+   "license_source": "https://github.com/ZhengPeng7/BiRefNet/blob/main/LICENSE",
+   "license_notes": "matches release asset BiRefNet-general-bb_swin_v1_tiny-epoch_232 (companion birefnet_swin_tiny.onnx is 224005046 B vs release 224005088 B, not byte-identical); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "modnet_portrait_matting.onnx",
+   "title": "MODNet",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Portrait matting model for fast person cutouts with softer hair and edge handling.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/modnet_portrait_matting.onnx",
+   "size": 25888640,
+   "sha256": "07c308cf0fc7e6e8b2065a12ed7fc07e1de8febb7dc7839d7b7f15dd66584df9",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.061
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "MODNet (ZHKKKe)",
+   "upstream_url": "https://github.com/ZHKKKe/MODNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ZHKKKe/MODNet#license",
+   "license_notes": "README: 'The code, models, and demos in this repository (excluding GIF files under doc/gif) are released under Apache License 2.0'; ONNX producer PyTorch 1.7, exporter not identified (repo ships an onnx export script)",
+   "restricted": false
+  },
+  {
+   "name": "isnet-general-use.onnx",
+   "title": "ISNet",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Background removal model that produces accurate masks with smooth edges, suitable for general objects and moderate detail preservation.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/isnet-general-use.onnx",
+   "size": 178647984,
+   "sha256": "4fcc3f7f7af1d16565dd7ec767e6e2500565ed6ba76c5c30b9934116ca32153e",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 0.573
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DIS / IS-Net (Xuebin Qin et al.)",
+   "upstream_url": "https://github.com/xuebinqin/DIS",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/xuebinqin/DIS/blob/main/LICENSE.md",
+   "license_notes": "isnet-general-use.pth released by DIS authors; README: code and metric Apache 2.0, DIS5K dataset under separate Terms of Use; filename follows rembg (MIT) naming",
+   "restricted": false
+  },
+  {
+   "name": "yolo11x-seg.onnx",
+   "title": "YOLO v11",
+   "type": "REMOVE_BG",
+   "task": "remove_background",
+   "description": "Object segmentation based background remover using YOLO v11 Segmentation",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/yolo11x-seg.onnx",
+   "size": 249033763,
+   "sha256": "ef451889f4744d3d5ab47b82c16b7ffe3f15d2233c7aa77dfd4773fd8221b508",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 1.26
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Ultralytics YOLO11",
+   "upstream_url": "https://github.com/ultralytics/ultralytics",
+   "license": "AGPL-3.0",
+   "license_source": "https://github.com/ultralytics/ultralytics/blob/main/LICENSE",
+   "license_notes": "weights also AGPL-3.0 (HF Ultralytics/YOLO11 card license agpl-3.0); closed/commercial use needs Ultralytics Enterprise License",
+   "restricted": true,
+   "restricted_reason": "strong copyleft licence (GPL/AGPL); check the obligations before use"
+  },
+  {
+   "name": "1x_ColorizerV2_22000G-fp16.onnx",
+   "title": "Colorizer",
+   "type": "COLORIZE",
+   "task": "colorize",
+   "description": "General colorizer for grayscale/bw images, for better results use DDColor",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_ColorizerV2_22000G-fp16.onnx",
+   "size": 33456842,
+   "sha256": "c42520288f29a61d85107439ffea4a755129cb2f3eddfabb396598dc5d867f40",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.125
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "BS_Colorizer/Vapourizer by blackscout (OpenModelDB 1x-BS-Colorizer)",
+   "upstream_url": "https://openmodeldb.info/models/1x-BS-Colorizer",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "GPL-3.0-only",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-BS-Colorizer.json",
+   "license_notes": "OpenModelDB original-model-file-names.json maps 1x-BS-Colorizer -> 1x_ColorizerV2_22000G.pth",
+   "restricted": true,
+   "restricted_reason": "strong copyleft licence (GPL/AGPL); check the obligations before use"
+  },
+  {
+   "name": "1x-SpongeColor-Lite-fp16.onnx",
+   "title": "SpongeColor Lite",
+   "type": "COLORIZE",
+   "task": "colorize",
+   "description": "Simple and fast colorization, cartoons, not ideal",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-SpongeColor-Lite-fp16.onnx",
+   "size": 10112988,
+   "sha256": "c0b9df99d0cb0857eb96e0f8fb718c9010c2eeab9c30c17b0deacee79e2d2851",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 4.731
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SpongeColor Lite by joey (OpenModelDB 1x-SpongeColor-Lite)",
+   "upstream_url": "https://openmodeldb.info/models/1x-SpongeColor-Lite",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-SpongeColor-Lite.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "ddcolor_paper_tiny.ort",
+   "title": "DDColor Tiny",
+   "type": "COLORIZE",
+   "task": "colorize",
+   "description": "Lightweight and fast colorization model that adds natural colors to grayscale images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/ddcolor_paper_tiny.ort",
+   "size": 220853232,
+   "sha256": "8186a8c21a5075c0c37860d7313043b6edb8a672067f73f3d8f5d362509f1bd3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.159
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DDColor (piddnad)",
+   "upstream_url": "https://github.com/piddnad/DDColor",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/piddnad/ddcolor_paper_tiny",
+   "license_notes": "DDColor-T weights; HF card license apache-2.0; GitHub repo LICENSE Apache-2.0",
+   "restricted": false
+  },
+  {
+   "name": "ddcolor_modelscope.onnx",
+   "title": "DDColor",
+   "type": "COLORIZE",
+   "task": "colorize",
+   "description": "Full DDColor model delivers high-quality colorization for general images with minimal artifacts. Best choice of all colorization models.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/ddcolor_modelscope.onnx",
+   "size": 911801965,
+   "sha256": "cda896f3e61c0e489f2e11a657c6dfb711d0958364286335e3cd48fadbd621be",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.362
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DDColor (piddnad)",
+   "upstream_url": "https://github.com/piddnad/DDColor",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/piddnad/ddcolor_modelscope",
+   "license_notes": "DDColor-L 'modelscope' default weights (also damo/cv_ddcolor_image-colorization on ModelScope); HF card apache-2.0",
+   "restricted": false
+  },
+  {
+   "name": "ddcolor_artistic.onnx",
+   "title": "DDColor Artistic",
+   "type": "COLORIZE",
+   "task": "colorize",
+   "description": "DDColor Trained and private artistic datasets; produces diverse and artistic colorization results with fewer unrealistic color artifacts.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/ddcolor_artistic.onnx",
+   "size": 911801965,
+   "sha256": "e7f6d8e48d609be3f2615b70637fbc7019cbad545038279a7ba26f229503d61c",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.334
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DDColor (piddnad)",
+   "upstream_url": "https://github.com/piddnad/DDColor",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/piddnad/ddcolor_artistic",
+   "license_notes": "DDColor-L trained on ImageNet + private artistic data; HF card apache-2.0",
+   "restricted": false
+  },
+  {
+   "name": "fbcnn_color_fp16.onnx",
+   "title": "FBCNN Color",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Best at general compression, color images",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/fbcnn/fbcnn_color_fp16.onnx",
+   "size": 143910675,
+   "sha256": "1a678ff4f721b557fd8a7e560b99cb94ba92f201545c7181c703e7808b93e922",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 2.003
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "FBCNN (Jiaxi Jiang et al.)",
+   "upstream_url": "https://github.com/jiaxi-jiang/FBCNN",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/jiaxi-jiang/FBCNN/blob/main/LICENSE",
+   "license_notes": "weights fbcnn_color.pth (GitHub release v1.0); README: project released under Apache 2.0; fp16 ONNX byte-identical to colpona/dejpeg-models (DeJPEG)",
+   "restricted": false
+  },
+  {
+   "name": "fbcnn_grey_fp16.onnx",
+   "title": "FBCNN Grayscale",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Best at general compression, grayscale images",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/fbcnn/fbcnn_grey_fp16.onnx",
+   "size": 143903294,
+   "sha256": "e220b9637a9f2c34a36c98b275b2c9d2b9c2c029e365be82111072376afbec54",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 1.992
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "FBCNN (Jiaxi Jiang et al.)",
+   "upstream_url": "https://github.com/jiaxi-jiang/FBCNN",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/jiaxi-jiang/FBCNN/blob/main/LICENSE",
+   "license_notes": "weights fbcnn_gray.pth (release v1.0); fp16 ONNX byte-identical to colpona/dejpeg-models",
+   "restricted": false
+  },
+  {
+   "name": "fbcnn_gray_double_fp16.onnx",
+   "title": "FBCNN Grayscale Strong",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "General compression, grayscale images, stronger",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/fbcnn/fbcnn_gray_double_fp16.onnx",
+   "size": 143903294,
+   "sha256": "17feadd8970772f5ff85596cb9fb152ae3c2b82bca4deb52a7c8b3ecb2f7ac14",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 1.934
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "FBCNN (Jiaxi Jiang et al.)",
+   "upstream_url": "https://github.com/jiaxi-jiang/FBCNN",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/jiaxi-jiang/FBCNN/blob/main/LICENSE",
+   "license_notes": "weights fbcnn_gray_double.pth (release v1.0); fp16 ONNX byte-identical to colpona/dejpeg-models",
+   "restricted": false
+  },
+  {
+   "name": "1x_JPEGDestroyerV2_96000G-fp16.onnx",
+   "title": "JPEG Destroyer V2",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "JPEG artifact removal V2",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEGDestroyerV2_96000G-fp16.onnx",
+   "size": 33456842,
+   "sha256": "96734e021e1b616ab3e74376244895bbeed118e454e051a548f5b98a113305c9",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.9
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPEGDestroyer by blackscout (OpenModelDB 1x-JPEGDestroyer)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPEGDestroyer",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "GPL-3.0-only",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPEGDestroyer.json",
+   "license_notes": "OpenModelDB original-model-file-names.json maps 1x-JPEGDestroyer -> 1x_JPEGDestroyerV2_96000G.pth",
+   "restricted": true,
+   "restricted_reason": "strong copyleft licence (GPL/AGPL); check the obligations before use"
+  },
+  {
+   "name": "1x_JPEG_00-20.ort",
+   "title": "JPEG 0-20",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Optimizes images with very high compression artifacts (0-20% quality) for improved clarity.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEG_00-20.ort",
+   "size": 35277480,
+   "sha256": "9230d501dc34fd6ef3c6dcc7640df95c20627482ff93cb236a93060bd0c9826b",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.994
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (00-20%) by blueamulet (OpenModelDB 1x-JPG-00-20)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-00-20",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-00-20.json",
+   "license_notes": "Original file 1x_JPEG_00-20.pth (per OpenModelDB file-name map); non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_JPEG_20-40.ort",
+   "title": "JPEG 20-40",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Enhances images with high compression artifacts (20-40% quality), restoring details and reducing noise.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEG_20-40.ort",
+   "size": 35277488,
+   "sha256": "bbdbd9cdb86d56a5a88b0ccf8ad833d6a1ebfc4202cc25c6d139bb09a6a2535d",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.754
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (20-40%) by blueamulet (OpenModelDB 1x-JPG-20-40)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-20-40",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-20-40.json",
+   "license_notes": "Original file 1x_JPEG_20-40.pth; non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_JPEG_40-60.ort",
+   "title": "JPEG 40-60",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Improves images with moderate compression (40-60% quality), balancing sharpness and smoothness.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEG_40-60.ort",
+   "size": 35277480,
+   "sha256": "dc248a7166cbcdcf8577d6cbd80a6d8aab3a3a7c9e2ebda29341353b4050664b",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.959
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (40-60%) by blueamulet (OpenModelDB 1x-JPG-40-60)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-40-60",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-40-60.json",
+   "license_notes": "Original file 1x_JPEG_40-60.pth; non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_JPEG_60-80.ort",
+   "title": "JPEG 60-80",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Refines images with light compression (60-80% quality) to enhance subtle details and textures.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEG_60-80.ort",
+   "size": 35277488,
+   "sha256": "21ece5396cf88f39f35a264000baf2ff2ec084ca7fd41b125759d845b1bfb9c3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.307
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (60-80%) by blueamulet (OpenModelDB 1x-JPG-60-80)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-60-80",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-60-80.json",
+   "license_notes": "Original file 1x_JPEG_60-80.pth; non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_JPEG_80-100.ort",
+   "title": "JPEG 80-100",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Slightly enhances near-lossless images (80-100% quality) while preserving natural look and details.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_JPEG_80-100.ort",
+   "size": 35277488,
+   "sha256": "1041060d1d151150e14e8d51c65cd5f6608606bb4bf7ac6b5271ae074e5c3913",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.018
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (80-100%) by blueamulet (OpenModelDB 1x-JPG-80-100)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-80-100",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-80-100.json",
+   "license_notes": "Original file 1x_JPEG_80-100.pth; non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_artifacts_jpg_00_20_alsa-fp16.ort",
+   "title": "JPEG Artifacts 0-20",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Removes heavy JPEG compression artifacts in very low quality images (0-20%).",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_jpg_00_20_alsa-fp16.ort",
+   "size": 34729312,
+   "sha256": "8a416ffa7f1d78de7b3a8d211a123964b277fcb7c253f78b8e79970c7ed114bb",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.041
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (00-20%) by alsa (OpenModelDB 1x-JPG-00-20-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-00-20-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-00-20-alsa.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_artifacts_jpg_20_40_alsa-fp16.ort",
+   "title": "JPEG Artifacts 20-40",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Reduces strong JPEG artifacts in highly compressed images (20-40%).",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_jpg_20_40_alsa-fp16.ort",
+   "size": 34729312,
+   "sha256": "2abe485266cd1895e17b4166c5609f30a1d4d7283b9d8b2503c94f008a39244f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.733
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (20-40%) by alsa (OpenModelDB 1x-JPG-20-40-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-20-40-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-20-40-alsa.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_artifacts_jpg_40_60_alsa-fp16.ort",
+   "title": "JPEG Artifacts 40-60",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Cleans up moderate JPEG artifacts while preserving image details (40-60%).",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_jpg_40_60_alsa-fp16.ort",
+   "size": 34729312,
+   "sha256": "bd0116861368b83a459af687308a8acd7dc4c89aa8ba5c3dab76adb67ef9002f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.973
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (40-60%) by alsa (OpenModelDB 1x-JPG-40-60-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-40-60-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-40-60-alsa.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_artifacts_jpg_60_80_alsa-fp16.ort",
+   "title": "JPEG Artifacts 60-80",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Refines light JPEG artifacts in fairly high quality images (60-80%).",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_jpg_60_80_alsa-fp16.ort",
+   "size": 34729312,
+   "sha256": "5282f04a4520bcff4882836d134e99dbfc207f7fcaf4bf9166a99d623f579f4e",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.572
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (60-80%) by alsa (OpenModelDB 1x-JPG-60-80-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-60-80-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-60-80-alsa.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_artifacts_jpg_80_100_alsa-fp16.ort",
+   "title": "JPEG Artifacts 80-100",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Subtly reduces minor JPEG artifacts in near-lossless images (80-100%).",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_jpg_80_100_alsa-fp16.ort",
+   "size": 34729312,
+   "sha256": "8d11451909d9318f54e1b292c0bf901856633bce835ee838bbcf4bfaf5cd174a",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.404
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "JPG (80-100%) by alsa (OpenModelDB 1x-JPG-80-100-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-JPG-80-100-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-JPG-80-100-alsa.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_SBDV-DeJPEG-Lite_130000_G.ort",
+   "title": "SBDV DeJPEG",
+   "type": "DE_JPEG",
+   "task": "dejpeg",
+   "description": "Removes JPEG compression artifacts and restores image quality for compressed photos.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_SBDV-DeJPEG-Lite_130000_G.ort",
+   "size": 11070576,
+   "sha256": "3039271c69e3f5b3ca9af3673bea98749dffa9331930f88d057047b57d6001dc",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 5.158
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SBDV-DeJPEG Lite by joey (OpenModelDB 1x-SBDV-DeJPEG-Lite)",
+   "upstream_url": "https://openmodeldb.info/models/1x-SBDV-DeJPEG-Lite",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-SBDV-DeJPEG-Lite.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "scunet_color-GAN.onnx",
+   "title": "SCUNet Color GAN",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, color images",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_color-GAN.onnx",
+   "size": 91264256,
+   "sha256": "79ae6073c91c2d25d1f199137a67c8d0f0807df27219cdd7d890f3cc6d5b43e7",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 2.715
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "= scunet_color_real_gan.pth (fp32 ONNX, exporter not identified); weights hosted on cszn/KAIR v1.0 release (KAIR MIT)",
+   "restricted": false
+  },
+  {
+   "name": "scunet_color-PSNR.onnx",
+   "title": "SCUNet Color PSNR",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, color images, better details",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_color-PSNR.onnx",
+   "size": 91264256,
+   "sha256": "b0f8c12f1575bb49e39a85924152f1c6d4b527a4aae0432c9e5c7397123465e3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 2.633
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "= scunet_color_real_psnr.pth (fp32 ONNX, exporter not identified); weights hosted on cszn/KAIR v1.0 release (KAIR MIT)",
+   "restricted": false
+  },
+  {
+   "name": "scunet_gray_15_fp16.onnx",
+   "title": "SCUNet Grayscale 15",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, grayscale images",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_gray_15_fp16.onnx",
+   "size": 37741895,
+   "sha256": "8e8740cea4306c9a61215194f315e5c0dc9e06c726a9ddea77d978d804da7663",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 3.048
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "scunet_gray_25_fp16.onnx",
+   "title": "SCUNet Grayscale 25",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, grayscale images, stronger",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_gray_25_fp16.onnx",
+   "size": 37741895,
+   "sha256": "dec631fbdca7705bbff1fc779cf85a657dcb67f55359c368464dd6e734e1f2b7",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 3.033
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "scunet_gray_50_fp16.onnx",
+   "title": "SCUNet Grayscale 50",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, grayscale images, strongest",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_gray_50_fp16.onnx",
+   "size": 37741895,
+   "sha256": "48b7d07229a03d98b892d2b33aa4c572ea955301772e7fcb5fd10723552a1874",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 3.058
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "scunet_color_15_fp16.onnx",
+   "title": "SCUNet Color 15",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, colored images",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_color_15_fp16.onnx",
+   "size": 42555584,
+   "sha256": "25a3a07de278867df9d29e9d08fe555523bb0f9f78f8956c4af943a4eeb8c934",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 7.095
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "scunet_color_25_fp16.onnx",
+   "title": "SCUNet Color 25",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, colored images, stronger",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_color_25_fp16.onnx",
+   "size": 42555584,
+   "sha256": "34d25ec2187d24f9f25b9dc9d918e94e87217c129471adda8c9fdf2e5a1cb62a",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 6.994
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "scunet_color_50_fp16.onnx",
+   "title": "SCUNet Color 50",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General noise, colored images, strongest",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/scunet/scunet_color_50_fp16.onnx",
+   "size": 42555584,
+   "sha256": "1c6bdc6d9e0c1dea314cf22d41c261d4c744bf0ae1ae6c59b9505c4b4d50febb",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 7.229
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "SCUNet (cszn)",
+   "upstream_url": "https://github.com/cszn/SCUNet",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/cszn/SCUNet/blob/main/LICENSE",
+   "license_notes": "fp16 ONNX byte-identical (sha256) to colpona/dejpeg-models (DeJPEG app, HF card apache-2.0); weights from cszn/KAIR v1.0 release (KAIR repo MIT); no separate weights licence stated",
+   "restricted": false
+  },
+  {
+   "name": "1x-RGB-max-Denoise-fp16.onnx",
+   "title": "RGB Max Denoise",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "General compression, general noise",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1x-RGB-max-Denoise-fp16.onnx",
+   "size": 310212,
+   "sha256": "1bb02e6444f306fd8ad17758ed474f6e21b909cceda1cba9606b6e923f65a102",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.172
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x RGB max Denoise by loganavter (OpenModelDB 1x-RGB-max-Denoise)",
+   "upstream_url": "https://openmodeldb.info/models/1x-RGB-max-Denoise",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-RGB-max-Denoise.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-WB-Denoise-fp16.onnx",
+   "title": "WB Denoise",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Colorless cartoon noise",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1x-WB-Denoise-fp16.onnx",
+   "size": 310212,
+   "sha256": "50978ca2777b5720d1d57c8f284d5274c96746c8721c3c2fdccb1dfcea823af1",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.177
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x BW Denoise by loganavter (OpenModelDB 1x-BW-Denoise)",
+   "upstream_url": "https://openmodeldb.info/models/1x-BW-Denoise",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-BW-Denoise.json",
+   "license_notes": "PROBABLE match, not filename-verified: no upstream model named 'WB Denoise' found; matches loganavter's '1x BW Denoise' (monochrome cartoon noise, compact 32nf/16nc; ITB ONNX is byte-identical in size to sibling 1x-RGB-max-Denoise, also loganavter). Both loganavter denoise models are CC-BY-NC-SA-4.0",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_NoiseToner-Poisson-Detailed_108000_G-fp16.onnx",
+   "title": "Noise Toner Poisson Detailed",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Applies Poisson-based noise toning with emphasis on preserving fine details and textures.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NoiseToner-Poisson-Detailed_108000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "ed6bb382f71385032df8fcf16ea0a1d0469de801338ed32abcc5a01557944460",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.463
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NoiseToner Poisson Detailed by mutin-choler (OpenModelDB 1x-NoiseToner-Poisson-Detailed)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NoiseToner-Poisson-Detailed",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NoiseToner-Poisson-Detailed.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_NoiseToner-Poisson-Soft_101000_G-fp16.onnx",
+   "title": "Noise Toner Poisson Soft",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Applies soft Poisson noise toning for smoother and less aggressive visual results.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NoiseToner-Poisson-Soft_101000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "e4d18cc399e4fbf2b5239b00b640c8ff0e80811bf88ded7f151eec6760eb0471",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.606
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NoiseToner Poisson Soft by mutin-choler (OpenModelDB 1x-NoiseToner-Poisson-Soft)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NoiseToner-Poisson-Soft",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "unknown (not stated)",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NoiseToner-Poisson-Soft.json",
+   "license_notes": "OpenModelDB license field null.",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_NoiseToner-Uniform-Detailed_100000_G-fp16.onnx",
+   "title": "Noise Toner Uniform Detailed",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Uniform noise toning focused on detail preservation and image clarity.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NoiseToner-Uniform-Detailed_100000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "e5602a5e1aabb8ec6ee98969d834224ac1b4b366f89a4ec26b3fae93077a4dbf",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.802
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NoiseToner Uniform Detailed by mutin-choler (OpenModelDB 1x-NoiseToner-Uniform-Detailed)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NoiseToner-Uniform-Detailed",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "unknown (not stated)",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NoiseToner-Uniform-Detailed.json",
+   "license_notes": "OpenModelDB license field null.",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_NoiseToner-Uniform-Soft_100000_G-fp16.onnx",
+   "title": "Noise Toner Uniform Soft",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Gentle uniform noise toning for subtle texture and smooth appearance.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NoiseToner-Uniform-Soft_100000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "54622791711ab457565fa0a750f668f209171a0194d0f94c206243d9a649f797",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.001
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NoiseToner Uniform Soft by mutin-choler (OpenModelDB 1x-NoiseToner-Uniform-Soft)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NoiseToner-Uniform-Soft",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "unknown (not stated)",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NoiseToner-Uniform-Soft.json",
+   "license_notes": "OpenModelDB license field null.",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_ISO_denoise_v1.ort",
+   "title": "ISO Denoise v1",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Reduces ISO noise in photos taken in low-light conditions, preserving details.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_ISO_denoise_v1.ort",
+   "size": 35277480,
+   "sha256": "a16b9253a10a7e95aa10e451b2ad21b3d60124c1316ddaca746071f5843b312b",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.463
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "ISO denoise v1 by alpha (OpenModelDB 1x-ISO-denoise-v1)",
+   "upstream_url": "https://openmodeldb.info/models/1x-ISO-denoise-v1",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-ISO-denoise-v1.json",
+   "restricted": false
+  },
+  {
+   "name": "deblurring_nafnet_2025may.onnx",
+   "title": "NAFNET deblurring",
+   "type": "DENOISE",
+   "task": "denoise",
+   "description": "Removes blur/noise and shakes from photos. General purpose but best on photos.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/deblurring_nafnet_2025may.onnx",
+   "size": 91736251,
+   "sha256": "07263f416febecce10193dd648e950b22e397cf521eedab1a114ef77b2bc9587",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 1.371
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NAFNet (megvii-research); ONNX by OpenCV Zoo",
+   "upstream_url": "https://github.com/megvii-research/NAFNet",
+   "license": "MIT",
+   "license_source": "https://github.com/opencv/opencv_zoo/blob/main/models/deblurring_nafnet/LICENSE",
+   "license_notes": "file name = OpenCV Zoo models/deblurring_nafnet export; that dir's LICENSE is NAFNet's MIT; NAFNet LICENSE also appends BasicSR Apache-2.0 notice (GitHub shows NOASSERTION)",
+   "restricted": false
+  },
+  {
+   "name": "1x-BroadcastToStudio_Compact-fp16.onnx",
+   "title": "Broadcast To Studio",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Cartoons, broadcast compression",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1x-BroadcastToStudio_Compact-fp16.onnx",
+   "size": 1200682,
+   "sha256": "52836c782140058bcc695e90102c3ef54961ebab2c12e66298eaba25d42570bc",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.625
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "BroadcastToStudio Compact by kim2091 (OpenModelDB 1x-BroadcastToStudio-Compact)",
+   "upstream_url": "https://openmodeldb.info/models/1x-BroadcastToStudio-Compact",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-BroadcastToStudio-Compact.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-Anti-Aliasing-fp16.onnx",
+   "title": "Anti-Aliasing",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Eliminating the stair-step effect, smoothing",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-Anti-Aliasing-fp16.onnx",
+   "size": 33456842,
+   "sha256": "acd4f12a59ec606772df496f422e27099d629316671b41793b7362e6e13fe8dd",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.806
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Anti Aliasing by twittman (OpenModelDB 1x-Anti-Aliasing)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Anti-Aliasing",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Anti-Aliasing.json",
+   "license_notes": "Original file 1x_Alias_200000_G.pth; non-commercial licence",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_DeEdge-fp16.onnx",
+   "title": "DeEdge",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Edge removal",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_DeEdge-fp16.onnx",
+   "size": 33456842,
+   "sha256": "ead4873ec5f6870343e7dbe121f3054335941b12cf6fa4d0b54010c2cc3c0675",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.099
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeEdge by mutin-choler (OpenModelDB 1x-DeEdge)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeEdge",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeEdge.json",
+   "restricted": false
+  },
+  {
+   "name": "1x-cinepak-fp16.onnx",
+   "title": "Cinepak",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Non-standard compression (cinepak, msvideo1, roq)",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-cinepak-fp16.onnx",
+   "size": 33456842,
+   "sha256": "55cd3df1d3700dd31f09309beedce65f4d178d4b6e7777ecce05818bb60a2c67",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.515
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "cinepak by twittman (OpenModelDB 1x-cinepak)",
+   "upstream_url": "https://openmodeldb.info/models/1x-cinepak",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-cinepak.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_Bandage-Smooth-fp16.onnx",
+   "title": "Bandage Smooth",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Bandage removal with smooth results",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_Bandage-Smooth-fp16.onnx",
+   "size": 33456842,
+   "sha256": "40f98955aba23e2360b7f9f2e800e896be0d6a8071a3ff0a4bbb6cf24cd8656d",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.176
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Bandage Smooth by mutin-choler (OpenModelDB 1x-Bandage-Smooth)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Bandage-Smooth",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Bandage-Smooth.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_Bendel_Halftone-fp32.onnx",
+   "title": "Bendel Halftone",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Halftone pattern processing",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_Bendel_Halftone-fp32.onnx",
+   "size": 8660947,
+   "sha256": "6982ab0c770ac4c210dd6df435c96aca609dfbec8745d8ff6c57db6bae88eead",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 4.019
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Bendel_Halftone by bendel (OpenModelDB 1x-Bendel-Halftone)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Bendel-Halftone",
+   "architecture": "SwinIR",
+   "license": "CC-BY-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Bendel-Halftone.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_NMKD-h264Texturize-fp16.onnx",
+   "title": "NMKD H264 Texturize",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "H.264 texture enhancement",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NMKD-h264Texturize-fp16.onnx",
+   "size": 33456842,
+   "sha256": "4291323f8f4eee0623d9c01416cb8f918b61285b6e4f4112f0dfc341c0f39397",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.886
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NMKD h264Texturize by nmkd (OpenModelDB 1x-NMKD-h264Texturize)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NMKD-h264Texturize",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NMKD-h264Texturize.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_artifacts_dithering_alsa-fp16.onnx",
+   "title": "Artifacts Dithering ALSA",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Reduces dithering artifacts and color banding, improving smooth gradients and flat color areas.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_artifacts_dithering_alsa-fp16.onnx",
+   "size": 33421271,
+   "sha256": "668bf366457c774e10cb46a756bf9744165c53671180969d4bab47ce935cd520",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.392
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Artifacts Dithering alsa by alsa (OpenModelDB 1x-artifacts-dithering-alsa)",
+   "upstream_url": "https://openmodeldb.info/models/1x-artifacts-dithering-alsa",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-artifacts-dithering-alsa.json",
+   "license_notes": "Original file 1x_DEDITHER_32_512_126900_G.pth (per OpenModelDB file-name map)",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_DeJumbo.ort",
+   "title": "DeJumbo",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Corrects overexposed or “jumbo” highlights and restores better tonal balance.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_DeJumbo.ort",
+   "size": 35277488,
+   "sha256": "17202a453ad7f7c89c6969d2dd0cd844b01f6685584876e54092e59f589ad180",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.717
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_DeJumbo (author unknown)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_DeJumbo.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "watermark_mit_b5_sigmoid.onnx",
+   "title": "Watermark Remover",
+   "type": "ARTIFACTS",
+   "task": "remove_watermark",
+   "description": "Detects common image watermarks and inpaints them with LaMa. Downloads detection and inpainting models automatically",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/watermark_mit_b5_sigmoid.onnx",
+   "size": 340590653,
+   "sha256": "7001f697ffe5d8d1b434a8e14c975a0401607cfab7aadad906a3d76f71c3d6ab",
+   "sha256_source": "hf-lfs (Kotlin checksum is empty)",
+   "speed": {
+    "tier": "Normal",
+    "value": 8.324
+   },
+   "in_itb_catalog": true,
+   "requires_models": [
+    "LaMa_512.onnx"
+   ],
+   "upstream_project": "Diffusion-Dynamics/watermark-segmentation (clear.photo) checkpoint best_watermark_model_mit_b5_best.pth (smp Unet + MiT-B5 encoder)",
+   "upstream_url": "https://github.com/Diffusion-Dynamics/watermark-segmentation",
+   "license": "MIT AND LicenseRef-NVIDIA-Source-Code-License-SegFormer (non-commercial)",
+   "license_source": "https://github.com/Diffusion-Dynamics/watermark-segmentation/blob/main/LICENSE ; https://github.com/NVlabs/SegFormer/blob/master/LICENSE",
+   "license_notes": "Identified by matching weights: 792 of 1052 encoder tensors and the segmentation head match the DD checkpoint byte-for-byte. The 50 decoder tensors and the remaining encoder tensors don't match exactly, probably because of BatchNorm folding or transposed MatMul weights in the export (not checked). The checkpoint is linked from the MIT repo and has no licence of its own. However, the MiT-B5 encoder was fine-tuned from NVIDIA SegFormer ImageNet weights (smp encoder_weights='imagenet', smp-hub/mit_b5.imagenet). NVIDIA's licence limits the Work 'and any derivative works' to non-commercial research/evaluation, so commercial use is doubtful. LaMa inpainting is a separate model.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-Fatality-DeBlur.onnx",
+   "title": "Fatality DeBlur",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Sharpens and removes blur from images while maintaining natural details, ideal for fixing out-of-focus photos.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/1x-Fatality-DeBlur.onnx",
+   "size": 33456842,
+   "sha256": "ea7b0d0d873151265ed096a55f9911240a7ef0b66db419c6f6912f2cf0c94888",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 11.609
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Fatality DeBlur by twittman (OpenModelDB 1x-Fatality-DeBlur)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Fatality-DeBlur",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Fatality-DeBlur.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-UnResize-V3.onnx",
+   "title": "UnResize V3",
+   "type": "ARTIFACTS",
+   "task": "remove_artifacts",
+   "description": "Intelligently restores images that have been previously resized, recovering lost details and textures.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/upscalers/1x-UnResize-V3.onnx",
+   "size": 33456842,
+   "sha256": "f4d67d604a8cc3fb184a662f3e2fe427a80cef444e87870be8b8eedfda774fd2",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 12.356
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "UnResize V3 by twittman (OpenModelDB 1x-UnResize-V3)",
+   "upstream_url": "https://openmodeldb.info/models/1x-UnResize-V3",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-UnResize-V3.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1xOverExposureCorrection_compact-fp16.onnx",
+   "title": "Overexposure Correction",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Exposure correction",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1xOverExposureCorrection_compact-fp16.onnx",
+   "size": 2391605,
+   "sha256": "8fef8e73062d2eff56aacea17caa1162b094a8c8a8010f51084c7e2cf9403ded",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.492
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "OverExposureCorrection compact by helaman (Philip Hofmann / Phhofm) (OpenModelDB 1x-OverExposureCorrection-compact)",
+   "upstream_url": "https://openmodeldb.info/models/1x-OverExposureCorrection-compact",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "CC-BY-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-OverExposureCorrection-compact.json ; https://github.com/Phhofm/models/releases/tag/1xExposureCorrection_compact",
+   "license_notes": "Author release Phhofm/models 1xExposureCorrection_compact also states 'License: CC BY 4.0'",
+   "restricted": false
+  },
+  {
+   "name": "zero_dcepp.onnx",
+   "title": "Zero-DCE++",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Fast low-light enhancement using Zero-DCE++ curve estimation.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/zero_dcepp.onnx",
+   "size": 52261,
+   "sha256": "8a78b1d5dd66dae64a12b87e9908215d70fc9ae941dd55006b2beebdf9c510a3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.002
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Zero-DCE++ (Chongyi Li et al., TPAMI 2021)",
+   "upstream_url": "https://github.com/Li-Chongyi/Zero-DCE_extension",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/Li-Chongyi/Zero-DCE_extension/blob/main/README.md",
+   "license_notes": "NON-COMMERCIAL. All tensors of the official snapshots_Zero_DCE++/Epoch99.pth are byte-identical in the ONNX. The repo has no LICENSE file; its README says 'made available for academic research purpose only. Under Attribution-NonCommercial 4.0 International License.'",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_DeSharpen-fp16.onnx",
+   "title": "DeSharpen",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Removes oversharpening",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_DeSharpen-fp16.onnx",
+   "size": 33456842,
+   "sha256": "3c08f894e9b05bba52f3b10cf1fb712a2370a5f352b88c3cdb246a3c295c6531",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.593
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeSharpen by loinne (OpenModelDB 1x-DeSharpen)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeSharpen",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeSharpen.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_GainresV4-fp16.onnx",
+   "title": "GainRes",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Anti-aliasing, general artifacts, CGI",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_GainresV4-fp16.onnx",
+   "size": 33456842,
+   "sha256": "a23d8157c6f809492ebbdd42632b865ce3e6c360221e7195aecc519ce610f3ac",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.415
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "GainRESV4 by cf2lter (OpenModelDB 1x-GainRESV4)",
+   "upstream_url": "https://openmodeldb.info/models/1x-GainRESV4",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-GainRESV4.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-DeBink-v4.onnx",
+   "title": "DeBink v4",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Bink compression, better on geometry",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-DeBink-v4.onnx",
+   "size": 33456842,
+   "sha256": "be52e251dff5a0c4504c559bb84d1b611c2e809edc99f1c261db646cd89a12fb",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 12.947
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeBink v4 by kim2091 (OpenModelDB 1x-DeBink-v4)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeBink-v4",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeBink-v4.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-DeBink-v5.onnx",
+   "title": "DeBink v5",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Bink compression, stronger",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-DeBink-v5.onnx",
+   "size": 33456842,
+   "sha256": "f545222af1655b96f5b2aa3d46c40d8f256937cd2cbc2f77a6f89f29abf01e46",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 13.597
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeBink v5 by kim2091 (OpenModelDB 1x-DeBink-v5)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeBink-v5",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeBink-v5.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-DeBink-v6.onnx",
+   "title": "DeBink v6",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Bink compression, soft, retains detail",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-DeBink-v6.onnx",
+   "size": 33456842,
+   "sha256": "e1c216804795a061218aa29617db52b91fb741c92bb00691da7caf9a64ef4f18",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 13.789
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeBink v6 by kim2091 (OpenModelDB 1x-DeBink-v6)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeBink-v6",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeBink-v6.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x-NMKD-Jaywreck3-Lite-fp16.onnx",
+   "title": "NMKD Jaywreck3 Lite",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Lightweight image enhancement model",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-NMKD-Jaywreck3-Lite-fp16.onnx",
+   "size": 10114140,
+   "sha256": "4f72d8532e0632e87bcb0d03ff611bdac348e615873bb7c990c6291b0f08a495",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 4.896
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "NMKD Jaywreck3 (Lite) by nmkd (OpenModelDB 1x-NMKD-Jaywreck3-Lite)",
+   "upstream_url": "https://openmodeldb.info/models/1x-NMKD-Jaywreck3-Lite",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-NMKD-Jaywreck3-Lite.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_BCGone-DetailedV2_40-60_115000_G-fp16.onnx",
+   "title": "BCGone Detailed V2",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Compression artifact removal",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_BCGone-DetailedV2_40-60_115000_G-fp16.onnx",
+   "size": 33456842,
+   "sha256": "a5237ef67f250871626020af3fc817bb6647888886cfc5b82a8e49718e52d3f4",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.694
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "BCGone Detailed V2 40-60 by mutin-choler (OpenModelDB 1x-BCGone-DetailedV2-40-60)",
+   "upstream_url": "https://openmodeldb.info/models/1x-BCGone-DetailedV2-40-60",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-BCGone-DetailedV2-40-60.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_BCGone_Smooth_110000_G-fp16.onnx",
+   "title": "BCGone Smooth",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Compression artifact removal",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_BCGone_Smooth_110000_G-fp16.onnx",
+   "size": 33456842,
+   "sha256": "597ac90e1cc3105631b3a06c354cf055f1bccdfc440e4fdfe069918d228c3cdf",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.44
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "BCGone Smooth by mutin-choler (OpenModelDB 1x-BCGone-Smooth)",
+   "upstream_url": "https://openmodeldb.info/models/1x-BCGone-Smooth",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-BCGone-Smooth.json",
+   "restricted": false
+  },
+  {
+   "name": "1x_DitherDeleterV3-Smooth-fp16.onnx",
+   "title": "Dither Deleter V3 Smooth",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Dither pattern removal V3",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_DitherDeleterV3-Smooth-fp16.onnx",
+   "size": 33456842,
+   "sha256": "55b0189c77caa8aa848d8b4c1dbf737a265d2a22f3ad0ea3805d9d6fc0881b3b",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 15.618
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DitherDeleterV3 Smooth by mutin-choler (OpenModelDB 1x-DitherDeleterV3-Smooth)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DitherDeleterV3-Smooth",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DitherDeleterV3-Smooth.json",
+   "restricted": false
+  },
+  {
+   "name": "VHS-Sharpen-1x_46000_G-fp16.onnx",
+   "title": "VHS Sharpen",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "VHS sharpening and enhancement",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/VHS-Sharpen-1x_46000_G-fp16.onnx",
+   "size": 33456842,
+   "sha256": "6d69cc4fb4fdcc34dd779a95032ddf5f32e99d5399c9dffcd557c0c3859ab866",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.192
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "VHS-Sharpen by rtx-2080-ti-hoarder (OpenModelDB 1x-VHS-Sharpen)",
+   "upstream_url": "https://openmodeldb.info/models/1x-VHS-Sharpen",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-VHS-Sharpen.json",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_NMKD-BrightenRedux_200k-fp16.onnx",
+   "title": "NMKD Brighten Redux",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Enhances image brightness and contrast with balanced highlights while preserving natural colors.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NMKD-BrightenRedux_200k-fp16.onnx",
+   "size": 33421271,
+   "sha256": "93f50904fa78948da69ff541b42fd9ce3e0fa096d87ca22f1f2f0ebb929f1c76",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.863
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_NMKD-BrightenRedux_200k (NMKD per filename; author not verified)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_NMKD-BrightenRedux_200k.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_nmkdbrighten_10000_G-fp16.onnx",
+   "title": "NMKD Brighten",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Brightens dark images while keeping details and avoiding overexposure.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_nmkdbrighten_10000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "e1c354370c04bc0433bdb54fc81898c1ade0c2db02cc02878a58aac6195c7f52",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.803
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_nmkdbrighten_10000_G (NMKD per filename; author not verified)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_nmkdbrighten_10000_G.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_NMKDDetoon_97500_G-fp16.onnx",
+   "title": "NMKD Detoon",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Removes excessive color toning and restores a more neutral and natural color balance.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_NMKDDetoon_97500_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "b75acf61a6067777dc591cb31c77a79fb73db3b72468796d69ceec73e58ac32d",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.817
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_NMKDDetoon_97500_G (NMKD per filename; author not verified)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_NMKDDetoon_97500_G.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_Repainter_20000_G-fp16.onnx",
+   "title": "Repainter",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Repairs damaged or uneven areas by repainting artifacts and improving image consistency.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_Repainter_20000_G-fp16.onnx",
+   "size": 33421271,
+   "sha256": "202fdce20d84ab0da25ea0d348d2f2c29546a28509e778ef8d699fb82fcf873d",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 14.775
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_Repainter_20000_G (author unknown)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_Repainter_20000_G.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x-Debandurh-FS-Ultra-lite-fp16.onnx",
+   "title": "Debandurh FS Ultra Lite",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Lightweight debanding model that removes color banding with minimal performance cost.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-Debandurh-FS-Ultra-lite-fp16.onnx",
+   "size": 1371141,
+   "sha256": "6aef5e015176c48984db80e95c31539d0d1e2c1fef9bac04b335253ce372b8a9",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.741
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Debandurh_FS Ultra-lite by twittman (OpenModelDB 1x-Debandurh-FS-Ultra-lite)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Debandurh-FS-Ultra-lite",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Debandurh-FS-Ultra-lite.json",
+   "license_notes": "Original file 1x_Debandurh_FS_lite_140000_G.pth; ESRGAN lite (8nf/3nb)",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "1x_DeBLR.ort",
+   "title": "DeBLR",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Slightly reduces image blur, improving sharpness without introducing artifacts.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_DeBLR.ort",
+   "size": 35277480,
+   "sha256": "261eb9690bc284d8cee5d81dd6156d92f9c3338c582019387a3852257c8a7b3a",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 16.079
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "DeBLR by blackscout (OpenModelDB 1x-DeBLR)",
+   "upstream_url": "https://openmodeldb.info/models/1x-DeBLR",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "unknown (not stated)",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-DeBLR.json",
+   "license_notes": "OpenModelDB license field null.",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x_ReDetail_v2_126000_G-fp16.ort",
+   "title": "ReDetail v2",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Enhances fine details and textures, improving perceived sharpness without heavy artifacts.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x_ReDetail_v2_126000_G-fp16.ort",
+   "size": 34724216,
+   "sha256": "4a1790847f8e3b51ace425875abe928215d32e00d0b80af0ce90dd3481d6f272",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.265
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x_ReDetail_v2_126000_G (author unknown)",
+   "upstream_url": "https://huggingface.co/utnah/esrgan/blob/main/1x_ReDetail_v2_126000_G.pth",
+   "architecture": "ESRGAN (RRDBNet, inferred from ~66.6 MB .pth size in mirror; unverified)",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/utnah/esrgan (third-party mirror, no model card/licence)",
+   "license_notes": "Not on OpenModelDB nor in archived upscale.wiki Model Database; only found in third-party HF mirror utnah/esrgan without licence. Original author/licence unverified",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "1x-ITF-SkinDiffDetail-Lite-v1.ort",
+   "title": "ITF Skin DiffDetail Lite",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Enhances skin textures and details while keeping a natural look, optimized for speed.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-ITF-SkinDiffDetail-Lite-v1.ort",
+   "size": 11070576,
+   "sha256": "813351fcee2447ff9037c86bf2807baee7a32be1db20352646c5a3eda8ced7b8",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 5.138
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "ITF SkinDiffDetail Lite v1 by intheflesh (OpenModelDB 1x-ITF-SkinDiffDetail-Lite-v1)",
+   "upstream_url": "https://openmodeldb.info/models/1x-ITF-SkinDiffDetail-Lite-v1",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "CC-BY-NC-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-ITF-SkinDiffDetail-Lite-v1.json",
+   "license_notes": "Original file x1_ITF_SkinDiffDetail_Lite_v1.pth",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "restormer_deraining.onnx",
+   "title": "Restormer Deraining",
+   "type": "ENHANCE",
+   "task": "enhance",
+   "description": "Restormer image restoration model for reducing rain streaks and wet-weather artifacts.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/restormer_deraining.onnx",
+   "size": 107114307,
+   "sha256": "1ef76f2f59cfe98fd626590f11e2c2cbe5b0870d9a4ce4f2b01ca3f02caefc87",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 12.615
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Restormer (Syed Waqas Zamir et al. / swz30)",
+   "upstream_url": "https://github.com/swz30/Restormer",
+   "license": "MIT",
+   "license_source": "https://github.com/swz30/Restormer/blob/main/LICENSE.md",
+   "license_notes": "weights deraining.pth (release v1.0); ONNX layer names match restormer_arch; exporter not identified",
+   "restricted": false
+  },
+  {
+   "name": "1x-AnimeUndeint-Compact-fp16.onnx",
+   "title": "Anime Undeint",
+   "type": "ANIME",
+   "task": "restore_anime",
+   "description": "Compression, jagged lines",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1x-AnimeUndeint-Compact-fp16.onnx",
+   "size": 2391605,
+   "sha256": "e2927fe5c09ad61975bfa52f7a879e3cf044a190d5b25f147a363540cd00ccd3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.497
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "AnimeUndeint Compact by zarxrax (OpenModelDB 1x-AnimeUndeint-Compact)",
+   "upstream_url": "https://openmodeldb.info/models/1x-AnimeUndeint-Compact",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "WTFPL",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-AnimeUndeint-Compact.json",
+   "restricted": false
+  },
+  {
+   "name": "1x-span-anime-pretrain-fp16.onnx",
+   "title": "SPAN Anime Pretrain",
+   "type": "ANIME",
+   "task": "restore_anime",
+   "description": "Fast, general compression, general noise, animation/comics/anime",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1x-span-anime-pretrain-fp16.onnx",
+   "size": 825768,
+   "sha256": "1311da8ad10af1d763b6b22797150429b377f36dda1fb26af5e3ec9bcc2701d2",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.399
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "1x-span_anime_pretrain by kim2091 (OpenModelDB 1x-span-anime-pretrain)",
+   "upstream_url": "https://openmodeldb.info/models/1x-span-anime-pretrain",
+   "architecture": "SPAN",
+   "license": "CC0-1.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-span-anime-pretrain.json",
+   "restricted": false
+  },
+  {
+   "name": "1xBook-Compact-fp16.onnx",
+   "title": "Book Scan",
+   "type": "SCANS",
+   "task": "restore_scans",
+   "description": "Book scanning",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/nanomodels/1xBook-Compact-fp16.onnx",
+   "size": 1200682,
+   "sha256": "7305ec3a592c5209fc2887d1f12d9b79163fca37020a719f55c83344effdb3c0",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.452
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "Book Compact by asterixcool (OpenModelDB 1x-Book-Compact)",
+   "upstream_url": "https://openmodeldb.info/models/1x-Book-Compact",
+   "architecture": "Compact (SRVGGNetCompact)",
+   "license": "CC-BY-SA-4.0",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-Book-Compact.json",
+   "restricted": false
+  },
+  {
+   "name": "1x-KDM003-scans-fp16.onnx",
+   "title": "KDM003 Scans",
+   "type": "SCANS",
+   "task": "restore_scans",
+   "description": "KDM003 scans processing",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/enhance/other-models/1x-KDM003-scans-fp16.onnx",
+   "size": 33456842,
+   "sha256": "85c740d5bdf8aa714b5b53eea1aa67c4c9e5483652702a31779a10f7a2ec9e45",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 14.948
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "KDM003 scans by boxdrop (OpenModelDB 1x-KDM003-scans)",
+   "upstream_url": "https://openmodeldb.info/models/1x-KDM003-scans",
+   "architecture": "ESRGAN (RRDBNet)",
+   "license": "unknown (not stated)",
+   "license_source": "https://github.com/OpenModelDB/open-model-database/blob/main/data/models/1x-KDM003-scans.json",
+   "license_notes": "OpenModelDB license field null.",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "uvdoc_grid.onnx",
+   "title": "UVDOC Grid",
+   "type": "SCANS",
+   "task": "restore_scans",
+   "description": "Document unwarping model that predicts a coordinate grid and remaps curved pages into a flatter scan.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/uvdoc_grid.onnx",
+   "size": 31802768,
+   "sha256": "16cb598b88b186d49c1ab0d81df2bdb2a66c26159b119871f129c1c3f9c85fd2",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.912
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "UVDoc (Tanguy Magne et al.)",
+   "upstream_url": "https://github.com/tanguymagne/UVDoc",
+   "license": "MIT",
+   "license_source": "https://github.com/tanguymagne/UVDoc/blob/main/LICENSE",
+   "license_notes": "weights model/best_model.pkl in repo; ONNX is a PyTorch export with original layer names (not the PaddleX UVDoc port, which is Apache-2.0)",
+   "restricted": false
+  },
+  {
+   "name": "arbitrary_style_transfer_onnx.zip",
+   "title": "Arbitrary Style Transfer",
+   "type": "STYLE_TRANSFER",
+   "task": "style_transfer",
+   "description": "Transfers the colors, textures, and artistic features of a reference image while preserving the composition and key details of the original.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/arbitrary_style_transfer_onnx.zip",
+   "size": 10826290,
+   "sha256": "f772d5af93a523949fc5e9ac44aadde4b42b11376608a046993644f65ef80e8f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 0.953
+   },
+   "in_itb_catalog": true,
+   "pack": {
+    "files": [
+     {
+      "name": "style_mobilenet.onnx",
+      "size": 9409794,
+      "sha256": "25522b33eb518dd7ab996d88dbecc898f5f063d50ad8676a959a3fa268a0a605"
+     },
+     {
+      "name": "transformer_separable.onnx",
+      "size": 2415224,
+      "sha256": "0d022efe00dd5615b32c6be864de0a21637981fd29d722a3abd8039258ca8262"
+     }
+    ]
+   },
+   "upstream_project": "Magenta arbitrary-image-stylization (Ghiasi et al.), distilled MobileNet-v2 style net + separable-conv transformer by Reiichiro Nakano; ONNX port by patlevin/pdn-styletransfer",
+   "upstream_url": "https://github.com/reiinakano/arbitrary-image-stylization-tfjs",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/reiinakano/arbitrary-image-stylization-tfjs/blob/master/LICENSE",
+   "license_notes": "style_mobilenet.onnx and transformer_separable.onnx have the same SHA-256 as the files in patlevin/pdn-styletransfer StyleTransferModels.zip (MIT repo; its README says they were ported from Magenta). The ~9.6MB/~2.4MB distilled pair is Nakano's (Apache-2.0); Magenta is also Apache-2.0. Trained on Painter-by-Numbers/WikiArt + DTD.",
+   "restricted": false
+  },
+  {
+   "name": "microast_style_transfer_onnx.zip",
+   "title": "MicroAST",
+   "type": "STYLE_TRANSFER",
+   "task": "style_transfer",
+   "description": "A lightweight arbitrary style transfer model that preserves the main structure while applying pronounced colors and textures from the reference image.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/microast_style_transfer_onnx.zip",
+   "size": 1764122,
+   "sha256": "1129bbd19ec754d01405368b8583e669469a77ba3d771b8b93896586beaf52d2",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.512
+   },
+   "in_itb_catalog": true,
+   "pack": {
+    "files": [
+     {
+      "name": "microast_style.onnx",
+      "size": 684869,
+      "sha256": "eb4003ad377c1afd18f377f96201b6337447ca473efb9455b519fa3193f6489d"
+     },
+     {
+      "name": "microast_transform.onnx",
+      "size": 1315160,
+      "sha256": "3da41e9a9fa68f14729e59323cb89bd0ff8acb2071213ed9e852563ea637d51c"
+     },
+     {
+      "name": "MICROAST_LICENSE.txt",
+      "size": 1070,
+      "sha256": "e8f0b2c00854430149f8af45b20ac30320634cda110eaa490b9ff577ba4c6c54"
+     }
+    ]
+   },
+   "upstream_project": "MicroAST (Zhizhong Wang et al., AAAI 2023)",
+   "upstream_url": "https://github.com/EndyWon/MicroAST",
+   "license": "MIT",
+   "license_source": "https://github.com/EndyWon/MicroAST/blob/main/LICENSE",
+   "license_notes": "Byte probes from the official models/*_iter_160000.pth.tar checkpoints, which ship inside the MIT repo, are found in the ONNX files (about 99%). The zip includes MICROAST_LICENSE.txt (MIT). Trained on MS-COCO + WikiArt.",
+   "restricted": false
+  },
+  {
+   "name": "aesfa_style_transfer_onnx.zip",
+   "title": "AesFA",
+   "type": "STYLE_TRANSFER",
+   "task": "style_transfer",
+   "description": "An aesthetic feature-aware style transfer model that captures local brushstrokes, textures, tones, and spatial features from the reference image.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/aesfa_style_transfer_onnx.zip",
+   "size": 11986814,
+   "sha256": "efb744958b7adc29de1577b785d27c75929798aaa54b36f5adc2f608a136df51",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 1.514
+   },
+   "in_itb_catalog": true,
+   "pack": {
+    "files": [
+     {
+      "name": "aesfa_style.onnx",
+      "size": 3375395,
+      "sha256": "df7dc84a6776c6533ce8578ab8f462075c52c0c3311ef97ef8206ba51d404b89"
+     },
+     {
+      "name": "aesfa_transform.onnx",
+      "size": 9773334,
+      "sha256": "b1a946b51703df0eddb48f4735dee943854abc53f2177279dc4d80937d00c99f"
+     },
+     {
+      "name": "AESFA_LICENSE.txt",
+      "size": 1069,
+      "sha256": "d26971c16786f3cf45465deebc9ec6cadd3bd4db6602af24accfb246374833ef"
+     }
+    ]
+   },
+   "upstream_project": "AesFA (Sooyoung Kim et al., AAAI 2024)",
+   "upstream_url": "https://github.com/Sooyyoungg/AesFA",
+   "license": "MIT",
+   "license_source": "https://github.com/Sooyyoungg/AesFA/blob/main/LICENSE",
+   "license_notes": "All netE/netG/netS tensors in the official main.pth (Google Drive link in the README) match the ONNX; only the optimiser state doesn't. The weights have no separate licence; the repo is MIT and the zip includes AESFA_LICENSE.txt. Trained on MS-COCO + WikiArt.",
+   "restricted": false
+  },
+  {
+   "name": "vgg19_optimization_style_transfer_onnx.zip",
+   "title": "VGG19 Optimization",
+   "type": "STYLE_TRANSFER",
+   "task": "style_transfer",
+   "description": "An optimization-based neural style transfer model that uses VGG19 features and Gram matrices to recreate the reference image’s colors, textures, and brushwork.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/vgg19_optimization_style_transfer_onnx.zip",
+   "size": 47994728,
+   "sha256": "d1a4cd235ab08f2aa531f3a668f8e245bd0ad80caf4c444d597172142657a811",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 43.912
+   },
+   "in_itb_catalog": true,
+   "pack": {
+    "files": [
+     {
+      "name": "vgg19_targets.onnx",
+      "size": 17514,
+      "sha256": "26b13aa5138a71dcccbbb7dba8feedc113747d957c7337eb0df01275680dc7e2"
+     },
+     {
+      "name": "vgg19_gradient.onnx",
+      "size": 87034,
+      "sha256": "33ec918993161e77d6b29833eee4c873da593f666212c0b4936e056ae3a60c62"
+     },
+     {
+      "name": "vgg19_weights.bin",
+      "size": 51779840,
+      "sha256": "4ab1c9682b08a6c52c0c043020a710debec2c6257641b3db95081c365897341e"
+     },
+     {
+      "name": "NEURAL_STYLE_TRANSFER_LICENSE.txt",
+      "size": 1068,
+      "sha256": "9aa9ce866af978993a88052e7e3fa6822433239a92fe85428345b889bfe53ca1"
+     },
+     {
+      "name": "TORCHVISION_LICENSE.txt",
+      "size": 1517,
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d"
+     }
+    ]
+   },
+   "upstream_project": "torchvision VGG19 IMAGENET1K_V1 weights (vgg19-dcbb9e9d.pth); NST pipeline after nazianafis/Neural-Style-Transfer",
+   "upstream_url": "https://github.com/pytorch/vision",
+   "license": "BSD-3-Clause",
+   "license_source": "https://github.com/pytorch/vision/blob/main/LICENSE",
+   "license_notes": "vgg19_weights.bin is VGG19 conv1_1 to conv5_1 in fp32, and byte chunks match torchvision vgg19-dcbb9e9d.pth. torchvision says these weights were 'trained from scratch' by torchvision, so Oxford VGG's CC-BY-4.0 doesn't apply. torchvision gives no separate weight licence; its README warns weights may carry dataset-derived (ImageNet) terms. The pipeline code is MIT (Nazia Nafis).",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v2_vits_q4.onnx",
+   "title": "Depth Anything V2 Small (Q4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Compact Q4 version of the 24.8M parameter model for fast processing",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vits_q4.onnx",
+   "size": 27404416,
+   "sha256": "5d55b02762e1907589158af3e366bd61ddf648155852a07bbf5e3a074639fcf8",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 2.537
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Small (ONNX from onnx-community/depth-anything-v2-small)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Small",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "Same SHA-256 as onnx-community/depth-anything-v2-small onnx/model_q4.onnx. The GitHub README says Small is Apache-2.0 and Base/Large/Giant are CC-BY-NC-4.0; the HF card agrees.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v2_vits_fp32.onnx",
+   "title": "Depth Anything V2 Small (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights of the fast 24.8M parameter model without quantization",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vits_fp32.onnx",
+   "size": 99060839,
+   "sha256": "afb6a5c28f3b6bf1618c6e43f02073ef9dfdc70e937502d51603e57b0a1df10c",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 4.917
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Small (ONNX from onnx-community/depth-anything-v2-small)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Small",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "Same SHA-256 as onnx-community/depth-anything-v2-small onnx/model.onnx. The HF card's licence agrees with the GitHub README.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v2_vitb_q4.onnx",
+   "title": "Depth Anything V2 Base (Q4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Quantized Q4 version of the detailed 97.5M parameter model",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vitb_q4.onnx",
+   "size": 102269714,
+   "sha256": "af9d3df88b2a0776a5c512bd98f4c1d94cc1328b6334745b196de38b0da2468d",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 8.147
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Base (ONNX from onnx-community/depth-anything-v2-base)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Base",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "NON-COMMERCIAL. Same SHA-256 as onnx-community/depth-anything-v2-base onnx/model_q4.onnx. The GitHub README says Small is Apache-2.0 and Base/Large/Giant are CC-BY-NC-4.0; the HF card agrees.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v2_vitb_fp32.onnx",
+   "title": "Depth Anything V2 Base (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights of the detailed 97.5M parameter model without quantization",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vitb_fp32.onnx",
+   "size": 388917010,
+   "sha256": "dab40f67d5ead5e0ed52acfae41a717a708b02bc57f6cb761c5de828f26a7289",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 15.761
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Base (ONNX from onnx-community/depth-anything-v2-base)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Base",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "NON-COMMERCIAL. Same SHA-256 as onnx-community/depth-anything-v2-base onnx/model.onnx. The HF card's licence agrees with the GitHub README.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v2_vitl_q4.onnx",
+   "title": "Depth Anything V2 Large (Q4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Quantized Q4 version of the highest-detail 335.3M parameter model",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vitl_q4.onnx",
+   "size": 317720789,
+   "sha256": "995173eacf031473a88682e0f5d5c3c984c64a270ca6e669228dc790b0448ce0",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 25.274
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Large (ONNX from onnx-community/depth-anything-v2-large)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Large",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "NON-COMMERCIAL. Same SHA-256 as onnx-community/depth-anything-v2-large onnx/model_q4.onnx. The GitHub README says Small is Apache-2.0 and Base/Large/Giant are CC-BY-NC-4.0; the HF card agrees.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v2_vitl_fp32.onnx",
+   "title": "Depth Anything V2 Large (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights of the highest-detail 335.3M parameter model without quantization",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v2_vitl_fp32.onnx",
+   "size": 1336922232,
+   "sha256": "a93aa89b5e92e30e0afbe0f7c3ec692b35cfca791ae9004a190fb0ca2010e905",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 49.386
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/Depth-Anything-V2-Large (ONNX from onnx-community/depth-anything-v2-large)",
+   "upstream_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Large",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://github.com/DepthAnything/Depth-Anything-V2/blob/main/README.md",
+   "license_notes": "NON-COMMERCIAL. Same SHA-256 as onnx-community/depth-anything-v2-large onnx/model.onnx. The HF card's licence agrees with the GitHub README.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v3_small_int8.onnx",
+   "title": "Depth Anything 3 Small (INT8)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Compact INT8 model with improved scene geometry and object boundaries",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_small_int8.onnx",
+   "size": 28941058,
+   "sha256": "b6eaf064414e1474c88ca58cdafe414771e058996b99ea58e694e256e8738b43",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 4.183
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-SMALL (ONNX from en970/depth-anything-v3-small-onnx)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-SMALL",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "Same SHA-256 as en970/depth-anything-v3-small-onnx onnx/model_quantized.onnx (Apache-2.0, derived from onnx-community/depth-anything-v3-small). The HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v3_small_fp32.onnx",
+   "title": "Depth Anything 3 Small (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights with full precision for scene geometry and object boundaries",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_small_fp32.onnx",
+   "size": 105329872,
+   "sha256": "b622801c69643a7e32fafbba4190b3c6de0a3f06b6d8cc566d4a582035003b65",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 5.947
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-SMALL (ONNX from onnx-community/depth-anything-v3-small)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-SMALL",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "Same file as onnx-community/depth-anything-v3-small with the external data merged in (byte probes match). The HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v3_base_int4.onnx",
+   "title": "Depth Anything 3 Base (INT4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Quantized INT4 model with stable depth and fine details in complex scenes",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_base_int4.onnx",
+   "size": 118091821,
+   "sha256": "dc4630d051cd8492431ff11f6d8ea440181a98e5a765442198d2b99c694ee0d3",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 12.443
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-BASE",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-BASE",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "No public copy of this INT4 file was found, so ImageToolbox probably quantised it from the onnx-community base export. DA3-BASE has only one checkpoint, and the HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v3_base_fp32.onnx",
+   "title": "Depth Anything 3 Base (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights with full precision for stable depth and fine details",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_base_fp32.onnx",
+   "size": 412701787,
+   "sha256": "10d93bf3dfe27d0c5f47f6774dd1c14ae9c4c2d1165a0182d44833b3f518e198",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 19.682
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-BASE (ONNX from onnx-community/depth-anything-v3-base)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-BASE",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "Same file as onnx-community/depth-anything-v3-base with the external data merged in (byte probes match). The HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v3_large_int4.onnx",
+   "title": "Depth Anything 3 Large (INT4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Quantized INT4 model with maximum geometry quality in a smaller package",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_large_int4.onnx",
+   "size": 306328602,
+   "sha256": "133787b3e634e9a24d5547494d3ead64d217ba79f3431178ecf033c15d8ff7a9",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 35.718
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-LARGE-1.1 (ONNX from mindqtrl/DA3-LARGE-1.1-ONNX-STRIPPED)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-LARGE-1.1",
+   "license": "conflicting: CC-BY-NC-4.0 (official GitHub model table) vs Apache-2.0 (official HF model card)",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md ; https://huggingface.co/depth-anything/DA3-LARGE-1.1",
+   "license_notes": "Same SHA-256 as mindqtrl/DA3-LARGE-1.1-ONNX-STRIPPED da3_large_stripped_int4.onnx (declares Apache-2.0, 'inherited'). The ByteDance GitHub README table lists DA3-LARGE-1.1 as CC BY-NC 4.0, but its HF card (uploaded 2025-12-11) says Apache 2.0. Treat it as non-commercial unless ByteDance clarifies.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v3_large_fp32.onnx",
+   "title": "Depth Anything 3 Large (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights for maximum geometry quality and detail without quantization",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_large_fp32.onnx",
+   "size": 1382809180,
+   "sha256": "a8d5ddab18bc2c2974d8359c06b582a6e78938e5a2e6be6d5c1712d51b7701bb",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 58.241
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3-LARGE (original, deprecated; ONNX from onnx-community/depth-anything-v3-large)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3-LARGE",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://huggingface.co/depth-anything/DA3-LARGE",
+   "license_notes": "NON-COMMERCIAL. Same file as onnx-community/depth-anything-v3-large with the external data merged in (byte probes match). 71 of 97 small tensors match the original DA3-LARGE and none match DA3-LARGE-1.1. The DA3-LARGE HF card and GitHub table both say CC BY-NC 4.0; the onnx-community repo wrongly labels it apache-2.0. The INT4 variant comes from a different checkpoint (1.1).",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "depth_anything_v3_mono_large_q4.onnx",
+   "title": "Depth Anything 3 Mono Large (Q4)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Q4 model specialized for highly detailed single-image depth estimation",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_mono_large_q4.onnx",
+   "size": 292902819,
+   "sha256": "153ccf2305e05a8ed9548b5beae843f9ff4242ab9f37c19d3f0ad658abec6dbb",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 31.684
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3MONO-LARGE",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3MONO-LARGE",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "No public copy of this Q4 file was found, so ImageToolbox probably quantised it from the FP32 export. DA3MONO-LARGE has only one checkpoint, and the HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "depth_anything_v3_mono_large_fp32.onnx",
+   "title": "Depth Anything 3 Mono Large (FP32)",
+   "type": "DEPTH",
+   "task": "depth",
+   "description": "Original FP32 weights specialized for maximum single-image depth quality",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/depth/depth_anything_v3_mono_large_fp32.onnx",
+   "size": 1340744258,
+   "sha256": "4f251eb04cc30d00cdea29a09656acb0ff42e27689ca65a3b292c2ec5718cfa0",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 46.927
+   },
+   "in_itb_catalog": true,
+   "upstream_project": "depth-anything/DA3MONO-LARGE (ONNX from yuvraj108c/Depth-Anything-3-Onnx)",
+   "upstream_url": "https://huggingface.co/depth-anything/DA3MONO-LARGE",
+   "license": "Apache-2.0",
+   "license_source": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/README.md",
+   "license_notes": "Same SHA-256 as yuvraj108c/Depth-Anything-3-Onnx DA3Mono-Large.onnx (that repo declares no licence). The upstream HF card and GitHub table both say Apache 2.0.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_mirage_siglip2_base_fp16.onnx",
+   "title": "Mirage SigLIP2 Base (FP16)",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "SigLIP2 Base detector trained on the Mirage news dataset to distinguish real and AI-generated images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_mirage_siglip2_base_fp16.onnx",
+   "size": 172999176,
+   "sha256": "ed37099bc56b5fdece9012986b147caf72c63bf63cf0d469a9dd0fdd96bdc0b0",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.059
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      1
+     ]
+    }
+   },
+   "upstream_project": "prithivMLmods/Mirage-Photo-Classifier",
+   "upstream_url": "https://huggingface.co/prithivMLmods/Mirage-Photo-Classifier",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/prithivMLmods/Mirage-Photo-Classifier",
+   "license_notes": "FP16 conversion. Identified by matching weights: 51 of 60 checked tensors are identical; the 9 that differ are the SigLIP pooling head, which the classifier doesn't use. ImageToolbox converted the file itself. Base model google/siglip2-base-patch16-224 is Apache-2.0. The MiRAGeNews training set (anson-huang/mirage-news) declares no licence, and its real images are NYT photos.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_mirage_siglip2_base_fp32.onnx",
+   "title": "Mirage SigLIP2 Base (FP32)",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "Full-precision SigLIP2 Base detector trained on the Mirage news dataset to distinguish real and AI-generated images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_mirage_siglip2_base_fp32.onnx",
+   "size": 344590299,
+   "sha256": "2f42b7beebe11b6470d0066726083edad90cd08141b42ac045d69dc8cc9e564f",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.029
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      1
+     ]
+    }
+   },
+   "upstream_project": "prithivMLmods/Mirage-Photo-Classifier",
+   "upstream_url": "https://huggingface.co/prithivMLmods/Mirage-Photo-Classifier",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/prithivMLmods/Mirage-Photo-Classifier",
+   "license_notes": "Identified by matching weights: 51 of 60 checked tensors are identical; the 9 that differ are the SigLIP pooling head, which the classifier doesn't use. ImageToolbox converted the file itself. Base model google/siglip2-base-patch16-224 is Apache-2.0. The MiRAGeNews training set (anson-huang/mirage-news) declares no licence, and its real images are NYT photos.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_lpx_swinv2_large_fp32.onnx",
+   "title": "LPX AI Detector SwinV2 Large",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "Large SwinV2 detector trained to distinguish artificial and real images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_lpx_swinv2_large_fp32.onnx",
+   "size": 904854552,
+   "sha256": "a2346d0e9f56d2d1593ba76758988b4e8da4e65a5bc65e7c3cf9798a86c9a2bf",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VerySlow",
+    "value": 0.451
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 256,
+    "resize_size": 256,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0
+     ]
+    }
+   },
+   "upstream_project": "haywoodsloan/ai-image-detector-deploy (ONNX copied from LPX55/detection-model-1-ONNX)",
+   "upstream_url": "https://huggingface.co/haywoodsloan/ai-image-detector-deploy",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/haywoodsloan/ai-image-detector-deploy",
+   "license_notes": "Same SHA-256 as LPX55/detection-model-1-ONNX onnx/model.onnx. That repo declares no licence and is a conversion of haywoodsloan/ai-image-detector-deploy (Apache-2.0).",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_convnext_tiny_fp32.onnx",
+   "title": "ConvNeXT Tiny AI Detector",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ConvNeXT Tiny detector trained to distinguish AI-generated and real images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_convnext_tiny_fp32.onnx",
+   "size": 111372433,
+   "sha256": "fa1a4cc62639a1d2c8020a46dca21810f50766b9f961ac2e497c0908ab4a4110",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.07
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 256,
+    "resize_mode": "ShortestSideCenterCrop",
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0
+     ]
+    }
+   },
+   "upstream_project": "mmanikanta/ConvNeXT_AI_image_detector",
+   "upstream_url": "https://huggingface.co/mmanikanta/ConvNeXT_AI_image_detector",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/mmanikanta/ConvNeXT_AI_image_detector",
+   "license_notes": "Identified by matching weights: 145 of 181 tensors identical (converted by ImageToolbox). Labels FAKE/REAL. Base facebook/convnext-tiny-224 is Apache-2.0. The model card lists the training data as 'unknown dataset'.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_resnet50_fp32.onnx",
+   "title": "ResNet-50 AI Detector",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ResNet-50 detector trained to distinguish AI-generated and real images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_resnet50_fp32.onnx",
+   "size": 93978312,
+   "sha256": "ce8e30aebdad71e7a6b55d1ce08ff25496d1be3207bfd1dbd7285d8133a102ee",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.046
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 256,
+    "resize_mode": "ShortestSideCenterCrop",
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0
+     ]
+    }
+   },
+   "upstream_project": "mmanikanta/ResNet_AI_image_detector",
+   "upstream_url": "https://huggingface.co/mmanikanta/ResNet_AI_image_detector",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/mmanikanta/ResNet_AI_image_detector",
+   "license_notes": "Identified by matching weights: the fine-tuned 2x2048 classifier weights are identical; the conv weights don't match exactly, probably because of BatchNorm folding during conversion. Base microsoft/resnet-50 is Apache-2.0. Training data listed as 'unknown dataset'.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_ai_vs_deepfake_vs_real_fp32.onnx",
+   "title": "AI vs Deepfake vs Real",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ViT detector that separates artificial, deepfake, and real images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_ai_vs_deepfake_vs_real_fp32.onnx",
+   "size": 343417229,
+   "sha256": "6ce5eb048dbf95c9702525abc24db5a38030221754024e0e1e31fdebc6c512b1",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Normal",
+    "value": 0.178
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0,
+      1
+     ]
+    }
+   },
+   "upstream_project": "prithivMLmods/AI-vs-Deepfake-vs-Real (ONNX from prithivMLmods/AI-vs-Deepfake-vs-Real-ONNX)",
+   "upstream_url": "https://huggingface.co/prithivMLmods/AI-vs-Deepfake-vs-Real",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/prithivMLmods/AI-vs-Deepfake-vs-Real",
+   "license_notes": "Same SHA-256 as prithivMLmods/AI-vs-Deepfake-vs-Real-ONNX (Apache-2.0). Base ViT-in21k is Apache-2.0. The dataset is gated and declares Apache-2.0; where its images come from wasn't checked.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_capcheck_vit_base_fp32.onnx",
+   "title": "CapCheck AI Image Detection",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ViT detector fine-tuned for separating AI-generated and real images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_capcheck_vit_base_fp32.onnx",
+   "size": 343401688,
+   "sha256": "44cb205f596f2530686bf4895e3678f08f9483c926b6bdc0e02998d5b54978a2",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 0.136
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      1
+     ]
+    }
+   },
+   "upstream_project": "capcheck/ai-image-detection (now redirects to aaronkantrowitz/ai-image-detection); weights originate from dima806/ai_vs_real_image_detection",
+   "upstream_url": "https://huggingface.co/aaronkantrowitz/ai-image-detection",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/aaronkantrowitz/ai-image-detection",
+   "license_notes": "Same SHA-256 as onnx-community/ai-image-detection-ONNX (Apache-2.0, base capcheck/ai-image-detection). The capcheck safetensors file is identical to dima806/ai_vs_real_image_detection (Apache-2.0). Trained on the CIFAKE dataset.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_deepfake_v2_vit_base_fp32.onnx",
+   "title": "Deep Fake Detector V2",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ViT detector trained on a large collection of real and deepfake face images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_deepfake_v2_vit_base_fp32.onnx",
+   "size": 343401688,
+   "sha256": "2e0662a81744aca769e240fd1daa3f44225c50d0565fd8fb8f702d1f26609c91",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 0.144
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      1
+     ]
+    }
+   },
+   "upstream_project": "prithivMLmods/Deep-Fake-Detector-v2-Model",
+   "upstream_url": "https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model",
+   "license_notes": "Same SHA-256 as onnx-community/Deep-Fake-Detector-v2-Model-ONNX (Apache-2.0). The training dataset isn't named, so its licence is unknown.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_distilled_vit_small_fp32.onnx",
+   "title": "AI Image Detect Distilled",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "Compact ViT detector. Fastest of the available detectors, but less accurate on unfamiliar generators.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_distilled_vit_small_fp32.onnx",
+   "size": 58410332,
+   "sha256": "87b4331f22418a4cb50901851a1c28f64a0ca4f58728442d073b4bed9922ba86",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "VeryFast",
+    "value": 0.041
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "std": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0
+     ]
+    }
+   },
+   "upstream_project": "jacoballessio/ai-image-detect-distilled",
+   "upstream_url": "https://huggingface.co/jacoballessio/ai-image-detect-distilled",
+   "license": "MIT",
+   "license_source": "https://huggingface.co/jacoballessio/ai-image-detect-distilled",
+   "license_notes": "Same SHA-256 as onnx-community/ai-image-detect-distilled-ONNX (MIT). Training data: Open Images plus two Kaggle sets whose licences weren't checked.",
+   "restricted": false
+  },
+  {
+   "name": "ai_detector_community_forensics_vit_small_384_fp32.onnx",
+   "title": "Community Forensics ViT-S/384",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "ViT-S/384 trained for broad cross-generator image forensics.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_community_forensics_vit_small_384_fp32.onnx",
+   "size": 143845409,
+   "sha256": "55602c73f457858f0b48c19bfa03bc6bd218f37027cb1f6b569ee24e2f954d03",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Slow",
+    "value": 0.214
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 384,
+    "resize_size": 440,
+    "resize_mode": "ShortestSideCenterCrop",
+    "mean": [
+     0.48145467,
+     0.4578275,
+     0.40821072
+    ],
+    "std": [
+     0.26862955,
+     0.2613026,
+     0.2757771
+    ],
+    "output": {
+     "kind": "sigmoid"
+    }
+   },
+   "upstream_project": "Intended: OwensLab/commfor-model-384 (Park & Owens, Community Forensics); the shipped weights are not from it",
+   "upstream_url": "https://huggingface.co/OwensLab/commfor-model-384",
+   "license": "unknown",
+   "license_source": "https://huggingface.co/OwensLab/commfor-model-384",
+   "license_notes": "WARNING: the shipped ONNX does not contain the commfor weights (0 of 75 checked tensors match). Every weight matrix has std of about 0.02, every bias is 0, LayerNorm weights are 1, the MLP is 3072-wide and the head has 2 classes. That is a randomly initialised HF ViT, which looks like a broken conversion. The intended upstream is MIT, and its dataset OwensLab/CommunityForensics is CC-BY-4.0 'for research purposes only' (Small subset CC-BY-NC-SA-4.0).",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "ai_detector_smogy_swin_base_fp32.onnx",
+   "title": "SMOGY Swin Base",
+   "type": "AI_DETECTION",
+   "task": "detect_ai_generated",
+   "description": "Swin detector trained on human and AI-generated images.",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/detectors/ai_detector_smogy_swin_base_fp32.onnx",
+   "size": 351983641,
+   "sha256": "51bd73cb17e68cde821eda4b978ef63b3ae4063e25b79a2c99bf84399988ea39",
+   "sha256_source": "kotlin",
+   "speed": {
+    "tier": "Fast",
+    "value": 0.153
+   },
+   "in_itb_catalog": true,
+   "ai_detection": {
+    "input_size": 224,
+    "resize_size": 224,
+    "resize_mode": "Stretch",
+    "mean": [
+     0.485,
+     0.456,
+     0.406
+    ],
+    "std": [
+     0.229,
+     0.224,
+     0.225
+    ],
+    "output": {
+     "kind": "softmax",
+     "ai_class_indices": [
+      0
+     ]
+    }
+   },
+   "upstream_project": "Smogy/SMOGY-Ai-images-detector",
+   "upstream_url": "https://huggingface.co/Smogy/SMOGY-Ai-images-detector",
+   "license": "CC-BY-NC-4.0",
+   "license_source": "https://huggingface.co/Smogy/SMOGY-Ai-images-detector",
+   "license_notes": "NON-COMMERCIAL. Same SHA-256 as onnx-community/SMOGY-Ai-images-detector-ONNX (CC-BY-NC-4.0). Base Organika/sdxl-detector is CC-BY-NC-3.0. Trained on images scraped from Reddit.",
+   "restricted": true,
+   "restricted_reason": "non-commercial / research-only licence"
+  },
+  {
+   "name": "LaMa_512.onnx",
+   "title": "LaMa 512",
+   "type": "INPAINT",
+   "task": "inpaint",
+   "description": "LaMa inpainting at 512x512 (used by ImageToolbox's spot-heal filter and watermark remover)",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/inpaint/lama/LaMa_512.onnx",
+   "size": 208044816,
+   "sha256": "1faef5301d78db7dda502fe59966957ec4b79dd64e16f03ed96913c7a4eb68d6",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "upstream_project": "LaMa (advimman); ONNX export by Carve (Carve/LaMa-ONNX)",
+   "upstream_url": "https://huggingface.co/Carve/LaMa-ONNX",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/Carve/LaMa-ONNX",
+   "license_notes": "sha256 identical to Carve/LaMa-ONNX lama_fp32.onnx (big-lama port, 512x512); Carve card apache-2.0; original advimman/lama LICENSE Apache-2.0",
+   "restricted": false
+  },
+  {
+   "name": "LaMa_512_FAST.onnx",
+   "title": "LaMa 512 Fast",
+   "type": "INPAINT",
+   "task": "inpaint",
+   "description": "Faster LaMa inpainting variant (ImageToolbox 'fast model' option)",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/onnx/inpaint/lama/LaMa_512_FAST.onnx",
+   "size": 182789586,
+   "sha256": "120840f919b68cab293bda1b562d4dfd685989f5771280a2d1a3b5f2fe7c462e",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "upstream_project": "LaMa dilated/multidilated-conv variant (advimman/lama architecture); exporter unidentified",
+   "upstream_url": "https://github.com/advimman/lama",
+   "license": "unknown",
+   "license_source": "https://github.com/advimman/lama/blob/main/LICENSE",
+   "license_notes": "graph = LaMa generator with multi-dilated conv blocks + sigmoid, PyTorch 2.8.0 legacy export; not byte-identical to any HF LaMa repo or Qualcomm AI Hub LaMa-Dilated v0.64.0; if derived from advimman/lama weights it would be Apache-2.0 (unverified)",
+   "restricted": true,
+   "restricted_reason": "licence of the weights could not be verified"
+  },
+  {
+   "name": "paddleocr_v5.zip",
+   "title": "PaddleOCR CJK",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (CJK) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5.zip",
+   "size": 19129870,
+   "sha256": "fca76e48eb68628467adbc456a619093c9f1c1b108670104a7defbe2f3253e98",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_korean.zip",
+   "title": "PaddleOCR Korean",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Korean) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_korean.zip",
+   "size": 13360329,
+   "sha256": "6b67006ce00dd753dcdfaa6134b60aaaa00323b126552445c7a00b34e7679fcc",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_latin.zip",
+   "title": "PaddleOCR Latin",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Latin) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_latin.zip",
+   "size": 12297689,
+   "sha256": "e5e355524a5692c1ceb842481382c8533b8b24c2c89a50c9041f5cbe4e705e18",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_eslav.zip",
+   "title": "PaddleOCR East Slavic",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (East Slavic) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_eslav.zip",
+   "size": 12335104,
+   "sha256": "6f14b1717641d1204713fbba3c2ab8225ecd0c5cdc04607bcff3cd278bf3c82b",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_th.zip",
+   "title": "PaddleOCR Thai",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Thai) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_th.zip",
+   "size": 12310803,
+   "sha256": "cca08823672d62e0373c47d7863425196da2f84c494e43b79a04e17a51961587",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_el.zip",
+   "title": "PaddleOCR Greek",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Greek) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_el.zip",
+   "size": 12242522,
+   "sha256": "e649b2c051e36e1130d8a1b3674e28830787f60a6bc73ce2b0e4719fb0b972ae",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_en.zip",
+   "title": "PaddleOCR English",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (English) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_en.zip",
+   "size": 12265739,
+   "sha256": "c33e0f2da0fb8d4c8bd3255822e62d4fcd62f8ff67baa0b478d5017678cd8864",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_cyrillic.zip",
+   "title": "PaddleOCR Cyrillic",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Cyrillic) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_cyrillic.zip",
+   "size": 12335104,
+   "sha256": "4d691fa2ecba9bfbd01c88075c578bc1700b7463bfa2d5e708cb66378ac64d4c",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_arabic.zip",
+   "title": "PaddleOCR Arabic",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Arabic) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_arabic.zip",
+   "size": 13161105,
+   "sha256": "bf5f5960680ecf67dc4201661452387cfefc7e3d459669ef6310e6f76c56d94c",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_devanagari.zip",
+   "title": "PaddleOCR Devanagari",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Devanagari) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_devanagari.zip",
+   "size": 13309199,
+   "sha256": "e68badae0120572e12b92539996f993b889b086dae6b346d885eae2a22092b64",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_ta.zip",
+   "title": "PaddleOCR Tamil",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Tamil) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_ta.zip",
+   "size": 13392392,
+   "sha256": "3cfea66e945d8b21e61f4a9e426b36413fcdfc2ef346e0eaad8a66674f766338",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v5_te.zip",
+   "title": "PaddleOCR Telugu",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (Telugu) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v5_te.zip",
+   "size": 13139943,
+   "sha256": "fde24ef64be1bfc129c737eaa03a06c5066045ffe882efafebcbb25aa8ccc6f9",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv5 (PaddlePaddle)",
+   "upstream_url": "https://github.com/PaddlePaddle/PaddleOCR",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv5_mobile_rec",
+   "license_notes": "PP-OCRv5 det/rec (+ PP-LCNet textline cls) weights; PaddlePaddle HF cards checked (mobile/server det, mobile rec, latin/korean rec, textline_ori) all apache-2.0; zips hold det/rec/cls.onnx + ppocrv5_dict.txt, ONNX converter not identified",
+   "restricted": false
+  },
+  {
+   "name": "paddleocr_v6_medium.zip",
+   "title": "PaddleOCR v6 (medium)",
+   "type": "OCR",
+   "task": "ocr",
+   "description": "PaddleOCR det/cls/rec ONNX pack (PaddleOCRv6) used by ImageToolbox's text recognition",
+   "url": "https://huggingface.co/T8RIN/imagetoolbox-models/resolve/main/paddleocr/paddleocr_v6_medium.zip",
+   "size": 101149927,
+   "sha256": "45ba0705479bcf3cc79b2720748c6ba15d73a6f6014a89a10db48bc6229cdf37",
+   "sha256_source": "hf-lfs",
+   "speed": null,
+   "in_itb_catalog": false,
+   "pack": {
+    "files": [],
+    "require_globs": [
+     "*det*.onnx",
+     "*rec*.onnx",
+     "*cls*.onnx",
+     "*dict*.txt"
+    ]
+   },
+   "upstream_project": "PaddleOCR PP-OCRv6_medium (PaddlePaddle)",
+   "upstream_url": "https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_det",
+   "license": "Apache-2.0",
+   "license_source": "https://huggingface.co/PaddlePaddle/PP-OCRv6_medium_det",
+   "license_notes": "PP-OCRv6_medium_det/_rec HF cards apache-2.0; PaddleOCR repo Apache-2.0; zip holds det/rec/cls.onnx + ppocrv6_dict.txt, ONNX converter not identified",
+   "restricted": false
+  }
+ ]
+}

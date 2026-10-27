@@ -1,0 +1,115 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "warm-70s-film",
+ "name": "Warm 1970s film",
+ "description": "Warm, brownish retro film: faded blacks, muted greens, soft contrast, warm brown shadows, soft highlights, subtle grain, slightly dreamy.",
+ "tags": [
+  "vintage",
+  "retro",
+  "1970s",
+  "70s",
+  "film",
+  "warm",
+  "brown",
+  "faded",
+  "nostalgic",
+  "analog",
+  "muted greens",
+  "soft"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 22,
+    "tint": 4
+   },
+   "label": "Warm"
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": -18
+   },
+   "label": "Soft contrast"
+  },
+  {
+   "origin": "look",
+   "op": "adjust.fade",
+   "params": {
+    "amount": 38,
+    "highlight_rolloff": 30,
+    "shadow_tint": "#3A2A1A"
+   },
+   "label": "Faded brown blacks"
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 30,
+    "shadows_saturation": 30,
+    "highlights_hue": 45,
+    "highlights_saturation": 18,
+    "midtones_hue": 38,
+    "midtones_saturation": 8,
+    "blending": 60
+   },
+   "label": "Brown shadows"
+  },
+  {
+   "origin": "look",
+   "op": "adjust.hsl",
+   "params": {
+    "green_saturation": -45,
+    "green_hue": -18,
+    "aqua_saturation": -30,
+    "blue_saturation": -25,
+    "yellow_hue": -8,
+    "orange_saturation": 8
+   },
+   "label": "Muted greens"
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -12
+   },
+   "label": "Muted"
+  },
+  {
+   "origin": "look",
+   "op": "effect.diffusion",
+   "params": {
+    "amount": 18,
+    "radius": 30,
+    "mode": "screen",
+    "highlights_only": 60
+   },
+   "label": "Dreamy glow"
+  },
+  {
+   "origin": "look",
+   "op": "effect.grain",
+   "params": {
+    "amount": 22,
+    "size": 1.6,
+    "roughness": 45
+   },
+   "label": "Grain"
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -18,
+    "midpoint": 45,
+    "feather": 70
+   },
+   "label": "Vignette"
+  }
+ ]
+}

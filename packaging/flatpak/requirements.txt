@@ -1,0 +1,13 @@
+numpy
+opencv-python-headless
+pillow
+scipy
+numba
+pydantic
+mcp
+piexif
+segno
+zxing-cpp
+pypdf
+rawpy
+onnxruntime

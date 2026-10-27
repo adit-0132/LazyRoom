@@ -1,0 +1,66 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "teal-orange",
+ "name": "Cinematic teal & orange",
+ "description": "Blockbuster grade: teal shadows, warm orange highlights/skin, punchy contrast.",
+ "tags": [
+  "cinematic",
+  "teal",
+  "orange",
+  "movie",
+  "blockbuster",
+  "film look",
+  "complementary"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": 18
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 195,
+    "shadows_saturation": 45,
+    "highlights_hue": 32,
+    "highlights_saturation": 35,
+    "midtones_hue": 30,
+    "midtones_saturation": 6,
+    "balance": -10,
+    "blending": 55
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.hsl",
+   "params": {
+    "aqua_hue": 10,
+    "blue_hue": -10,
+    "blue_saturation": 15,
+    "orange_saturation": 12,
+    "green_hue": 30,
+    "green_saturation": -25,
+    "yellow_hue": -10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "vibrance": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -15,
+    "midpoint": 50
+   }
+  }
+ ]
+}

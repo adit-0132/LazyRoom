@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=LazyRoom
+GenericName=Image Editor
+Comment=AI-native image toolbox with 600+ operations, style matching and an MCP server for agents
+Exec=LazyRoom %F
+Icon=lazyroom
+Terminal=false
+Categories=Graphics;RasterGraphics;Photography;
+MimeType=image/jpeg;image/png;image/webp;image/avif;image/heic;image/tiff;image/bmp;image/gif;image/x-adobe-dng;
+Keywords=photo;edit;filter;image;ai;mcp;
+StartupWMClass=LazyRoom

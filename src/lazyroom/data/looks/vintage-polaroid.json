@@ -1,0 +1,118 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "vintage-polaroid",
+ "name": "Vintage Polaroid",
+ "description": "Instant-film look: creamy warm highlights, cyan-green shadows, low contrast, light leak, white frame with thick bottom border.",
+ "tags": [
+  "polaroid",
+  "instant",
+  "vintage",
+  "retro",
+  "frame",
+  "light leak",
+  "70s",
+  "80s"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 12,
+    "tint": -6
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.curves",
+   "params": {
+    "rgb": [
+     [
+      0,
+      0.12
+     ],
+     [
+      0.5,
+      0.55
+     ],
+     [
+      1,
+      0.93
+     ]
+    ],
+    "blue": [
+     [
+      0,
+      0.12
+     ],
+     [
+      1,
+      0.86
+     ]
+    ],
+    "red": [
+     [
+      0,
+      0.03
+     ],
+     [
+      1,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 170,
+    "shadows_saturation": 25,
+    "highlights_hue": 50,
+    "highlights_saturation": 22
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.light_leak",
+   "params": {
+    "amount": 28,
+    "color": "#FF8A3D",
+    "angle": 20,
+    "size": 35
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -22,
+    "midpoint": 40
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.grain",
+   "params": {
+    "amount": 14,
+    "size": 1.3
+   }
+  },
+  {
+   "origin": "look",
+   "op": "draw.border",
+   "params": {
+    "width": 0.05,
+    "color": "#F4F1EA",
+    "bottom_extra": 0.18
+   }
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "name": "Duotone",
+  "params": [
+    {
+      "name": "uShadow",
+      "type": "color",
+      "default": "#1b1f4bff"
+    },
+    {
+      "name": "uHighlight",
+      "type": "color",
+      "default": "#ffd27fff"
+    },
+    {
+      "name": "uIntensity",
+      "type": "float",
+      "default": 1.0,
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "shader": "precision mediump float;\nvarying highp vec2 textureCoordinate;\nuniform sampler2D inputImageTexture;\nuniform vec4 uShadow;\nuniform vec4 uHighlight;\nuniform float uIntensity;\n\nvoid main() {\n    vec4 color = texture2D(inputImageTexture, textureCoordinate);\n    float l = dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));\n    vec3 duo = mix(uShadow.rgb, uHighlight.rgb, l);\n    gl_FragColor = vec4(mix(color.rgb, duo, uIntensity), color.a);\n}"
+}

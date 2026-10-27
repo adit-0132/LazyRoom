@@ -1,0 +1,51 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "bw-classic",
+ "name": "Classic black & white",
+ "description": "Rich monochrome with deep blacks and bright skies darkened (red-filter style), moderate grain.",
+ "tags": [
+  "black and white",
+  "monochrome",
+  "b&w",
+  "classic",
+  "noir",
+  "film"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.black_white",
+   "params": {
+    "reds": 70,
+    "yellows": 80,
+    "greens": 30,
+    "cyans": 20,
+    "blues": -10,
+    "magentas": 60
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": 25
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.tone",
+   "params": {
+    "blacks": -15,
+    "whites": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.grain",
+   "params": {
+    "amount": 20,
+    "size": 1.5
+   }
+  }
+ ]
+}

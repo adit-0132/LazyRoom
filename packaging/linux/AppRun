@@ -1,0 +1,14 @@
+#!/bin/sh
+# LazyRoom AppImage entry point.
+#   LazyRoom.AppImage [image]          -> desktop GUI
+#   LazyRoom.AppImage <cli command>    -> CLI (info, ops, apply, project, batch, mcp, tools, ...)
+#   LazyRoom.AppImage --cli ...        -> CLI explicitly
+HERE="$(dirname "$(readlink -f "$0")")"
+APP="$HERE/usr/lib/lazyroom"
+export PATH="$APP/bin:$PATH"
+case "$1" in
+  --cli) shift; exec "$APP/lazyroom" "$@" ;;
+  info|formats|backends|ops|inspect|apply|project|preset|style|batch|tools|intent|call|mcp|models|config|agent-setup|--version|--help|-h|--json)
+    exec "$APP/lazyroom" "$@" ;;
+  *) exec "$APP/LazyRoom" "$@" ;;
+esac

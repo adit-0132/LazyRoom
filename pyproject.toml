@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lazyroom"
+version = "0.1.0"
+description = "AI-native, agent-first desktop image toolbox (Linux/Windows) with MCP server, CLI, SDK and Qt GUI"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "LazyRoom contributors" }]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Multimedia :: Graphics :: Editors :: Raster-Based",
+]
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python-headless>=4.9",
+  "pillow>=10.3",
+  "scipy>=1.11",
+  "numba>=0.60",
+  "pydantic>=2.6",
+  "mcp>=2.0",
+  "piexif>=1.1.3",
+  "segno>=1.6",
+  "zxing-cpp>=2.2",
+  "pypdf>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/adit-0132/LazyRoom"
+Issues = "https://github.com/adit-0132/LazyRoom/issues"
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials>=6.6"]
+raw = ["rawpy>=0.19"]
+ai = ["onnxruntime>=1.17"]
+# HEIF/HEIC via pillow-heif: its wheels bundle libde265 (LGPL-3.0) and x265 (GPL-2.0-or-later)
+heif = ["pillow-heif>=0.16"]
+llm = ["anthropic>=1.0"]
+http = ["uvicorn>=0.30"]
+all = ["PySide6-Essentials>=6.6", "rawpy>=0.19", "onnxruntime>=1.17", "pillow-heif>=0.16", "uvicorn>=0.30"]
+dev = ["pytest>=8", "pytest-timeout>=2.3"]
+
+[project.scripts]
+lazyroom = "lazyroom.cli.main:main"
+lazyroom-mcp = "lazyroom.mcp.server:main"
+
+[project.gui-scripts]
+lazyroom-gui = "lazyroom.gui.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lazyroom"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+timeout = 300
+addopts = "-q"
+markers = [
+  "slow: long-running tests",
+  "gui: tests that need Qt (run offscreen)",
+  "gmic: tests that need the G'MIC CLI",
+]

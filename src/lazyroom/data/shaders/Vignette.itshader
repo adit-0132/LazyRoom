@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "Vignette",
+  "params": [
+    {
+      "name": "uRadius",
+      "type": "float",
+      "default": 0.75,
+      "min": 0.0,
+      "max": 1.5
+    },
+    {
+      "name": "uSoftness",
+      "type": "float",
+      "default": 0.45,
+      "min": 0.01,
+      "max": 1.0
+    },
+    {
+      "name": "uCenter",
+      "type": "vec2",
+      "default": [0.5, 0.5],
+      "min": [0.0, 0.0],
+      "max": [1.0, 1.0]
+    }
+  ],
+  "shader": "precision mediump float;\nvarying highp vec2 textureCoordinate;\nuniform sampler2D inputImageTexture;\nuniform float uRadius;\nuniform float uSoftness;\nuniform vec2 uCenter;\n\nvoid main() {\n    vec4 color = texture2D(inputImageTexture, textureCoordinate);\n    float d = distance(textureCoordinate, uCenter);\n    float v = smoothstep(uRadius, uRadius - uSoftness, d);\n    gl_FragColor = vec4(color.rgb * v, color.a);\n}"
+}

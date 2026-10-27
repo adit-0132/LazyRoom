@@ -1,0 +1,63 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "moody-dark",
+ "name": "Moody dark",
+ "description": "Dark, desaturated, low-key look with crushed greens and cool shadows.",
+ "tags": [
+  "moody",
+  "dark",
+  "low key",
+  "dramatic",
+  "forest",
+  "desaturated"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.exposure",
+   "params": {
+    "ev": -0.35
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.tone",
+   "params": {
+    "highlights": -40,
+    "shadows": -10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.hsl",
+   "params": {
+    "green_saturation": -50,
+    "green_luminance": -25,
+    "yellow_saturation": -30,
+    "blue_saturation": -20
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 200,
+    "shadows_saturation": 18
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.fade",
+   "params": {
+    "amount": 12
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -30
+   }
+  }
+ ]
+}

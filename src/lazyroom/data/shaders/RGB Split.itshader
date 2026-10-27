@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "RGB Split",
+  "params": [
+    {
+      "name": "uOffset",
+      "type": "vec2",
+      "default": [0.004, 0.0],
+      "min": [-0.05, -0.05],
+      "max": [0.05, 0.05]
+    }
+  ],
+  "shader": "precision mediump float;\nvarying highp vec2 textureCoordinate;\nuniform sampler2D inputImageTexture;\nuniform vec2 uOffset;\n\nvoid main() {\n    vec4 color = texture2D(inputImageTexture, textureCoordinate);\n    float r = texture2D(inputImageTexture, textureCoordinate + uOffset).r;\n    float b = texture2D(inputImageTexture, textureCoordinate - uOffset).b;\n    gl_FragColor = vec4(r, color.g, b, color.a);\n}"
+}

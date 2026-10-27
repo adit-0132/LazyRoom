@@ -1,0 +1,19 @@
+LazyRoom
+Copyright 2026 LazyRoom contributors
+
+This product includes software ported from ImageToolbox (https://github.com/T8RIN/ImageToolbox),
+ImageToolboxLibs and Trickle by T8RIN (Malik Mukhametzyanov), licensed under the Apache License 2.0.
+
+This product includes software ported from aire, pic-scale, libblur, histogram_equalization,
+colorutils-rs and yuv by Radzivon Bartoshyk (awxkee), licensed under the MIT License and/or
+BSD-3-Clause / Apache-2.0.
+
+This product includes software ported from GPUImage for Android (CyberAgent, Inc., Apache-2.0),
+GPUImage (Brad Larson, BSD-3-Clause), Java Image Filters (Jerry Huxtable, Apache-2.0),
+FastNoiseLite (Jordan Peck, MIT), ntsc-rs (MIT/ISC/Apache-2.0) and Clatter (MIT/Apache-2.0/zlib).
+
+Bundled data: lookup LUT images from ImageToolbox (Apache-2.0; GPUImage-origin LUTs BSD-3-Clause);
+YuNet face detection model from OpenCV Zoo (MIT).
+
+See docs/THIRD_PARTY.md for the complete list of dependencies and their licences, and
+docs/MODELS.md for optional AI model weights (downloaded on request, never bundled).

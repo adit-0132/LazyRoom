@@ -1,0 +1,4162 @@
+[
+ {
+  "name": "AcesFilmicToneMapping",
+  "group": "light",
+  "title": "ACES Filmic Tone Mapping",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAcesFilmicToneMappingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AcesFilmicToneMappingFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "AcesHillToneMapping",
+  "group": "light",
+  "title": "ACES Hill Tone Mapping",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAcesHillToneMappingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AcesHillToneMappingFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Achromatomaly",
+  "group": "simple",
+  "title": "Achromatomaly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAchromatomalyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AchromatomalyFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Achromatopsia",
+  "group": "simple",
+  "title": "Achromatopsia",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAchromatopsiaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AchromatopsiaFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "AdaptiveBlur",
+  "group": "blur",
+  "title": "Adaptive Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAdaptiveBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AdaptiveBlurFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Aldridge",
+  "group": "light",
+  "title": "Aldridge",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAldridgeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AldridgeFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "AlphaSharpen",
+  "group": "enhancement",
+  "title": "Alpha Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAlphaSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AlphaSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Amatorka",
+  "group": "lut",
+  "title": "Amatorka",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAmatorkaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AmatorkaFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Anaglyph",
+  "group": "distortion",
+  "title": "Anaglyph",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAnaglyphFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AnaglyphFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "AnalogDamage",
+  "group": "glitch",
+  "title": "Analog Damage",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAnalogDamageFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AnalogDamageFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "AnisotropicDiffusion",
+  "group": "enhancement",
+  "title": "Anisotropic Diffusion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAnisotropicDiffusionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AnisotropicDiffusionFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Arc",
+  "group": "geometry",
+  "title": "Arc",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiArcFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ArcFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Ascii",
+  "group": "pixelation",
+  "title": "ASCII",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAsciiFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AsciiFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "AtkinsonDithering",
+  "group": "dithering",
+  "title": "Atkinson Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAtkinsonDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AtkinsonDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "AutoCrop",
+  "group": "geometry",
+  "title": "Auto Crop",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAutoCropFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AutoCropFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "AutoPerspective",
+  "group": "simple",
+  "title": "Perspective Auto",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAutoPerspectiveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AutoPerspectiveFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "AutoRemoveRedEyes",
+  "group": "enhancement",
+  "title": "Auto Remove Red Eyes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAutoRemoveRedEyesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AutoRemoveRedEyesFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "AutoWhiteBalance",
+  "group": "enhancement",
+  "title": "Auto White Balance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAutoWhiteBalanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AutoWhiteBalanceFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "AutumnTones",
+  "group": "simple",
+  "title": "Autumn Tones",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAutumnTonesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AutumnTonesFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "AverageDistance",
+  "group": "simple",
+  "title": "Average Distance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiAverageDistanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/AverageDistanceFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "BandingDenoise",
+  "group": "enhancement",
+  "title": "Banding Denoise",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBandingDenoiseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BandingDenoiseFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "BayerEightDithering",
+  "group": "dithering",
+  "title": "Bayer Eight By Eight Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBayerEightDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BayerEightDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "BayerFourDithering",
+  "group": "dithering",
+  "title": "Bayer Four By Four Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBayerFourDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BayerFourDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "BayerThreeDithering",
+  "group": "dithering",
+  "title": "Bayer Three By Three Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBayerThreeDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BayerThreeDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "BayerTwoDithering",
+  "group": "dithering",
+  "title": "Bayer Two By Two Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBayerTwoDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BayerTwoDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "BilaterialBlur",
+  "group": "blur",
+  "title": "Bilaterial blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBilaterialBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BilaterialBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "BlackAndWhiteFilm",
+  "group": "color",
+  "title": "Black and White Film",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlackAndWhiteFilmFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BlackAndWhiteFilmFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "BlackAndWhite",
+  "group": "simple",
+  "title": "Black and White",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlackAndWhiteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BlackAndWhiteFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "BlackHat",
+  "group": "effects",
+  "title": "Black Hat",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlackHatFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BlackHatFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "BleachBypass",
+  "group": "lut",
+  "title": "Bleach Bypass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBleachBypassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BleachBypassFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "BlockGlitch",
+  "group": "glitch",
+  "title": "Block Glitch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlockGlitchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BlockGlitchFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Blocks3D",
+  "group": "pixelation",
+  "title": "3D Blocks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlocks3DFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/Blocks3DFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Bloom",
+  "group": "light",
+  "title": "Bloom",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBloomFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BloomFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "BlurredFrame",
+  "group": "frames",
+  "title": "Blurred Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBlurredFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BlurredFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Bokeh",
+  "group": "blur",
+  "title": "Bokeh",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBokehFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BokehFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "BokehLights",
+  "group": "light",
+  "title": "Bokeh Lights",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBokehLightsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BokehLightsFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "BoostChromaticity",
+  "group": "color",
+  "title": "Boost Chromaticity",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBoostChromaticityFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BoostChromaticityFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "BorderFrame",
+  "group": "frames",
+  "title": "Border Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBorderFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BorderFrameFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "BoxBlur",
+  "group": "blur",
+  "title": "Box blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBoxBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BoxBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Breaks",
+  "group": "glitch",
+  "title": "Breaks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBreaksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BreaksFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Brightness",
+  "group": "light",
+  "title": "Brightness",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBrightnessFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BrightnessFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "BrokenCells",
+  "group": "distortion",
+  "title": "Broken Cells",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBrokenCellsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BrokenCellsFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "BrokenGlass",
+  "group": "distortion",
+  "title": "Broken Glass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBrokenGlassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BrokenGlassFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Browni",
+  "group": "simple",
+  "title": "Browni",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBrowniFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BrowniFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Brushify",
+  "group": "artistic",
+  "title": "Brushify",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBrushifyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BrushifyFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "BufferError",
+  "group": "glitch",
+  "title": "Buffer Error",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBufferErrorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BufferErrorFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "BulgeDistortion",
+  "group": "distortion",
+  "title": "Bulge",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBulgeDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BulgeDistortionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "BurkesDithering",
+  "group": "dithering",
+  "title": "Burkes Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiBurkesDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/BurkesDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "CGAColorSpace",
+  "group": "simple",
+  "title": "CGA colorspace",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCGAColorSpaceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CGAColorSpaceFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Candlelight",
+  "group": "lut",
+  "title": "Candlelight",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCandlelightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CandlelightFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Canny",
+  "group": "effects",
+  "title": "Canny",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCannyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CannyFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "CaramelDarkness",
+  "group": "simple",
+  "title": "Caramel Darkness",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCaramelDarknessFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CaramelDarknessFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Celluloid",
+  "group": "lut",
+  "title": "Celluloid",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCelluloidFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CelluloidFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "ChannelMix",
+  "group": "color",
+  "title": "Channel Mix",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiChannelMixFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ChannelMixFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "ChannelProcessing",
+  "group": "color",
+  "title": "Channel Processing",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiChannelProcessingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ChannelProcessingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Charcoal",
+  "group": "artistic",
+  "title": "Charcoal",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCharcoalFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CharcoalFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ChessboardOverlay",
+  "group": "pixelation",
+  "title": "Chessboard Overlay",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiChessboardOverlayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ChessboardOverlayFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ChromaticAberrations",
+  "group": "glitch",
+  "title": "Chromatic Aberrations",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiChromaticAberrationsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ChromaticAberrationsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Chrome",
+  "group": "effects",
+  "title": "Chrome",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiChromeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ChromeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "CinematicDream",
+  "group": "light",
+  "title": "Cinematic Dream",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCinematicDreamFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CinematicDreamFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CircleAbstraction",
+  "group": "pixelation",
+  "title": "Circle Abstraction",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCircleAbstractionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CircleAbstractionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CircleBlur",
+  "group": "blur",
+  "title": "Circle Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCircleBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CircleBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "CirclePixelation",
+  "group": "pixelation",
+  "title": "Circle Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCirclePixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CirclePixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "CircleTransform",
+  "group": "geometry",
+  "title": "Circle Transform",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCircleTransformFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CircleTransformFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CircularMirror",
+  "group": "geometry",
+  "title": "Circular Mirror",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCircularMirrorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CircularMirrorFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Clahe",
+  "group": "light",
+  "title": "CLAHE",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheHSL",
+  "group": "light",
+  "title": "Clahe HSL",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheHSLFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheHSLFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheHSV",
+  "group": "light",
+  "title": "Clahe HSV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheHSVFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheHSVFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheJzazbz",
+  "group": "light",
+  "title": "Clahe Jzazbz",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheJzazbzFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheJzazbzFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheLAB",
+  "group": "light",
+  "title": "CLAHE LAB",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheLABFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheLABFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheLUV",
+  "group": "light",
+  "title": "CLAHE LUV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheLUVFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheLUVFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheOklab",
+  "group": "light",
+  "title": "Clahe Oklab",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheOklabFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheOklabFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "ClaheOklch",
+  "group": "light",
+  "title": "Clahe Oklch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClaheOklchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClaheOklchFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "CleanText",
+  "group": "enhancement",
+  "title": "Clean Text",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCleanTextFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CleanTextFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Closing",
+  "group": "effects",
+  "title": "Closing",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClosingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ClosingFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "Clustered2x2Dithering",
+  "group": "dithering",
+  "title": "Clustered 2x2 Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClustered2x2DitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/Clustered2x2DitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Clustered4x4Dithering",
+  "group": "dithering",
+  "title": "Clustered 4x4 Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClustered4x4DitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/Clustered4x4DitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Clustered8x8Dithering",
+  "group": "dithering",
+  "title": "Clustered 8x8 Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiClustered8x8DitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/Clustered8x8DitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "CodaChrome",
+  "group": "simple",
+  "title": "Coda Chrome",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCodaChromeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CodaChromeFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Coffee",
+  "group": "lut",
+  "title": "Coffee",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCoffeeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CoffeeFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "ColorAbstraction",
+  "group": "artistic",
+  "title": "Color Abstraction",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorAbstractionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorAbstractionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ColorAnomaly",
+  "group": "glitch",
+  "title": "Color Anomaly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorAnomalyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorAnomalyFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ColorBalance",
+  "group": "color",
+  "title": "Color balance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorBalanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorBalanceFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "ColorExplosion",
+  "group": "simple",
+  "title": "Color Explosion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorExplosionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorExplosionFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "ColorHalftone",
+  "group": "dithering",
+  "title": "Color Halftone",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorHalftoneFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorHalftoneFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "ColorMap",
+  "group": "simple",
+  "title": "Autumn",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorMapFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorMapFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ColorMask",
+  "group": "color",
+  "title": "Color Mask",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorMaskFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorMaskFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "ColorMatrix3x3",
+  "group": "color",
+  "title": "Color Matrix 3x3",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorMatrix3x3Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorMatrix3x3Filter.kt",
+  "backend": "aire matrix"
+ },
+ {
+  "name": "ColorMatrix4x4",
+  "group": "color",
+  "title": "Color Matrix 4x4",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorMatrix4x4Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorMatrix4x4Filter.kt",
+  "backend": "gpuimage matrix"
+ },
+ {
+  "name": "ColorOverlay",
+  "group": "color",
+  "title": "Color filter",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorOverlayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorOverlayFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "ColorPoster",
+  "group": "color",
+  "title": "Color Poster",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorPosterFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorPosterFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "ColorTemperature",
+  "group": "color",
+  "title": "Color Temperature",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorTemperatureFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorTemperatureFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ColorfulSwirl",
+  "group": "simple",
+  "title": "Colorful Swirl",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColorfulSwirlFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColorfulSwirlFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "ColumnStreak",
+  "group": "glitch",
+  "title": "Column Streak",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiColumnStreakFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ColumnStreakFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ConcentricCircleBreaks",
+  "group": "glitch",
+  "title": "Concentric Circle Breaks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConcentricCircleBreaksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ConcentricCircleBreaksFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ConcentricSquareBreaks",
+  "group": "glitch",
+  "title": "Concentric Square Breaks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConcentricSquareBreaksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ConcentricSquareBreaksFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ConformalMap",
+  "group": "geometry",
+  "title": "Conformal Map",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConformalMapFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ConformalMapFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ConstrainedSharpen",
+  "group": "enhancement",
+  "title": "Constrained Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConstrainedSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ConstrainedSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Contour",
+  "group": "effects",
+  "title": "Contour",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiContourFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ContourFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Contrast",
+  "group": "light",
+  "title": "Contrast",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiContrastFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ContrastFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Convex",
+  "group": "distortion",
+  "title": "Spline",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConvexFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ConvexFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Convolution3x3",
+  "group": "effects",
+  "title": "Convolution 3x3",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiConvolution3x3Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/Convolution3x3Filter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Cool",
+  "group": "simple",
+  "title": "Cool",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCoolFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CoolFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "CopyMoveDetection",
+  "group": "effects",
+  "title": "Copy Move Detection",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCopyMoveDetectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CopyMoveDetectionFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "Cracks",
+  "group": "effects",
+  "title": "Cracks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCracksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CracksFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Crease",
+  "group": "distortion",
+  "title": "Crease",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCreaseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CreaseFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CropOrPerspective",
+  "group": "geometry",
+  "title": "Crop or Perspective",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCropOrPerspectiveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CropOrPerspectiveFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "CropToContent",
+  "group": "geometry",
+  "title": "Crop to Content",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCropToContentFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CropToContentFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "CrossBlur",
+  "group": "blur",
+  "title": "Cross Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrossBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrossBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "CrossPixelization",
+  "group": "pixelation",
+  "title": "Cross Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrossPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "Crosshatch",
+  "group": "dithering",
+  "title": "Crosshatch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrosshatchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrosshatchFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "CrtCurvature",
+  "group": "glitch",
+  "title": "CRT curvature",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrtCurvatureFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrtCurvatureFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "CrtPhosphors",
+  "group": "effects",
+  "title": "CRT Phosphors",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrtPhosphorsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrtPhosphorsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CrtScanlines",
+  "group": "effects",
+  "title": "CRT Scanlines",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrtScanlinesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrtScanlinesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Crystallize",
+  "group": "pixelation",
+  "title": "Crystallize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCrystallizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CrystallizeFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "CubeFrame",
+  "group": "frames",
+  "title": "Cube Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCubeFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CubeFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "CubeLut",
+  "group": "lut",
+  "title": "3D LUT",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCubeLutFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CubeLutFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Cubism",
+  "group": "artistic",
+  "title": "Cubism",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCubismFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CubismFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Cutout",
+  "group": "artistic",
+  "title": "Cutout",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCutoutFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CutoutFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Cyberpunk",
+  "group": "simple",
+  "title": "Cyberpunk",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiCyberpunkFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/CyberpunkFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "DcpDehaze",
+  "group": "enhancement",
+  "title": "DCP Dehaze",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDcpDehazeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DcpDehazeFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Deblur",
+  "group": "enhancement",
+  "title": "Deblur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDeblurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DeblurFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "DeepPurple",
+  "group": "simple",
+  "title": "Deep Purple",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDeepPurpleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DeepPurpleFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Dehaze",
+  "group": "enhancement",
+  "title": "Dehaze",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDehazeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DehazeFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "DenoiseSmooth",
+  "group": "enhancement",
+  "title": "Denoise Smooth",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDenoiseSmoothFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DenoiseSmoothFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "DesaturateNorm",
+  "group": "color",
+  "title": "Desaturate Norm",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDesaturateNormFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DesaturateNormFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Descreen",
+  "group": "enhancement",
+  "title": "Descreen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDescreenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DescreenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Deskew",
+  "group": "geometry",
+  "title": "Deskew",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDeskewFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DeskewFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "Despeckle",
+  "group": "simple",
+  "title": "Despeckle",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDespeckleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DespeckleFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "DetailsEqualizer",
+  "group": "enhancement",
+  "title": "Details Equalizer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDetailsEqualizerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DetailsEqualizerFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Deutaromaly",
+  "group": "simple",
+  "title": "Deuteranomaly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDeutaromalyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DeutaromalyFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Deuteranopia",
+  "group": "simple",
+  "title": "Deuteranopia",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDeuteranopiaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DeuteranopiaFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "DiamondPixelation",
+  "group": "pixelation",
+  "title": "Diamond Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDiamondPixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DiamondPixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "DiceMosaic",
+  "group": "pixelation",
+  "title": "Dice Mosaic",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDiceMosaicFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DiceMosaicFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Diffuse",
+  "group": "blur",
+  "title": "Diffuse",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDiffuseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DiffuseFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "DiffusionTensors",
+  "group": "pixelation",
+  "title": "Diffusion Tensors",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDiffusionTensorsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DiffusionTensorsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "DigitalCode",
+  "group": "simple",
+  "title": "Digital Code",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDigitalCodeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DigitalCodeFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Dilation",
+  "group": "effects",
+  "title": "Dilation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDilationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DilationFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "Dirty",
+  "group": "effects",
+  "title": "Dirty",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDirtyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DirtyFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Displacement",
+  "group": "distortion",
+  "title": "Displacement",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDisplacementFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DisplacementFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Dissolve",
+  "group": "effects",
+  "title": "Dissolve",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDissolveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DissolveFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "DistortPerspective",
+  "group": "geometry",
+  "title": "Distort Perspective",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDistortPerspectiveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DistortPerspectiveFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Distortion",
+  "group": "distortion",
+  "title": "Content Aware Distortion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DistortionFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "DoG",
+  "group": "effects",
+  "title": "DoG",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDoGFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DoGFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "DodgeSketch",
+  "group": "artistic",
+  "title": "Dodge Sketch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDodgeSketchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DodgeSketchFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Doodle",
+  "group": "artistic",
+  "title": "Doodle",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDoodleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DoodleFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Drago",
+  "group": "light",
+  "title": "Drago",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDragoFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DragoFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "DreamPainting",
+  "group": "artistic",
+  "title": "Dream Painting",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDreamPaintingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DreamPaintingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "DropBlues",
+  "group": "lut",
+  "title": "Drop Blues",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDropBluesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DropBluesFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "DropShadow",
+  "group": "frames",
+  "title": "Drop Shadow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDropShadowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DropShadowFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Droste",
+  "group": "geometry",
+  "title": "Droste",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDrosteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DrosteFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "DynamicContrast",
+  "group": "light",
+  "title": "Dynamic Contrast",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiDynamicContrastFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/DynamicContrastFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "EdgyAmber",
+  "group": "lut",
+  "title": "Edgy Amber",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEdgyAmberFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EdgyAmberFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "ElectricGradient",
+  "group": "simple",
+  "title": "Electric Gradient",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiElectricGradientFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ElectricGradientFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Ellipsionism",
+  "group": "pixelation",
+  "title": "Ellipsionism",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEllipsionismFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EllipsionismFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Emboss",
+  "group": "effects",
+  "title": "Emboss",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEmbossFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EmbossFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Engrave",
+  "group": "artistic",
+  "title": "Engrave",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEngraveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EngraveFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "EnhancedCirclePixelation",
+  "group": "pixelation",
+  "title": "Enhanced Circle Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedCirclePixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedCirclePixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "EnhancedDiamondPixelation",
+  "group": "pixelation",
+  "title": "Enhanced Diamond Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedDiamondPixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedDiamondPixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "EnhancedGlitch",
+  "group": "glitch",
+  "title": "Enhanced Glitch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedGlitchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedGlitchFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EnhancedOil",
+  "group": "artistic",
+  "title": "Enhanced Oil",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedOilFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedOilFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "EnhancedPixelation",
+  "group": "pixelation",
+  "title": "Enhanced Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedPixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedPixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "EnhancedZoomBlur",
+  "group": "blur",
+  "title": "Enhanced Zoom Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEnhancedZoomBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EnhancedZoomBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Equalize",
+  "group": "simple",
+  "title": "Equalize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "EqualizeHistogramAdaptive",
+  "group": "light",
+  "title": "Equalize Histogram Adaptive",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramAdaptiveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramAdaptiveFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramAdaptiveHSL",
+  "group": "light",
+  "title": "Equalize Histogram Adaptive HSL",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramAdaptiveHSLFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramAdaptiveHSLFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramAdaptiveHSV",
+  "group": "light",
+  "title": "Equalize Histogram Adaptive HSV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramAdaptiveHSVFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramAdaptiveHSVFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramAdaptiveLAB",
+  "group": "light",
+  "title": "Equalize Histogram Adaptive LAB",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramAdaptiveLABFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramAdaptiveLABFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramAdaptiveLUV",
+  "group": "light",
+  "title": "Equalize Histogram Adaptive LUV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramAdaptiveLUVFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramAdaptiveLUVFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogram",
+  "group": "simple",
+  "title": "Equalize Histogram",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramHSV",
+  "group": "light",
+  "title": "Equalize Histogram HSV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramHSVFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramHSVFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeHistogramPixelation",
+  "group": "pixelation",
+  "title": "Equalize Histogram Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeHistogramPixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeHistogramPixelationFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "EqualizeLight",
+  "group": "light",
+  "title": "Equalize Light",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeLightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeLightFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "EqualizeShadow",
+  "group": "light",
+  "title": "Equalize Shadow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEqualizeShadowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EqualizeShadowFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "EquirectangularProjection",
+  "group": "geometry",
+  "title": "Equirectangular Projection",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiEquirectangularProjectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/EquirectangularProjectionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Erode",
+  "group": "effects",
+  "title": "Erode",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiErodeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ErodeFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "ErrorLevelAnalysis",
+  "group": "effects",
+  "title": "Error Level Analysis",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiErrorLevelAnalysisFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ErrorLevelAnalysisFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "ExpandImage",
+  "group": "geometry",
+  "title": "Expand Image",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiExpandImageFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ExpandImageFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "Exposure",
+  "group": "light",
+  "title": "Exposure",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiExposureFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ExposureFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "FadedArray",
+  "group": "pixelation",
+  "title": "Faded Array",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFadedArrayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FadedArrayFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FallColors",
+  "group": "lut",
+  "title": "Fall Colors",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFallColorsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FallColorsFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "FalseColor",
+  "group": "color",
+  "title": "False color",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFalseColorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FalseColorFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "FalseFloydSteinbergDithering",
+  "group": "dithering",
+  "title": "False Floyd Steinberg Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFalseFloydSteinbergDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FalseFloydSteinbergDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "FantasyLandscape",
+  "group": "simple",
+  "title": "Fantasy Landscape",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFantasyLandscapeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FantasyLandscapeFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "FastBilaterialBlur",
+  "group": "blur",
+  "title": "Fast Bilaterial Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFastBilaterialBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FastBilaterialBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "FastBlur",
+  "group": "blur",
+  "title": "Fast blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFastBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FastBlurFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "FastGaussianBlur2D",
+  "group": "blur",
+  "title": "Fast Gaussian Blur 2D",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFastGaussianBlur2DFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FastGaussianBlur2DFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "FastGaussianBlur3D",
+  "group": "blur",
+  "title": "Fast Gaussian Blur 3D",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFastGaussianBlur3DFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FastGaussianBlur3DFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "FastGaussianBlur4D",
+  "group": "blur",
+  "title": "Fast Gaussian Blur 4D",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFastGaussianBlur4DFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FastGaussianBlur4DFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Feedback",
+  "group": "geometry",
+  "title": "Feedback",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFeedbackFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FeedbackFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "FeltPen",
+  "group": "artistic",
+  "title": "Felt Pen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFeltPenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FeltPenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Filaments",
+  "group": "effects",
+  "title": "Filaments",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFilamentsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FilamentsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FillHoles",
+  "group": "effects",
+  "title": "Fill Holes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFillHolesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FillHolesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FilmStock50",
+  "group": "lut",
+  "title": "Film Stock 50",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFilmStock50Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FilmStock50Filter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Fireworks",
+  "group": "light",
+  "title": "Fireworks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFireworksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FireworksFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "FishEye",
+  "group": "distortion",
+  "title": "Fish-Eye",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFishEyeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FishEyeFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Flare",
+  "group": "light",
+  "title": "Flare",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFlareFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FlareFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "FlipAndRotateBlocks",
+  "group": "pixelation",
+  "title": "Flip And Rotate Blocks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFlipAndRotateBlocksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FlipAndRotateBlocksFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Flower",
+  "group": "distortion",
+  "title": "Flower",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFlowerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FlowerFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FloydSteinbergDithering",
+  "group": "dithering",
+  "title": "Floyd Steinberg Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFloydSteinbergDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FloydSteinbergDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "FoggyNight",
+  "group": "lut",
+  "title": "Foggy Night",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFoggyNightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FoggyNightFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "FractalGlass",
+  "group": "distortion",
+  "title": "Fractal Glass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFractalGlassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FractalGlassFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Fractalize",
+  "group": "effects",
+  "title": "Fractalize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFractalizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FractalizeFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FreakyBlackAndWhite",
+  "group": "effects",
+  "title": "Freaky B&W",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFreakyBlackAndWhiteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FreakyBlackAndWhiteFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FreakyDetails",
+  "group": "enhancement",
+  "title": "Freaky Details",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFreakyDetailsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FreakyDetailsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FrostedGlass",
+  "group": "blur",
+  "title": "Frosted Glass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFrostedGlassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FrostedGlassFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "FuturisticGradient",
+  "group": "simple",
+  "title": "Futuristic Gradient",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFuturisticGradientFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FuturisticGradientFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "FuzzyFrame",
+  "group": "frames",
+  "title": "Fuzzy Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiFuzzyFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/FuzzyFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Gallium",
+  "group": "distortion",
+  "title": "Gallium",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGalliumFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GalliumFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Gamma",
+  "group": "light",
+  "title": "Gamma",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGammaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GammaFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "GaussianBlur",
+  "group": "blur",
+  "title": "Gaussian blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGaussianBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GaussianBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "GaussianBoxBlur",
+  "group": "blur",
+  "title": "Gaussian Box Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGaussianBoxBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GaussianBoxBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Ghost",
+  "group": "effects",
+  "title": "Ghost",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGhostFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GhostFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "GlassHexTiles",
+  "group": "distortion",
+  "title": "Glass Hex Tiles",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlassHexTilesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlassHexTilesFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "GlassRectTiles",
+  "group": "distortion",
+  "title": "Glass Rect Tiles",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlassRectTilesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlassRectTilesFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "GlassSphereRefraction",
+  "group": "distortion",
+  "title": "Glass sphere refraction",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlassSphereRefractionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlassSphereRefractionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "GlassTriangleTiles",
+  "group": "distortion",
+  "title": "Glass Triangle Tiles",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlassTriangleTilesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlassTriangleTilesFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Glitch",
+  "group": "glitch",
+  "title": "Glitch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlitchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlitchFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "GlitchVariant",
+  "group": "glitch",
+  "title": "Glitch Variant",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlitchVariantFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlitchVariantFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Glow",
+  "group": "light",
+  "title": "Glow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGlowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GlowFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "GoldMeinelSharpen",
+  "group": "enhancement",
+  "title": "Gold Meinel Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGoldMeinelSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GoldMeinelSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "GoldenForest",
+  "group": "lut",
+  "title": "Golden Forest",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGoldenForestFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GoldenForestFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "GoldenHour",
+  "group": "simple",
+  "title": "Golden Hour",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGoldenHourFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GoldenHourFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Gotham",
+  "group": "simple",
+  "title": "Gotham",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGothamFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GothamFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "GradientMap",
+  "group": "color",
+  "title": "Gradient map",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGradientMapFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GradientMapFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "GradientSharpen",
+  "group": "enhancement",
+  "title": "Gradient Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGradientSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GradientSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "GraduatedColorAccent",
+  "group": "color",
+  "title": "Graduated Color Accent",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGraduatedColorAccentFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GraduatedColorAccentFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Grain",
+  "group": "effects",
+  "title": "Grain",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGrainFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GrainFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "GraphicNovel",
+  "group": "artistic",
+  "title": "Graphic Novel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGraphicNovelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GraphicNovelFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Grayscale",
+  "group": "color",
+  "title": "Gray Scale",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGrayscaleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GrayscaleFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "GreenSun",
+  "group": "simple",
+  "title": "Green Sun",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGreenSunFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GreenSunFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Greenish",
+  "group": "lut",
+  "title": "Greenish",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGreenishFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GreenishFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Grid",
+  "group": "effects",
+  "title": "Grid",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGridFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GridFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "GridSineDistortion2",
+  "group": "distortion",
+  "title": "Grid Sine Distortion 2",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiGridSineDistortion2Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/GridSineDistortion2Filter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HDR",
+  "group": "simple",
+  "title": "HDR",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHDRFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HDRFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "HableFilmicToneMapping",
+  "group": "light",
+  "title": "Hable Filmic Tone Mapping",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHableFilmicToneMappingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HableFilmicToneMappingFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Halftone",
+  "group": "dithering",
+  "title": "Halftone",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHalftoneFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HalftoneFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Haze",
+  "group": "light",
+  "title": "Haze",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHazeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HazeFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Hedcut",
+  "group": "artistic",
+  "title": "Hedcut",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHedcutFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HedcutFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HejlBurgessToneMapping",
+  "group": "light",
+  "title": "Heji-Burgess Tone mapping",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHejlBurgessToneMappingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HejlBurgessToneMappingFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "HelixWaves",
+  "group": "distortion",
+  "title": "Helix Waves",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHelixWavesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HelixWavesFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HessianSharpen",
+  "group": "enhancement",
+  "title": "Hessian Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHessianSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HessianSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HexKaleidoscope",
+  "group": "geometry",
+  "title": "Hex Kaleidoscope",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHexKaleidoscopeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HexKaleidoscopeFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HighPass",
+  "group": "enhancement",
+  "title": "High Pass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHighPassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HighPassFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "HighlightSynthesis",
+  "group": "light",
+  "title": "Highlight Synthesis",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHighlightSynthesisFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HighlightSynthesisFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HighlightsAndShadows",
+  "group": "light",
+  "title": "Highlights and shadows",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHighlightsAndShadowsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HighlightsAndShadowsFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "HopePoster",
+  "group": "artistic",
+  "title": "Hope Poster",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHopePosterFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HopePosterFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HorizontalWindStagger",
+  "group": "glitch",
+  "title": "Horizontal Wind Stagger",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHorizontalWindStaggerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HorizontalWindStaggerFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "HotSummer",
+  "group": "simple",
+  "title": "Hot Summer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHotSummerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HotSummerFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "HoughSketch",
+  "group": "artistic",
+  "title": "Hough Sketch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHoughSketchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HoughSketchFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HslAdjustment",
+  "group": "color",
+  "title": "HSL Adjustment",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHslAdjustmentFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HslAdjustmentFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "HsvEqualizer",
+  "group": "color",
+  "title": "HSV Equalizer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHsvEqualizerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HsvEqualizerFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Hue",
+  "group": "color",
+  "title": "Hue",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHueFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HueFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "HueShiftBands",
+  "group": "color",
+  "title": "Hue Shift Bands",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHueShiftBandsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HueShiftBandsFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HueShiftFan",
+  "group": "color",
+  "title": "Hue Shift Fan",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHueShiftFanFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HueShiftFanFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HueShiftTunnel",
+  "group": "color",
+  "title": "Hue Shift Tunnel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHueShiftTunnelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HueShiftTunnelFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "HuffmanGlitch",
+  "group": "glitch",
+  "title": "Huffman Glitch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiHuffmanGlitchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/HuffmanGlitchFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "InkWash",
+  "group": "artistic",
+  "title": "Ink Wash",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiInkWashFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/InkWashFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "InlineBreaks",
+  "group": "glitch",
+  "title": "Inline Breaks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiInlineBreaksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/InlineBreaksFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "InversionFractal",
+  "group": "geometry",
+  "title": "Inversion Fractal",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiInversionFractalFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/InversionFractalFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Isophotes",
+  "group": "effects",
+  "title": "Isophotes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiIsophotesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/IsophotesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "JarvisJudiceNinkeDithering",
+  "group": "dithering",
+  "title": "Jarvis Judice Ninke Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiJarvisJudiceNinkeDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/JarvisJudiceNinkeDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "JavaLookAndFeel",
+  "group": "simple",
+  "title": "Java Look and Feel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiJavaLookAndFeelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/JavaLookAndFeelFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "JpegArtifacts",
+  "group": "glitch",
+  "title": "JPEG Artifacts",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiJpegArtifactsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/JpegArtifactsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Kaleidoscope",
+  "group": "geometry",
+  "title": "Kaleidoscope",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiKaleidoscopeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/KaleidoscopeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Kodak",
+  "group": "lut",
+  "title": "Kodak",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiKodakFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/KodakFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Kuwahara",
+  "group": "enhancement",
+  "title": "Kuwahara smoothing",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiKuwaharaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/KuwaharaFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "LUT512x512",
+  "group": "lut",
+  "title": "512x512 2D LUT",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLUT512x512Filter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LUT512x512Filter.kt",
+  "backend": "lut trickle"
+ },
+ {
+  "name": "Laplacian",
+  "group": "simple",
+  "title": "Laplacian",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLaplacianFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LaplacianFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "LaplacianSimple",
+  "group": "simple",
+  "title": "Laplacian Simple",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLaplacianSimpleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LaplacianSimpleFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LavenderDream",
+  "group": "simple",
+  "title": "Lavender Dream",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLavenderDreamFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LavenderDreamFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "LeftToRightDithering",
+  "group": "dithering",
+  "title": "Left To Right Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLeftToRightDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LeftToRightDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "LemonadeLight",
+  "group": "simple",
+  "title": "Lemonade Light",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLemonadeLightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LemonadeLightFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "LensBlur",
+  "group": "blur",
+  "title": "Lens Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLensBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LensBlurFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "LensCorrection",
+  "group": "geometry",
+  "title": "Lens Correction",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLensCorrectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LensCorrectionFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "LensDistortion",
+  "group": "distortion",
+  "title": "Distort Lens",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLensDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LensDistortionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Levels",
+  "group": "light",
+  "title": "Levels",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLevelsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LevelsFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "LightEffects",
+  "group": "light",
+  "title": "Light Effects",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLightEffectsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LightEffectsFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "LightGlow",
+  "group": "light",
+  "title": "Light Glow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLightGlowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LightGlowFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LightPatch",
+  "group": "light",
+  "title": "Light Patch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLightPatchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LightPatchFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LinearBoxBlur",
+  "group": "blur",
+  "title": "Linear Box Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearBoxBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearBoxBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearFastGaussianBlur",
+  "group": "blur",
+  "title": "Linear Fast Gaussian Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearFastGaussianBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearFastGaussianBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearFastGaussianBlurNext",
+  "group": "blur",
+  "title": "Linear Fast Gaussian Blur Next",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearFastGaussianBlurNextFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearFastGaussianBlurNextFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearGaussianBlur",
+  "group": "blur",
+  "title": "Linear Gaussian Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearGaussianBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearGaussianBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearGaussianBoxBlur",
+  "group": "blur",
+  "title": "Linear Gaussian Box Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearGaussianBoxBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearGaussianBoxBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearStackBlur",
+  "group": "blur",
+  "title": "Linear Stack Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearStackBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearStackBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearTentBlur",
+  "group": "blur",
+  "title": "Linear Tent Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearTentBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearTentBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "LinearTiltShift",
+  "group": "blur",
+  "title": "Linear Tilt-Shift",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinearTiltShiftFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinearTiltShiftFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Linify",
+  "group": "artistic",
+  "title": "Linify",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLinifyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LinifyFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LocalContrastEnhancement",
+  "group": "light",
+  "title": "Local Contrast Enhancement",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLocalContrastEnhancementFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LocalContrastEnhancementFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LocalOrientation",
+  "group": "effects",
+  "title": "Local Orientation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLocalOrientationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LocalOrientationFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LocalVarianceNormalization",
+  "group": "enhancement",
+  "title": "Local Variance Normalization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLocalVarianceNormalizationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LocalVarianceNormalizationFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "LogarithmicSpiral",
+  "group": "distortion",
+  "title": "Logarithmic Spiral",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLogarithmicSpiralFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LogarithmicSpiralFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "LogarithmicToneMapping",
+  "group": "light",
+  "title": "Logarithmic Tone Mapping",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLogarithmicToneMappingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LogarithmicToneMappingFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Lomo",
+  "group": "color",
+  "title": "Lomo",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLomoFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LomoFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Lookup",
+  "group": "effects",
+  "title": "Lookup",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLookupFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LookupFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "LowPoly",
+  "group": "artistic",
+  "title": "Low Poly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLowPolyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LowPolyFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "LuminanceGradient",
+  "group": "simple",
+  "title": "Luminance Gradient",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLuminanceGradientFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LuminanceGradientFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "LylejkPainting",
+  "group": "artistic",
+  "title": "Lylejk Painting",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiLylejkPaintingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/LylejkPaintingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MagicDetails",
+  "group": "enhancement",
+  "title": "Magic Details",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMagicDetailsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MagicDetailsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MakeSeamless",
+  "group": "pixelation",
+  "title": "Make Seamless",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMakeSeamlessFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MakeSeamlessFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Marble",
+  "group": "distortion",
+  "title": "Marble",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMarbleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MarbleFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "MarkerDrawing",
+  "group": "artistic",
+  "title": "Marker Drawing",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMarkerDrawingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MarkerDrawingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MedianBlur",
+  "group": "blur",
+  "title": "Median Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMedianBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MedianBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "MessWithBits",
+  "group": "glitch",
+  "title": "Mess With Bits",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMessWithBitsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MessWithBitsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MetallicLook",
+  "group": "effects",
+  "title": "Metallic Look",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMetallicLookFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MetallicLookFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MicroMacroPixelization",
+  "group": "pixelation",
+  "title": "Micro Macro Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMicroMacroPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "MightyDetails",
+  "group": "enhancement",
+  "title": "Mighty Details",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMightyDetailsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MightyDetailsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MineralMosaic",
+  "group": "pixelation",
+  "title": "Mineral Mosaic",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMineralMosaicFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MineralMosaicFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Ministeck",
+  "group": "pixelation",
+  "title": "Ministeck",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMinisteckFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MinisteckFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Mirror",
+  "group": "geometry",
+  "title": "Mirror",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMirrorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MirrorFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "MirrorFrame",
+  "group": "frames",
+  "title": "Mirror Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMirrorFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MirrorFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MirroredArray",
+  "group": "pixelation",
+  "title": "Mirrored Array",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMirroredArrayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MirroredArrayFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "MissEtikate",
+  "group": "lut",
+  "title": "Miss Etikate",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMissEtikateFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MissEtikateFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "Mobius",
+  "group": "light",
+  "title": "Mobius",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMobiusFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MobiusFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Moire",
+  "group": "simple",
+  "title": "Moire",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMoireFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MoireFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "Monochrome",
+  "group": "color",
+  "title": "Monochrome",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMonochromeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MonochromeFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "MorphologicalGradient",
+  "group": "effects",
+  "title": "Morphological Gradient",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMorphologicalGradientFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MorphologicalGradientFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "MotionBlur",
+  "group": "blur",
+  "title": "Motion Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMotionBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MotionBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "MultiscaleSharpen",
+  "group": "enhancement",
+  "title": "Multiscale Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiMultiscaleSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/MultiscaleSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "NativeStackBlur",
+  "group": "blur",
+  "title": "Native Stack Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNativeStackBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NativeStackBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Negative",
+  "group": "simple",
+  "title": "Negative",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNegativeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NegativeFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Neon",
+  "group": "color",
+  "title": "Neon",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNeonFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NeonFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "NightMagic",
+  "group": "simple",
+  "title": "Night Magic",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNightMagicFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NightMagicFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "NightVision",
+  "group": "simple",
+  "title": "Night Vision",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNightVisionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NightVisionFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Noise",
+  "group": "effects",
+  "title": "Noise",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNoiseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NoiseFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "NonMaximumSuppression",
+  "group": "simple",
+  "title": "Non maximum suppression",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNonMaximumSuppressionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/NonMaximumSuppressionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "NucleusPixelization",
+  "group": "pixelation",
+  "title": "Nucleus Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiNucleusPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "Offset",
+  "group": "geometry",
+  "title": "Offset",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOffsetFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OffsetFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "OffsetStripes",
+  "group": "glitch",
+  "title": "Offset Stripes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOffsetStripesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OffsetStripesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Oil",
+  "group": "artistic",
+  "title": "Oil",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOilFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OilFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "OldMovieStripes",
+  "group": "effects",
+  "title": "Old Movie Stripes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOldMovieStripesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OldMovieStripesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "OldPhotograph",
+  "group": "artistic",
+  "title": "Old Photograph",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOldPhotographFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OldPhotographFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "OldSchool8Bit",
+  "group": "pixelation",
+  "title": "Old School 8 Bit",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOldSchool8BitFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OldSchool8BitFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "OldTv",
+  "group": "simple",
+  "title": "Old Tv",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOldTvFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OldTvFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Opacity",
+  "group": "color",
+  "title": "Opacity",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOpacityFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OpacityFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Opening",
+  "group": "effects",
+  "title": "Opening",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOpeningFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OpeningFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "OrangeHaze",
+  "group": "simple",
+  "title": "Orange Haze",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOrangeHazeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/OrangeHazeFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "OrbitalPixelization",
+  "group": "pixelation",
+  "title": "Orbital Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiOrbitalPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "Painting",
+  "group": "artistic",
+  "title": "Painting",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPaintingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PaintingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PaintingFrame",
+  "group": "frames",
+  "title": "Painting Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPaintingFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PaintingFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PaletteTransfer",
+  "group": "color",
+  "title": "Palette Transfer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPaletteTransferFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PaletteTransferFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "PaletteTransferVariant",
+  "group": "color",
+  "title": "Palette Transfer Variant",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPaletteTransferVariantFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PaletteTransferVariantFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Pastel",
+  "group": "simple",
+  "title": "Pastel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPastelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PastelFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "PenDrawing",
+  "group": "artistic",
+  "title": "Pen Drawing",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPenDrawingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PenDrawingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PencilPortrait",
+  "group": "artistic",
+  "title": "Pencil Portrait",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPencilPortraitFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PencilPortraitFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PerlinDistortion",
+  "group": "distortion",
+  "title": "Perlin Distortion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPerlinDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PerlinDistortionFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Pinch",
+  "group": "distortion",
+  "title": "Whirl and Pinch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPinchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PinchFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "PinkDream",
+  "group": "simple",
+  "title": "Pink Dream",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPinkDreamFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PinkDreamFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "PixelMelt",
+  "group": "glitch",
+  "title": "Pixel Melt",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPixelMeltFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PixelMeltFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "PixelSort",
+  "group": "glitch",
+  "title": "Pixel Sort",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPixelSortFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PixelSortFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Pixelation",
+  "group": "pixelation",
+  "title": "Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "PoincareDisk",
+  "group": "geometry",
+  "title": "Poincare Disk",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPoincareDiskFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PoincareDiskFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Pointillize",
+  "group": "artistic",
+  "title": "Pointillize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPointillizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PointillizeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "PoissonBlur",
+  "group": "blur",
+  "title": "Poisson Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPoissonBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PoissonBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "PolarCoordinates",
+  "group": "geometry",
+  "title": "Polar Coordinates",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPolarCoordinatesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PolarCoordinatesFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "PolarTransform",
+  "group": "geometry",
+  "title": "Polar Transform",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPolarTransformFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PolarTransformFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Polaroid",
+  "group": "simple",
+  "title": "Polaroid",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPolaroidFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PolaroidFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "PolaroidFrame",
+  "group": "frames",
+  "title": "Polaroid Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPolaroidFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PolaroidFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PolkaDot",
+  "group": "pixelation",
+  "title": "Polka Dot",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPolkaDotFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PolkaDotFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "PopArt",
+  "group": "artistic",
+  "title": "Pop Art",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPopArtFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PopArtFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "PopShadows",
+  "group": "light",
+  "title": "Pop Shadows",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPopShadowsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PopShadowsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PosterEdges",
+  "group": "artistic",
+  "title": "Poster Edges",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPosterEdgesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PosterEdgesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Posterize",
+  "group": "color",
+  "title": "Posterize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPosterizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PosterizeFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "PosterizedDithering",
+  "group": "dithering",
+  "title": "Posterized Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPosterizedDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PosterizedDitheringFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "PowerTwirl",
+  "group": "distortion",
+  "title": "Power Twirl",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPowerTwirlFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PowerTwirlFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ProgressiveScaling",
+  "group": "geometry",
+  "title": "Progressive Scaling",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiProgressiveScalingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ProgressiveScalingFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Protanopia",
+  "group": "simple",
+  "title": "Protanopia",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiProtanopiaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ProtanopiaFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Protonomaly",
+  "group": "simple",
+  "title": "Protanomaly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiProtonomalyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ProtonomalyFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "PulseGridPixelization",
+  "group": "pixelation",
+  "title": "Pulse Grid Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPulseGridPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "PurpleMist",
+  "group": "simple",
+  "title": "Purple Mist",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPurpleMistFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PurpleMistFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Puzzle",
+  "group": "pixelation",
+  "title": "Puzzle",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiPuzzleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/PuzzleFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Quadtree",
+  "group": "pixelation",
+  "title": "Quadtree",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiQuadtreeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/QuadtreeFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Quantizier",
+  "group": "dithering",
+  "title": "Quantizier",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiQuantizierFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/QuantizierFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Quicksilver",
+  "group": "distortion",
+  "title": "Quicksilver",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiQuicksilverFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/QuicksilverFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RGB",
+  "group": "color",
+  "title": "RGB filter",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRGBFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RGBFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "RadialInterpolate",
+  "group": "distortion",
+  "title": "Radial Interpolate",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRadialInterpolateFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RadialInterpolateFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RadialShimmer",
+  "group": "distortion",
+  "title": "Radial Shimmer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRadialShimmerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RadialShimmerFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RadialStreak",
+  "group": "glitch",
+  "title": "Radial Streak",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRadialStreakFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RadialStreakFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RadialTiltShift",
+  "group": "blur",
+  "title": "Tilt Shift",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRadialTiltShiftFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RadialTiltShiftFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "RadialWeavePixelization",
+  "group": "pixelation",
+  "title": "Radial Weave Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRadialWeavePixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "RainAndSnow",
+  "group": "effects",
+  "title": "Rain And Snow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRainAndSnowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RainAndSnowFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RainbowWorld",
+  "group": "simple",
+  "title": "Rainbow World",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRainbowWorldFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RainbowWorldFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "RandomColorArray",
+  "group": "pixelation",
+  "title": "Random Color Array",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomColorArrayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomColorArrayFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RandomColorDispersion",
+  "group": "glitch",
+  "title": "Random Color Dispersion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomColorDispersionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomColorDispersionFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RandomDeformations",
+  "group": "distortion",
+  "title": "Random Deformations",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomDeformationsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomDeformationsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RandomDithering",
+  "group": "dithering",
+  "title": "Random Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "RandomKaleidoscopeGrid",
+  "group": "geometry",
+  "title": "Random Kaleidoscope Grid",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomKaleidoscopeGridFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomKaleidoscopeGridFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RandomPatchArray",
+  "group": "pixelation",
+  "title": "Random Patch Array",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomPatchArrayFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomPatchArrayFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RandomShadeStripes",
+  "group": "pixelation",
+  "title": "Random Shade Stripes",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRandomShadeStripesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RandomShadeStripesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RawGmic",
+  "group": "effects",
+  "title": "GMIC",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRawGmicFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RawGmicFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Rays",
+  "group": "light",
+  "title": "Rays",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRaysFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RaysFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "RebuildFromSimilarBlocks",
+  "group": "pixelation",
+  "title": "Rebuild From Similar Blocks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRebuildFromSimilarBlocksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RebuildFromSimilarBlocksFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RedSwirl",
+  "group": "simple",
+  "title": "Red Swirl",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRedSwirlFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RedSwirlFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "ReduceNoise",
+  "group": "simple",
+  "title": "Reduce Noise",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiReduceNoiseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ReduceNoiseFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "ReliefLight",
+  "group": "light",
+  "title": "Relief Light",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiReliefLightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ReliefLightFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RemoveColor",
+  "group": "color",
+  "title": "Remove Color",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRemoveColorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RemoveColorFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "RemoveHotPixels",
+  "group": "enhancement",
+  "title": "Remove Hot Pixels",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRemoveHotPixelsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RemoveHotPixelsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RemoveScratches",
+  "group": "enhancement",
+  "title": "Remove Scratches",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRemoveScratchesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RemoveScratchesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ReplaceColor",
+  "group": "color",
+  "title": "Replace Color",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiReplaceColorFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ReplaceColorFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Retinex",
+  "group": "light",
+  "title": "Retinex",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRetinexFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RetinexFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RetroFade",
+  "group": "effects",
+  "title": "Retro Fade",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRetroFadeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RetroFadeFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RetroYellow",
+  "group": "lut",
+  "title": "Retro Yellow",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRetroYellowFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RetroYellowFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "RichardsonLucySharpen",
+  "group": "enhancement",
+  "title": "Richardson Lucy Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRichardsonLucySharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RichardsonLucySharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RingBlur",
+  "group": "blur",
+  "title": "Ring Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRingBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RingBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Ripple",
+  "group": "distortion",
+  "title": "Ripple",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRippleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RippleFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Rodilius",
+  "group": "artistic",
+  "title": "Rodilius",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRodiliusFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RodiliusFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RoundedFrame",
+  "group": "frames",
+  "title": "Rounded Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRoundedFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RoundedFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RowShifter",
+  "group": "glitch",
+  "title": "Row Shifter",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRowShifterFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RowShifterFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "RubberStamp",
+  "group": "artistic",
+  "title": "Rubber Stamp",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRubberStampFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RubberStampFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "Rubidium",
+  "group": "distortion",
+  "title": "Rubidium",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiRubidiumFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/RubidiumFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SandPainting",
+  "group": "artistic",
+  "title": "Sand Painting",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSandPaintingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SandPaintingFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SaturationEqualizer",
+  "group": "color",
+  "title": "Saturation Equalizer",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSaturationEqualizerFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SaturationEqualizerFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Saturation",
+  "group": "color",
+  "title": "Saturation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSaturationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SaturationFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "SeamCarving",
+  "group": "geometry",
+  "title": "Seam Carving",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSeamCarvingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SeamCarvingFilter.kt",
+  "backend": "opencv"
+ },
+ {
+  "name": "SelectiveDesaturation",
+  "group": "color",
+  "title": "Selective Desaturation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSelectiveDesaturationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SelectiveDesaturationFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Sepia",
+  "group": "simple",
+  "title": "Sepia",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSepiaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SepiaFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Shader",
+  "group": "effects",
+  "title": "Shader",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShaderFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShaderFilter.kt",
+  "backend": "gpuimage shader"
+ },
+ {
+  "name": "ShadowPatch",
+  "group": "light",
+  "title": "Shadow Patch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShadowPatchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShadowPatchFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Shapeism",
+  "group": "pixelation",
+  "title": "Shapeism",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShapeismFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShapeismFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SharpAbstract",
+  "group": "artistic",
+  "title": "Sharp Abstract",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSharpAbstractFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SharpAbstractFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Sharpen",
+  "group": "enhancement",
+  "title": "Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SharpenFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Shear",
+  "group": "geometry",
+  "title": "Shear",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShearFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShearFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "ShockWaves",
+  "group": "distortion",
+  "title": "Shock Waves",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShockWavesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShockWavesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ShuffleBlur",
+  "group": "blur",
+  "title": "Shuffle Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShuffleBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShuffleBlurFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "ShufflePatches",
+  "group": "pixelation",
+  "title": "Shuffle Patches",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiShufflePatchesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ShufflePatchesFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SideFade",
+  "group": "frames",
+  "title": "Side Fade",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSideFadeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SideFadeFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SierraDithering",
+  "group": "dithering",
+  "title": "Sierra Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSierraDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SierraDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SierraLiteDithering",
+  "group": "dithering",
+  "title": "Sierra Lite Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSierraLiteDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SierraLiteDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SimpleOldTv",
+  "group": "simple",
+  "title": "Simple Old TV",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSimpleOldTvFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SimpleOldTvFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SimpleSketch",
+  "group": "simple",
+  "title": "Simple Sketch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSimpleSketchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SimpleSketchFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SimpleSolarize",
+  "group": "simple",
+  "title": "Simple Solarize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSimpleSolarizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SimpleSolarizeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "SimpleThresholdDithering",
+  "group": "dithering",
+  "title": "Simple Threshold Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSimpleThresholdDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SimpleThresholdDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "SimpleWeavePixelation",
+  "group": "pixelation",
+  "title": "Simple Weave Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSimpleWeavePixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SimpleWeavePixelationFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SixtiesCinema",
+  "group": "effects",
+  "title": "60's Cinema",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSixtiesCinemaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SixtiesCinemaFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Skeleton",
+  "group": "effects",
+  "title": "Skeleton",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSkeletonFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SkeletonFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Sketch",
+  "group": "artistic",
+  "title": "Sketch",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSketchFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SketchFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Smear",
+  "group": "pixelation",
+  "title": "Smear",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmearFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmearFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "SmoothAbstract",
+  "group": "artistic",
+  "title": "Smooth Abstract",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmoothAbstractFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmoothAbstractFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SmoothFrame",
+  "group": "frames",
+  "title": "Smooth Frame",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmoothFrameFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmoothFrameFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SmoothKaleidoscope",
+  "group": "geometry",
+  "title": "Smooth Kaleidoscope",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmoothKaleidoscopeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmoothKaleidoscopeFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SmoothSkin",
+  "group": "enhancement",
+  "title": "Smooth Skin",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmoothSkinFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmoothSkinFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SmoothToon",
+  "group": "artistic",
+  "title": "Smooth toon",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSmoothToonFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SmoothToonFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "SobelEdgeDetection",
+  "group": "effects",
+  "title": "Sobel edge",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSobelEdgeDetectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SobelEdgeDetectionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "SobelSimple",
+  "group": "simple",
+  "title": "Sobel Simple",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSobelSimpleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SobelSimpleFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "SoftElegance",
+  "group": "lut",
+  "title": "Soft Elegance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSoftEleganceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SoftEleganceFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "SoftEleganceVariant",
+  "group": "lut",
+  "title": "Soft Elegance Variant",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSoftEleganceVariantFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SoftEleganceVariantFilter.kt",
+  "backend": "lut"
+ },
+ {
+  "name": "SoftSpringLight",
+  "group": "simple",
+  "title": "Soft Spring Light",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSoftSpringLightFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SoftSpringLightFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Solarize",
+  "group": "color",
+  "title": "Solarize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSolarizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SolarizeFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "SpacePortal",
+  "group": "simple",
+  "title": "Space Portal",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpacePortalFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpacePortalFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Sparkle",
+  "group": "light",
+  "title": "Sparkle",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSparkleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SparkleFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "SpecificSaturation",
+  "group": "color",
+  "title": "Specific Saturation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpecificSaturationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpecificSaturationFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SpectralFire",
+  "group": "simple",
+  "title": "Spectral Fire",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpectralFireFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpectralFireFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "SphereLensDistortion",
+  "group": "distortion",
+  "title": "Sphere Lens Distortion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSphereLensDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SphereLensDistortionFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "SphereRefraction",
+  "group": "distortion",
+  "title": "Sphere refraction",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSphereRefractionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SphereRefractionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "SpiralArms",
+  "group": "distortion",
+  "title": "Spiral Arms",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpiralArmsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpiralArmsFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SpiralBreaks",
+  "group": "glitch",
+  "title": "Spiral Breaks",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpiralBreaksFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpiralBreaksFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SpiralDroste",
+  "group": "distortion",
+  "title": "Spiral Droste",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSpiralDrosteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SpiralDrosteFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SquareFresnel",
+  "group": "distortion",
+  "title": "Square Fresnel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSquareFresnelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SquareFresnelFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SquareSpiralDroste",
+  "group": "distortion",
+  "title": "Square Spiral Droste",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSquareSpiralDrosteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SquareSpiralDrosteFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "SquareToCircle",
+  "group": "geometry",
+  "title": "Square To Circle",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSquareToCircleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SquareToCircleFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "StackBlur",
+  "group": "blur",
+  "title": "Stack blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStackBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StackBlurFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "StaggeredPixelization",
+  "group": "pixelation",
+  "title": "Staggered Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStaggeredPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "StainedGlass",
+  "group": "artistic",
+  "title": "Stained Glass",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStainedGlassFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StainedGlassFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "StarBlur",
+  "group": "blur",
+  "title": "Star Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStarBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StarBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "StereographicProjection",
+  "group": "geometry",
+  "title": "Stereographic Projection",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStereographicProjectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StereographicProjectionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "StreakCircles",
+  "group": "glitch",
+  "title": "Streak Circles",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStreakCirclesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StreakCirclesFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "StreakExpand",
+  "group": "glitch",
+  "title": "Streak Expand",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStreakExpandFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StreakExpandFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "Streak",
+  "group": "glitch",
+  "title": "Streak",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStreakFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StreakFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Stringify",
+  "group": "artistic",
+  "title": "Stringify",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStringifyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StringifyFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "StrokePixelation",
+  "group": "pixelation",
+  "title": "Stroke Pixelation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStrokePixelationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StrokePixelationFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "StuckiDithering",
+  "group": "dithering",
+  "title": "Stucki Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiStuckiDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/StuckiDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Sunrise",
+  "group": "simple",
+  "title": "Sunrise",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSunriseFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SunriseFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "SuperPixels",
+  "group": "pixelation",
+  "title": "Super Pixels",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSuperPixelsFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SuperPixelsFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "SwirlDistortion",
+  "group": "distortion",
+  "title": "Swirl",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiSwirlDistortionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/SwirlDistortionFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Taquin",
+  "group": "pixelation",
+  "title": "Taquin",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTaquinFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TaquinFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "TargetColorSpot",
+  "group": "color",
+  "title": "Target Color Spot",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTargetColorSpotFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TargetColorSpotFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "TemperatureBalance",
+  "group": "color",
+  "title": "Temperature Balance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTemperatureBalanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TemperatureBalanceFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "TentBlur",
+  "group": "blur",
+  "title": "Tent Blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTentBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TentBlurFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "TextureSharpen",
+  "group": "enhancement",
+  "title": "Texture Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTextureSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TextureSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Threshold",
+  "group": "effects",
+  "title": "Luminance threshold",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiThresholdFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ThresholdFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "TileableRotation",
+  "group": "pixelation",
+  "title": "Tileable Rotation",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTileableRotationFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TileableRotationFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "TiledStreak",
+  "group": "glitch",
+  "title": "Tiled Streak",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTiledStreakFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TiledStreakFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "ToneCurves",
+  "group": "color",
+  "title": "Tone Curves",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiToneCurvesFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ToneCurvesFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "ToneEnhance",
+  "group": "light",
+  "title": "Tone Enhance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiToneEnhanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ToneEnhanceFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ToneSharpen",
+  "group": "enhancement",
+  "title": "Tone Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiToneSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ToneSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Toon",
+  "group": "artistic",
+  "title": "Toon",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiToonFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ToonFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "TopHat",
+  "group": "effects",
+  "title": "Top Hat",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTopHatFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TopHatFilter.kt",
+  "backend": "aire trickle"
+ },
+ {
+  "name": "TornEdge",
+  "group": "frames",
+  "title": "Torn Edge",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTornEdgeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TornEdgeFilter.kt",
+  "backend": "other"
+ },
+ {
+  "name": "TriTone",
+  "group": "color",
+  "title": "Tri Tone",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTriToneFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TriToneFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Tritanopia",
+  "group": "simple",
+  "title": "Tritanopia",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTritanopiaFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TritanopiaFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Tritonomaly",
+  "group": "simple",
+  "title": "Tritanomaly",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTritonomalyFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TritonomalyFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "Tunnel",
+  "group": "geometry",
+  "title": "Tunnel",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTunnelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TunnelFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Twirl",
+  "group": "distortion",
+  "title": "Twirl",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTwirlFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TwirlFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "TwoRowSierraDithering",
+  "group": "dithering",
+  "title": "Two Row Sierra Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiTwoRowSierraDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/TwoRowSierraDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "Uchimura",
+  "group": "light",
+  "title": "Uchimura",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiUchimuraFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/UchimuraFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Unpurple",
+  "group": "color",
+  "title": "Unpurple",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiUnpurpleFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/UnpurpleFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Unsharp",
+  "group": "enhancement",
+  "title": "Unsharp",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiUnsharpFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/UnsharpFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Unstrip",
+  "group": "enhancement",
+  "title": "Unstrip",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiUnstripFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/UnstripFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "VHS",
+  "group": "glitch",
+  "title": "VHS",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVHSFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VHSFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "VHSNtsc",
+  "group": "glitch",
+  "title": "VHS NTSC",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVHSNtscFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VHSNtscFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "VectorPainting",
+  "group": "artistic",
+  "title": "Vector Painting",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVectorPaintingFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VectorPaintingFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Vibrance",
+  "group": "color",
+  "title": "Vibrance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVibranceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VibranceFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "Vignette",
+  "group": "light",
+  "title": "Vignette",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVignetteFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VignetteFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Vintage",
+  "group": "simple",
+  "title": "Vintage",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVintageFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VintageFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "VoronoiCrystallize",
+  "group": "pixelation",
+  "title": "Voronoi Crystallize",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVoronoiCrystallizeFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/VoronoiCrystallizeFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "VortexPixelization",
+  "group": "pixelation",
+  "title": "Vortex Pixelization",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiVortexPixelizationFilter.kt",
+  "impl_file": null,
+  "backend": "?"
+ },
+ {
+  "name": "Warhol",
+  "group": "artistic",
+  "title": "Warhol",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWarholFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WarholFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "Warm",
+  "group": "simple",
+  "title": "Warm",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWarmFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WarmFilter.kt",
+  "backend": "matrix"
+ },
+ {
+  "name": "WarpByIntensity",
+  "group": "distortion",
+  "title": "Warp By Intensity",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWarpByIntensityFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WarpByIntensityFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "WaterDrop",
+  "group": "distortion",
+  "title": "Water Drop",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWaterDropFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WaterDropFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "WaterEffect",
+  "group": "distortion",
+  "title": "Water Effect",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWaterEffectFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WaterEffectFilter.kt",
+  "backend": "aire"
+ },
+ {
+  "name": "WaterReflection",
+  "group": "distortion",
+  "title": "Water Reflection",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWaterReflectionFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WaterReflectionFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "WeakPixel",
+  "group": "simple",
+  "title": "Weak pixel inclusion",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWeakPixelFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WeakPixelFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "Weave",
+  "group": "pixelation",
+  "title": "Weave",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWeaveFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WeaveFilter.kt",
+  "backend": "jhlabs"
+ },
+ {
+  "name": "WhiteBalance",
+  "group": "light",
+  "title": "White balance",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWhiteBalanceFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WhiteBalanceFilter.kt",
+  "backend": "gpuimage"
+ },
+ {
+  "name": "WhitenSharpen",
+  "group": "enhancement",
+  "title": "Whiten Sharpen",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiWhitenSharpenFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/WhitenSharpenFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "YililomaDithering",
+  "group": "dithering",
+  "title": "Yililoma Dithering",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiYililomaDitheringFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/YililomaDitheringFilter.kt",
+  "backend": "trickle"
+ },
+ {
+  "name": "ZoneSystem",
+  "group": "light",
+  "title": "Zone System",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiZoneSystemFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ZoneSystemFilter.kt",
+  "backend": "gmic"
+ },
+ {
+  "name": "ZoomBlur",
+  "group": "blur",
+  "title": "Zoom blur",
+  "ui_file": "core/filters/src/main/java/com/t8rin/imagetoolbox/core/filters/presentation/model/UiZoomBlurFilter.kt",
+  "impl_file": "feature/filters/src/main/java/com/t8rin/imagetoolbox/feature/filters/data/model/ZoomBlurFilter.kt",
+  "backend": "gpuimage"
+ }
+]

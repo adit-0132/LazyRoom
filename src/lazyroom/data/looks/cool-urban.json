@@ -1,0 +1,72 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "cool-urban",
+ "name": "Cool desaturated urban",
+ "description": "Gritty city look: cool blue-cyan cast, desaturated colours, crisp contrast, deep shadows, clarity.",
+ "tags": [
+  "urban",
+  "street",
+  "cool",
+  "desaturated",
+  "gritty",
+  "blue",
+  "moody",
+  "city"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": -18,
+    "tint": -4
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -35
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": 25
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.tone",
+   "params": {
+    "blacks": -20,
+    "highlights": -20
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 210,
+    "shadows_saturation": 20,
+    "highlights_hue": 190,
+    "highlights_saturation": 8
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.clarity",
+   "params": {
+    "clarity": 30
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -20
+   }
+  }
+ ]
+}

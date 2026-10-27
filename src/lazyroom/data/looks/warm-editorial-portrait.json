@@ -1,0 +1,73 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "warm-editorial-portrait",
+ "name": "Warm editorial portrait",
+ "description": "Flattering magazine portrait: warm skin, gentle contrast, soft highlights, desaturated background greens/blues, subtle glow.",
+ "tags": [
+  "portrait",
+  "editorial",
+  "magazine",
+  "warm",
+  "skin",
+  "flattering",
+  "soft"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 10,
+    "tint": 3
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.tone",
+   "params": {
+    "highlights": -25,
+    "shadows": 15,
+    "whites": 5
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": 8
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.hsl",
+   "params": {
+    "orange_luminance": 10,
+    "orange_saturation": -5,
+    "red_saturation": -8,
+    "green_saturation": -30,
+    "blue_saturation": -20,
+    "aqua_saturation": -25
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "highlights_hue": 40,
+    "highlights_saturation": 12,
+    "shadows_hue": 25,
+    "shadows_saturation": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.diffusion",
+   "params": {
+    "amount": 12,
+    "radius": 20,
+    "mode": "soft_light",
+    "highlights_only": 40
+   }
+  }
+ ]
+}

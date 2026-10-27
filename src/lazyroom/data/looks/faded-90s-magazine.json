@@ -1,0 +1,84 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "faded-90s-magazine",
+ "name": "Faded 1990s magazine print",
+ "description": "Print-like 90s magazine photo: slightly magenta-warm cast, crushed but faded blacks, punchy midtones, halftone-like grain.",
+ "tags": [
+  "1990s",
+  "90s",
+  "magazine",
+  "print",
+  "retro",
+  "faded",
+  "editorial"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 8,
+    "tint": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.curves",
+   "params": {
+    "rgb": [
+     [
+      0,
+      0.07
+     ],
+     [
+      0.3,
+      0.27
+     ],
+     [
+      0.7,
+      0.75
+     ],
+     [
+      1,
+      0.94
+     ]
+    ]
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -8,
+    "vibrance": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 280,
+    "shadows_saturation": 10,
+    "highlights_hue": 50,
+    "highlights_saturation": 12
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.grain",
+   "params": {
+    "amount": 28,
+    "size": 1.2,
+    "roughness": 70
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.sharpen",
+   "params": {
+    "amount": 30,
+    "radius": 1.2
+   }
+  }
+ ]
+}

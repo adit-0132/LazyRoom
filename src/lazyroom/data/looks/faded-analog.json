@@ -1,0 +1,72 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "faded-analog",
+ "name": "Faded analog film",
+ "description": "Washed-out analog print: lifted matte blacks, compressed highlights, slightly cool shadows and warm highlights, light grain.",
+ "tags": [
+  "faded",
+  "analog",
+  "film",
+  "matte",
+  "washed",
+  "vintage",
+  "kodak",
+  "portra"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.curves",
+   "params": {
+    "rgb": [
+     [
+      0,
+      0.1
+     ],
+     [
+      0.25,
+      0.26
+     ],
+     [
+      0.5,
+      0.52
+     ],
+     [
+      0.75,
+      0.76
+     ],
+     [
+      1,
+      0.92
+     ]
+    ]
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.split_toning",
+   "params": {
+    "highlights_hue": 40,
+    "highlights_saturation": 18,
+    "shadows_hue": 205,
+    "shadows_saturation": 14
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -15,
+    "vibrance": 5
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.grain",
+   "params": {
+    "amount": 18,
+    "size": 1.4
+   }
+  }
+ ]
+}

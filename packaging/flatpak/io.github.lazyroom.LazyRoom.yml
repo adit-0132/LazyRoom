@@ -1,0 +1,40 @@
+# Flatpak manifest (experimental — not yet built/tested in CI).
+# Python wheels are vendored with flatpak-pip-generator:
+#   flatpak-pip-generator --runtime org.kde.Sdk//6.9 --requirements-file packaging/flatpak/requirements.txt \
+#     --output packaging/flatpak/python-deps
+# then: flatpak-builder --user --install build-flatpak packaging/flatpak/io.github.lazyroom.LazyRoom.yml
+app-id: io.github.lazyroom.LazyRoom
+runtime: org.kde.Platform
+runtime-version: "6.9"
+sdk: org.kde.Sdk
+base: io.qt.PySide.BaseApp
+base-version: "6.9"
+command: lazyroom-gui
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --filesystem=xdg-pictures
+  - --filesystem=xdg-download
+  - --filesystem=home:ro
+modules:
+  - packaging/flatpak/python-deps.json
+  - name: gmic
+    buildsystem: simple
+    build-commands:
+      - make -C src cli PREFIX=/app && install -Dm755 src/gmic /app/bin/gmic
+    sources:
+      - type: archive
+        url: https://gmic.eu/files/source/gmic_3.7.6.tar.gz
+        sha256: REPLACE_WITH_RELEASE_SHA256
+  - name: lazyroom
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-deps --no-build-isolation --prefix=/app .
+      - install -Dm644 packaging/linux/lazyroom.desktop /app/share/applications/io.github.lazyroom.LazyRoom.desktop
+      - sed -i 's/^Icon=.*/Icon=io.github.lazyroom.LazyRoom/' /app/share/applications/io.github.lazyroom.LazyRoom.desktop
+      - install -Dm644 packaging/icon-256.png /app/share/icons/hicolor/256x256/apps/io.github.lazyroom.LazyRoom.png
+    sources:
+      - type: dir
+        path: ../..

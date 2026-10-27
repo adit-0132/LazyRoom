@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "name": "Posterize",
+  "params": [
+    {
+      "name": "uLevels",
+      "type": "int",
+      "default": 6,
+      "min": 2,
+      "max": 32
+    }
+  ],
+  "shader": "precision mediump float;\nvarying highp vec2 textureCoordinate;\nuniform sampler2D inputImageTexture;\nuniform int uLevels;\n\nvoid main() {\n    vec4 color = texture2D(inputImageTexture, textureCoordinate);\n    float n = float(uLevels - 1);\n    gl_FragColor = vec4(floor(color.rgb * n + 0.5) / n, color.a);\n}"
+}

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+.lazyroom-artifacts/
+/tmp/
+*.AppImage
+.coverage
+htmlcov/
+.tools/
+.pytest_home/

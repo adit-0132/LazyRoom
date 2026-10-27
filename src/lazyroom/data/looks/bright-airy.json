@@ -1,0 +1,56 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "bright-airy",
+ "name": "Bright & airy",
+ "description": "Light, clean and pastel: lifted exposure and shadows, low contrast, soft warm whites.",
+ "tags": [
+  "bright",
+  "airy",
+  "light",
+  "pastel",
+  "wedding",
+  "clean",
+  "soft",
+  "high key"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.exposure",
+   "params": {
+    "ev": 0.35
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.tone",
+   "params": {
+    "shadows": 35,
+    "highlights": -20,
+    "whites": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": -15
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 6
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -8,
+    "vibrance": 10
+   }
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "earthy-muted",
+ "name": "Muted earthy (Instagram)",
+ "description": "Popular muted earthy feed aesthetic: warm beige tones, desaturated greens and blues, matte shadows, soft contrast.",
+ "tags": [
+  "instagram",
+  "earthy",
+  "muted",
+  "beige",
+  "boho",
+  "warm",
+  "matte",
+  "minimal",
+  "brown"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.white_balance",
+   "params": {
+    "temperature": 12,
+    "tint": 2
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.fade",
+   "params": {
+    "amount": 25,
+    "highlight_rolloff": 20
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": -10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.hsl",
+   "params": {
+    "green_saturation": -55,
+    "green_hue": -25,
+    "green_luminance": -10,
+    "blue_saturation": -45,
+    "aqua_saturation": -50,
+    "orange_saturation": -10,
+    "yellow_saturation": -25,
+    "red_saturation": -15
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.color_grading",
+   "params": {
+    "shadows_hue": 30,
+    "shadows_saturation": 15,
+    "highlights_hue": 40,
+    "highlights_saturation": 10
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": -10
+   }
+  }
+ ]
+}

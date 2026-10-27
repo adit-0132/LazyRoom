@@ -1,0 +1,92 @@
+{
+ "schema": "lazyroom.preset/1",
+ "id": "cross-process",
+ "name": "Cross-processed",
+ "description": "Slide film developed in C-41 chemistry: yellow-green highlights, blue shadows, high contrast and saturation.",
+ "tags": [
+  "cross process",
+  "lomo",
+  "experimental",
+  "film",
+  "retro"
+ ],
+ "steps": [
+  {
+   "origin": "look",
+   "op": "adjust.curves",
+   "params": {
+    "red": [
+     [
+      0,
+      0
+     ],
+     [
+      0.25,
+      0.2
+     ],
+     [
+      0.75,
+      0.82
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "green": [
+     [
+      0,
+      0
+     ],
+     [
+      0.25,
+      0.22
+     ],
+     [
+      0.75,
+      0.8
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "blue": [
+     [
+      0,
+      0.15
+     ],
+     [
+      0.5,
+      0.5
+     ],
+     [
+      1,
+      0.8
+     ]
+    ]
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.contrast",
+   "params": {
+    "amount": 20
+   }
+  },
+  {
+   "origin": "look",
+   "op": "adjust.saturation",
+   "params": {
+    "saturation": 15
+   }
+  },
+  {
+   "origin": "look",
+   "op": "effect.vignette",
+   "params": {
+    "amount": -25
+   }
+  }
+ ]
+}
