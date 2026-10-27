@@ -355,8 +355,8 @@ def write_zip(dst: Path, sources: list[tuple[str, Path]], method: int, level: in
                     zi = zipfile.ZipInfo.from_file(src, arcname=name, strict_timestamps=False)
                     zi.external_attr = (stat.S_IFREG | FILE_PERMISSIONS) << 16
                     zi.compress_type = method
-                    if level is not None:
-                        zi.compress_level = level
+                    if level is not None:  # public attribute since Python 3.13 (``_compresslevel`` before)
+                        setattr(zi, "compress_level" if hasattr(zi, "compress_level") else "_compresslevel", level)
                     with open(src, "rb") as fin, zf.open(zi, "w") as fout:
                         shutil.copyfileobj(fin, fout, COPY_BUFFER)
             raw.flush()
